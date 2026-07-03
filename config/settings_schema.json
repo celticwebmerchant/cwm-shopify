@@ -269,7 +269,7 @@
         "type": "text",
         "id": "t_cart_recs_trigger",
         "label": "Recommended products button",
-        "default": "View matching products"
+        "info": "Leave empty to use the recommended heading (product.recommended_heading)."
       }
     ]
   }

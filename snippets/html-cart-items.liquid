@@ -32,6 +32,12 @@
   assign show_vendor = show_vendor | default: false
   assign show_recommended = show_recommended | default: false
   assign compact = compact | default: false
+
+  comment
+    Recommended-button label: optional theme setting, falls back to the
+    existing (already translated) product.recommended_heading locale key.
+  endcomment
+  assign recs_label = 'product.recommended_heading' | t
 -%}
 
 {%- if cart.item_count > 0 -%}
@@ -219,7 +225,7 @@
                   {%- endif -%}
                 {%- endfor -%}
               </span>
-              <span class="cart-item-recs-trigger__label">{{ settings.t_cart_recs_trigger | default: 'View matching products' }}</span>
+              <span class="cart-item-recs-trigger__label">{{ recs_label }}</span>
               {%- render 'html-theme-icons', icon: 'chevron-right', size: 16 -%}
             </button>
           {%- endif -%}
