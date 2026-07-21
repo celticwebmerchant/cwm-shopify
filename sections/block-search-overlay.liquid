@@ -29,6 +29,22 @@ DEPENDENCIES:
 {%- liquid
 	assign overlay_id = section.settings.overlay_id | default: 'search-overlay'
 	assign overlay_id_input = overlay_id | append: '-input'
+
+	comment
+		Currency per market (mirrors html-product-price):
+		symbol from active cart currency, separators detected via a
+		money_without_currency probe (199999 -> "1.999,99" of "1,999.99").
+	endcomment
+	assign currency_symbol = cart.currency.symbol | default: localization.country.currency.symbol | default: '€'
+	assign money_probe = 199999 | money_without_currency
+	assign dec_sep = money_probe | slice: -3, 1
+	assign thou_sep = money_probe | slice: 1, 1
+	if dec_sep == '0' or dec_sep == '9'
+		assign dec_sep = ','
+	endif
+	if thou_sep == '9'
+		assign thou_sep = ''
+	endif
 -%}
 
 <div
@@ -79,7 +95,12 @@ DEPENDENCIES:
 				"root": {{ routes.root_url | json }},
 				"search": {{ routes.search_url | json }}
 			},
-			"moneyFormat": {{ shop.money_format | json }},
+			"currency": {
+				"symbol": {{ currency_symbol | json }},
+				"code": {{ cart.currency.iso_code | json }},
+				"decimalSeparator": {{ dec_sep | json }},
+				"thousandsSeparator": {{ thou_sep | json }}
+			},
 			"showComparePrice": {{ settings.price_show_compare | default: true | json }},
 			"showTaxNotice": {{ settings.price_show_tax_notice | default: false | json }},
 			"hideZeroCents": {{ settings.price_hide_zero_cents | default: false | json }},
