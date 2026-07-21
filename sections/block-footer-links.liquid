@@ -28,16 +28,35 @@
 {% endstyle %}
 
 <div class="block-footer-links__content {{ section.settings.width }}">
-	{%- assign footer_menu = section.settings.footer_menu -%}
-	{%- if footer_menu != blank and linklists[footer_menu].links.size > 0 -%}
+	{%- liquid
+		assign footer_menu = section.settings.footer_menu
+		assign has_menu = false
+		if footer_menu != blank and linklists[footer_menu].links.size > 0
+			assign has_menu = true
+		endif
+		assign has_extra = false
+		if section.settings.extra_link_url != blank and section.settings.extra_link_text != blank
+			assign has_extra = true
+		endif
+	-%}
+	{%- if has_menu or has_extra -%}
 		<ul class="block-footer-links__list">
-			{%- for link in linklists[footer_menu].links -%}
+			{%- if has_menu -%}
+				{%- for link in linklists[footer_menu].links -%}
+					<li class="block-footer-links__item">
+						<a href="{{ link.url }}" class="block-footer-links__link">
+							{{ link.title }}
+						</a>
+					</li>
+				{%- endfor -%}
+			{%- endif -%}
+			{%- if has_extra -%}
 				<li class="block-footer-links__item">
-					<a href="{{ link.url }}" class="block-footer-links__link">
-						{{ link.title }}
+					<a href="{{ section.settings.extra_link_url }}" class="block-footer-links__link">
+						{{ section.settings.extra_link_text }}
 					</a>
 				</li>
-			{%- endfor -%}
+			{%- endif -%}
 		</ul>
 	{%- endif -%}
 </div>
@@ -62,6 +81,20 @@
 			"type": "link_list",
 			"id": "footer_menu",
 			"label": "Menu"
+		},
+		{
+			"type": "header",
+			"content": "Extra link"
+		},
+		{
+			"type": "text",
+			"id": "extra_link_text",
+			"label": "Link label"
+		},
+		{
+			"type": "url",
+			"id": "extra_link_url",
+			"label": "Link"
 		},
 		{
 			"type": "header",
