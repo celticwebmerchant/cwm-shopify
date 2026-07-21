@@ -555,21 +555,30 @@
     },
 
     formatMoney(price) {
+      // Currency per market: symbol + separators come from the section config
+      // (see block-search-overlay.liquid). Mirrors html-product-price.
+      const currency = this.config.currency || {};
+      const symbol = currency.symbol || '€';
+      let decSep = currency.decimalSeparator || ',';
+      let thouSep = (typeof currency.thousandsSeparator === 'string') ? currency.thousandsSeparator : '.';
+      if (/\d/.test(decSep)) decSep = ',';
+      if (/\d/.test(thouSep)) thouSep = '';
+
       // Shopify API returns price as string like "51.25" or number
       const amount = parseFloat(price).toFixed(2);
-      
+
       // Split into whole and decimal parts
       const parts = amount.split('.');
-      const before = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      const before = thouSep ? parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thouSep) : parts[0];
       const after = parts[1];
 
       // Hide cents on whole prices when enabled (mirrors html-product-price)
       if (this.config.hideZeroCents && after === '00') {
-        return `<span class="price"><span class="valuta">€</span><span class="before_seperator">${before}</span></span>`;
+        return `<span class="price"><span class="valuta">${symbol}</span><span class="before_seperator">${before}</span></span>`;
       }
 
       // Return same structure as html-product-price
-      return `<span class="price"><span class="valuta">€</span><span class="before_seperator">${before}</span><span class="seperator">,</span><span class="after_seperator">${after}</span></span>`;
+      return `<span class="price"><span class="valuta">${symbol}</span><span class="before_seperator">${before}</span><span class="seperator">${decSep}</span><span class="after_seperator">${after}</span></span>`;
     },
 
     getRecentSearches(limit) {
