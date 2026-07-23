@@ -1,0 +1,314 @@
+{{ 'block-cart-freeship.min.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%}
+============================================================================
+BLOCK-CART-FREESHIP
+============================================================================
+Free-shipping progress bar for the cart. Shows how much more the customer
+must spend to qualify for free shipping, with a live-updating progress bar.
+
+FEATURES:
+- Threshold per currency via fixed section settings (freeship_<iso>),
+  resolved by the active cart currency. Leave a currency empty to hide.
+- Per-market differences are handled natively via context templates
+  (cart.context.[market].json): adjust the values there, toggle the
+  section off (eye), or leave it out — no market logic inside the section.
+- Live update on cart change via window.CartEvents ('cart:update')
+- Money formatting mirrors html-product-price / theme-search formatMoney
+- States: remaining / reached / (optional) empty
+- Cart-template only (enabled_on)
+
+NOTE: purely visual. Keep the currency values in sync with the shipping
+app (Intuitive Shipping) — there is no API to read the real thresholds.
+
+DEPENDENCIES:
+- window.CartEvents (assets/theme-cart.js)
+- block-cart-freeship.min.js
+============================================================================
+{%- endcomment -%}
+
+{%- liquid
+  assign currency_iso = cart.currency.iso_code
+  assign currency_key = 'freeship_' | append: currency_iso | downcase
+  assign threshold = section.settings[currency_key] | default: 0
+  assign threshold_cents = threshold | times: 100
+
+  if section.settings.basis == 'subtotal'
+    assign basis_cents = cart.items_subtotal_price
+  else
+    assign basis_cents = cart.total_price
+  endif
+
+  assign is_empty = false
+  if cart.item_count == 0
+    assign is_empty = true
+  endif
+
+  assign remaining_cents = threshold_cents | minus: basis_cents
+  assign reached = false
+  if remaining_cents <= 0
+    assign reached = true
+  endif
+
+  assign percent = 0
+  if threshold_cents > 0
+    assign percent = basis_cents | times: 100 | divided_by: threshold_cents
+  endif
+  if percent > 100
+    assign percent = 100
+  endif
+
+  comment
+    Currency formatting primitives (mirrors block-search-overlay):
+    symbol from active cart currency, separators via a money probe.
+  endcomment
+  assign currency_symbol = cart.currency.symbol | default: localization.country.currency.symbol | default: '€'
+  assign money_probe = 199999 | money_without_currency
+  assign dec_sep = money_probe | slice: -3, 1
+  assign thou_sep = money_probe | slice: 1, 1
+  if dec_sep == '0' or dec_sep == '9'
+    assign dec_sep = ','
+  endif
+  if thou_sep == '9'
+    assign thou_sep = ''
+  endif
+-%}
+
+{%- comment -%} Render nothing when no threshold is configured for this currency {%- endcomment -%}
+{%- if threshold > 0 -%}
+
+  {% style %}
+    #shopify-section-{{ section.id }} .cart-freeship {
+      --cart-freeship-fill: {{ section.settings.bar_color | default: 'rgb(var(--color-foreground))' }};
+      --cart-freeship-track: {{ section.settings.track_color | default: 'rgba(var(--color-foreground), 0.12)' }};
+      --cart-freeship-reached: {{ section.settings.reached_color | default: '#009922' }};
+    }
+    #shopify-section-{{ section.id }} .block-cart-freeship__content {
+      padding-block: {{ section.settings.padding_block | default: 1 }}em;
+    }
+  {% endstyle %}
+
+  {%- comment -%} Placeholder + defaults via capture so the literal {amount} never sits inside a {{ }} tag (strict Liquid parser) {%- endcomment -%}
+  {%- capture ph -%}{amount}{%- endcapture -%}
+  {%- capture default_remaining -%}Nog {amount} te gaan voor gratis verzending{%- endcapture -%}
+  {%- assign remaining_setting = section.settings.remaining_text | default: default_remaining -%}
+  {%- assign reached_setting = section.settings.reached_text | default: 'Je komt in aanmerking voor gratis verzending' -%}
+
+  {%- comment -%} Initial remaining amount as .price markup (matches JS formatMoney) {%- endcomment -%}
+  {%- liquid
+    assign rem_abs = remaining_cents
+    if rem_abs < 0
+      assign rem_abs = 0
+    endif
+    assign rem_str = rem_abs | money_without_currency
+    assign rem_parts = rem_str | split: dec_sep
+    assign rem_before = rem_parts[0]
+    assign rem_after = rem_parts[1] | default: '00'
+  -%}
+  {%- capture amount_html -%}<span class="price"><span class="valuta">{{ currency_symbol }}</span><span class="before_seperator">{{ rem_before }}</span>{% if settings.price_hide_zero_cents and rem_after == '00' %}{% else %}<span class="seperator">{{ dec_sep }}</span><span class="after_seperator">{{ rem_after }}</span>{% endif %}</span>{%- endcapture -%}
+
+  {%- assign remaining_message = remaining_setting | replace: ph, amount_html -%}
+  {%- assign reached_message = reached_setting -%}
+
+  <div
+    class="block-cart-freeship__content {{ section.settings.width }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+    {% if section.settings.anchor != blank %}id="{{ section.settings.anchor }}"{% endif %}
+    {% if is_empty and section.settings.show_when_empty == false %}hidden{% endif %}
+  >
+    <div
+      class="cart-freeship{% if reached %} cart-freeship--reached{% endif %}"
+      data-cart-freeship
+    >
+      <p class="cart-freeship__message" data-freeship-message>
+        {%- if reached -%}{{ reached_message }}{%- else -%}{{ remaining_message }}{%- endif -%}
+      </p>
+      <div class="cart-freeship__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ percent }}">
+        <div class="cart-freeship__fill" data-freeship-fill style="width: {{ percent }}%;"></div>
+      </div>
+
+      <script type="application/json" data-freeship-config>
+        {
+          "threshold": {{ threshold_cents | json }},
+          "basis": {{ section.settings.basis | default: 'total' | json }},
+          "showWhenEmpty": {{ section.settings.show_when_empty | default: false | json }},
+          "currency": {
+            "symbol": {{ currency_symbol | json }},
+            "code": {{ currency_iso | json }},
+            "decimalSeparator": {{ dec_sep | json }},
+            "thousandsSeparator": {{ thou_sep | json }}
+          },
+          "hideZeroCents": {{ settings.price_hide_zero_cents | default: false | json }},
+          "texts": {
+            "remaining": {{ remaining_setting | json }},
+            "reached": {{ reached_setting | json }}
+          }
+        }
+      </script>
+    </div>
+  </div>
+
+  <script src="{{ 'block-cart-freeship.min.js' | asset_url }}" defer></script>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Free shipping bar",
+  "tag": "section",
+  "class": "block-cart-freeship",
+  "enabled_on": {
+    "templates": ["cart"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "remaining_text",
+      "label": "Remaining message",
+      "default": "Nog {amount} te gaan voor gratis verzending",
+      "info": "Use {amount} for the remaining amount. Translatable via Translate & Adapt."
+    },
+    {
+      "type": "text",
+      "id": "reached_text",
+      "label": "Reached message",
+      "default": "Je komt in aanmerking voor gratis verzending"
+    },
+    {
+      "type": "header",
+      "content": "Currencies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Free shipping threshold per currency, in whole units (e.g. 75). Leave a currency empty to hide the bar for that currency. For a market that differs, adjust these values in that market's cart template — or turn the section off / remove it there."
+    },
+    {
+      "type": "number",
+      "id": "freeship_eur",
+      "label": "EUR — Euro"
+    },
+    {
+      "type": "number",
+      "id": "freeship_gbp",
+      "label": "GBP — British Pound"
+    },
+    {
+      "type": "number",
+      "id": "freeship_dkk",
+      "label": "DKK — Danish Krone"
+    },
+    {
+      "type": "number",
+      "id": "freeship_sek",
+      "label": "SEK — Swedish Krona"
+    },
+    {
+      "type": "number",
+      "id": "freeship_pln",
+      "label": "PLN — Polish Złoty"
+    },
+    {
+      "type": "number",
+      "id": "freeship_chf",
+      "label": "CHF — Swiss Franc"
+    },
+    {
+      "type": "number",
+      "id": "freeship_usd",
+      "label": "USD — US Dollar"
+    },
+    {
+      "type": "header",
+      "content": "Behavior"
+    },
+    {
+      "type": "select",
+      "id": "basis",
+      "label": "Progress based on",
+      "options": [
+        { "value": "total", "label": "Cart total (after discounts)" },
+        { "value": "subtotal", "label": "Items subtotal (before discounts)" }
+      ],
+      "default": "total"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_when_empty",
+      "label": "Show when cart is empty",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "options": [
+        { "value": "is-align-narrow", "label": "Narrow" },
+        { "value": "is-align-small", "label": "Small" },
+        { "value": "is-align", "label": "Regular" },
+        { "value": "is-align-wide", "label": "Wide" },
+        { "value": "is-align-full", "label": "Full" }
+      ],
+      "default": "is-align-full"
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "default": 1,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bar_color",
+      "label": "Bar color",
+      "info": "Leave empty to use theme foreground"
+    },
+    {
+      "type": "color",
+      "id": "track_color",
+      "label": "Track color"
+    },
+    {
+      "type": "color",
+      "id": "reached_color",
+      "label": "Reached color",
+      "info": "Leave empty for green (#009922)"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "ID for scroll links (without #)"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Free shipping bar",
+      "category": "Cart"
+    }
+  ]
+}
+{% endschema %}
