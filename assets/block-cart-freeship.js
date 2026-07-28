@@ -29,7 +29,9 @@
     var messageEl = root.querySelector('[data-freeship-message]');
     var fillEl = root.querySelector('[data-freeship-fill]');
     var trackEl = root.querySelector('[role="progressbar"]');
-    var wrapper = root.closest('.block-cart-freeship__content') || root;
+    // Hide the full-width section wrapper (incl. background) when present;
+    // fall back to the component root for a standalone (cart-preview) render.
+    var wrapper = root.closest('.block-cart-freeship') || root;
 
     function formatMoney(cents) {
       var c = config.currency || {};

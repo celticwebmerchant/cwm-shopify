@@ -1,154 +1,70 @@
-{{ 'block-cart-freeship.min.css' | asset_url | stylesheet_tag }}
-
 {%- comment -%}
 ============================================================================
 BLOCK-CART-FREESHIP
 ============================================================================
-Free-shipping progress bar for the cart. Shows how much more the customer
-must spend to qualify for free shipping, with a live-updating progress bar.
+Free-shipping progress bar for the cart. Carries the settings + section
+background, resolves the threshold for the active currency, and renders the
+reusable html-cart-freeship snippet (which does the markup, states, config
+and asset loading — so it can be reused in the cart-preview drawer later).
 
-FEATURES:
-- Threshold per currency via fixed section settings (freeship_<iso>),
-  resolved by the active cart currency. Leave a currency empty to hide.
-- Per-market differences are handled natively via context templates
-  (cart.context.[market].json): adjust the values there, toggle the
-  section off (eye), or leave it out — no market logic inside the section.
-- Live update on cart change via window.CartEvents ('cart:update')
-- Money formatting mirrors html-product-price / theme-search formatMoney
-- States: remaining / reached / (optional) empty
-- Cart-template only (enabled_on)
+- Threshold per currency via fixed settings (freeship_<iso>). Leave empty
+  to hide for that currency.
+- Per-market differences: native via context templates (cart.context.*).
+- Cart-template only (enabled_on).
 
-NOTE: purely visual. Keep the currency values in sync with the shipping
-app (Intuitive Shipping) — there is no API to read the real thresholds.
-
-DEPENDENCIES:
-- window.CartEvents (assets/theme-cart.js)
-- block-cart-freeship.min.js
+NOTE: purely visual. Keep the currency values in sync with the shipping app
+(Intuitive Shipping) — no API to read the real thresholds.
 ============================================================================
 {%- endcomment -%}
 
 {%- liquid
-  assign currency_iso = cart.currency.iso_code
-  assign currency_key = 'freeship_' | append: currency_iso | downcase
+  assign currency_key = 'freeship_' | append: cart.currency.iso_code | downcase
   assign threshold = section.settings[currency_key] | default: 0
-  assign threshold_cents = threshold | times: 100
-
-  if section.settings.basis == 'subtotal'
-    assign basis_cents = cart.items_subtotal_price
-  else
-    assign basis_cents = cart.total_price
-  endif
 
   assign is_empty = false
   if cart.item_count == 0
     assign is_empty = true
   endif
 
-  assign remaining_cents = threshold_cents | minus: basis_cents
-  assign reached = false
-  if remaining_cents <= 0
-    assign reached = true
-  endif
-
-  assign percent = 0
-  if threshold_cents > 0
-    assign percent = basis_cents | times: 100 | divided_by: threshold_cents
-  endif
-  if percent > 100
-    assign percent = 100
-  endif
-
   comment
-    Currency formatting primitives (mirrors block-search-overlay):
-    symbol from active cart currency, separators via a money probe.
+    Render nothing on an empty cart (unless show_when_empty) so the section
+    wrapper collapses — no empty background strip. Live remove-to-empty is
+    handled by the JS (it hides the .block-cart-freeship section wrapper).
   endcomment
-  assign currency_symbol = cart.currency.symbol | default: localization.country.currency.symbol | default: '€'
-  assign money_probe = 199999 | money_without_currency
-  assign dec_sep = money_probe | slice: -3, 1
-  assign thou_sep = money_probe | slice: 1, 1
-  if dec_sep == '0' or dec_sep == '9'
-    assign dec_sep = ','
-  endif
-  if thou_sep == '9'
-    assign thou_sep = ''
+  assign do_render = false
+  if threshold > 0
+    if is_empty == false or section.settings.show_when_empty
+      assign do_render = true
+    endif
   endif
 -%}
 
-{%- comment -%} Render nothing when no threshold is configured for this currency {%- endcomment -%}
-{%- if threshold > 0 -%}
-
+{%- if do_render -%}
   {% style %}
+    #shopify-section-{{ section.id }}.block-cart-freeship {
+      background: {{ section.settings.section_background | default: '#f8f8f8' }};
+      color: {{ section.settings.section_text | default: '#111111' }};
+      padding-block: {{ section.settings.padding_block | default: 1 }}em;
+    }
     #shopify-section-{{ section.id }} .cart-freeship {
+      --cart-freeship-card: {{ section.settings.card_background | default: '#ffffff' }};
       --cart-freeship-fill: {{ section.settings.bar_color | default: 'rgb(var(--color-foreground))' }};
       --cart-freeship-track: {{ section.settings.track_color | default: 'rgba(var(--color-foreground), 0.12)' }};
       --cart-freeship-reached: {{ section.settings.reached_color | default: '#009922' }};
     }
-    #shopify-section-{{ section.id }} .block-cart-freeship__content {
-      padding-block: {{ section.settings.padding_block | default: 1 }}em;
-    }
   {% endstyle %}
 
-  {%- comment -%} Placeholder + defaults via capture so the literal {amount} never sits inside a {{ }} tag (strict Liquid parser) {%- endcomment -%}
-  {%- capture ph -%}{amount}{%- endcapture -%}
-  {%- capture default_remaining -%}Nog {amount} te gaan voor gratis verzending{%- endcapture -%}
-  {%- assign remaining_setting = section.settings.remaining_text | default: default_remaining -%}
-  {%- assign reached_setting = section.settings.reached_text | default: 'Je komt in aanmerking voor gratis verzending' -%}
-
-  {%- comment -%} Initial remaining amount as .price markup (matches JS formatMoney) {%- endcomment -%}
-  {%- liquid
-    assign rem_abs = remaining_cents
-    if rem_abs < 0
-      assign rem_abs = 0
-    endif
-    assign rem_str = rem_abs | money_without_currency
-    assign rem_parts = rem_str | split: dec_sep
-    assign rem_before = rem_parts[0]
-    assign rem_after = rem_parts[1] | default: '00'
-  -%}
-  {%- capture amount_html -%}<span class="price"><span class="valuta">{{ currency_symbol }}</span><span class="before_seperator">{{ rem_before }}</span>{% if settings.price_hide_zero_cents and rem_after == '00' %}{% else %}<span class="seperator">{{ dec_sep }}</span><span class="after_seperator">{{ rem_after }}</span>{% endif %}</span>{%- endcapture -%}
-
-  {%- assign remaining_message = remaining_setting | replace: ph, amount_html -%}
-  {%- assign reached_message = reached_setting -%}
-
-  <div
-    class="block-cart-freeship__content {{ section.settings.width }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
-    {% if section.settings.anchor != blank %}id="{{ section.settings.anchor }}"{% endif %}
-    {% if is_empty and section.settings.show_when_empty == false %}hidden{% endif %}
-  >
-    <div
-      class="cart-freeship{% if reached %} cart-freeship--reached{% endif %}"
-      data-cart-freeship
-    >
-      <p class="cart-freeship__message" data-freeship-message>
-        {%- if reached -%}{{ reached_message }}{%- else -%}{{ remaining_message }}{%- endif -%}
-      </p>
-      <div class="cart-freeship__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ percent }}">
-        <div class="cart-freeship__fill" data-freeship-fill style="width: {{ percent }}%;"></div>
-      </div>
-
-      <script type="application/json" data-freeship-config>
-        {
-          "threshold": {{ threshold_cents | json }},
-          "basis": {{ section.settings.basis | default: 'total' | json }},
-          "showWhenEmpty": {{ section.settings.show_when_empty | default: false | json }},
-          "currency": {
-            "symbol": {{ currency_symbol | json }},
-            "code": {{ currency_iso | json }},
-            "decimalSeparator": {{ dec_sep | json }},
-            "thousandsSeparator": {{ thou_sep | json }}
-          },
-          "hideZeroCents": {{ settings.price_hide_zero_cents | default: false | json }},
-          "texts": {
-            "remaining": {{ remaining_setting | json }},
-            "reached": {{ reached_setting | json }}
-          }
-        }
-      </script>
-    </div>
+  {%- comment -%} Section wrapper (#shopify-section + schema class) carries the full-width background; __content carries the width {%- endcomment -%}
+  <div class="block-cart-freeship__content {{ section.settings.width }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"{% if section.settings.anchor != blank %} id="{{ section.settings.anchor }}"{% endif %}>
+    {%- render 'html-cart-freeship',
+      threshold: threshold,
+      basis: section.settings.basis,
+      remaining_text: section.settings.remaining_text,
+      reached_text: section.settings.reached_text,
+      explaining: section.settings.explaining,
+      show_when_empty: section.settings.show_when_empty
+    -%}
   </div>
-
-  <script src="{{ 'block-cart-freeship.min.js' | asset_url }}" defer></script>
-
 {%- endif -%}
 
 {% schema %}
@@ -178,6 +94,12 @@ DEPENDENCIES:
       "default": "Je komt in aanmerking voor gratis verzending"
     },
     {
+      "type": "richtext",
+      "id": "explaining",
+      "label": "Explaining message",
+      "info": "Shown in the accordion body. Leave empty for a plain bar without a toggle."
+    },
+    {
       "type": "header",
       "content": "Currencies"
     },
@@ -185,41 +107,13 @@ DEPENDENCIES:
       "type": "paragraph",
       "content": "Free shipping threshold per currency, in whole units (e.g. 75). Leave a currency empty to hide the bar for that currency. For a market that differs, adjust these values in that market's cart template — or turn the section off / remove it there."
     },
-    {
-      "type": "number",
-      "id": "freeship_eur",
-      "label": "EUR — Euro"
-    },
-    {
-      "type": "number",
-      "id": "freeship_gbp",
-      "label": "GBP — British Pound"
-    },
-    {
-      "type": "number",
-      "id": "freeship_dkk",
-      "label": "DKK — Danish Krone"
-    },
-    {
-      "type": "number",
-      "id": "freeship_sek",
-      "label": "SEK — Swedish Krona"
-    },
-    {
-      "type": "number",
-      "id": "freeship_pln",
-      "label": "PLN — Polish Złoty"
-    },
-    {
-      "type": "number",
-      "id": "freeship_chf",
-      "label": "CHF — Swiss Franc"
-    },
-    {
-      "type": "number",
-      "id": "freeship_usd",
-      "label": "USD — US Dollar"
-    },
+    { "type": "number", "id": "freeship_eur", "label": "EUR — Euro" },
+    { "type": "number", "id": "freeship_gbp", "label": "GBP — British Pound" },
+    { "type": "number", "id": "freeship_dkk", "label": "DKK — Danish Krone" },
+    { "type": "number", "id": "freeship_sek", "label": "SEK — Swedish Krona" },
+    { "type": "number", "id": "freeship_pln", "label": "PLN — Polish Złoty" },
+    { "type": "number", "id": "freeship_chf", "label": "CHF — Swiss Franc" },
+    { "type": "number", "id": "freeship_usd", "label": "USD — US Dollar" },
     {
       "type": "header",
       "content": "Behavior"
@@ -270,6 +164,24 @@ DEPENDENCIES:
     {
       "type": "header",
       "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "info": "Leave empty for #f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "section_text",
+      "label": "Section text",
+      "info": "Leave empty for #111111"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "info": "Leave empty for white"
     },
     {
       "type": "color",
