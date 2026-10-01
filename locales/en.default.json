@@ -70,7 +70,7 @@
       "low_stock": "In stock",
       "low_stock_count": "Only {{ quantity }} left in stock, buy now!",
       "backorder": "Available on order",
-      "out_of_stock": "Sold out! Sign up and receive a 10% discount"
+      "out_of_stock": "Sold out! Notify me"
     },
     "volume_pricing": {
       "title": "Bulk discount",

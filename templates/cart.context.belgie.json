@@ -17,20 +17,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-27a6cd7a8c1f2499eca481ee5fedc94a": null,
+        "header-25ff9bc8be698b83b7710517c0d1d608": null,
         "heading": "",
         "subheading": "",
-        "header-2697ddd6ab1db65f2d5364c87aed8962": null,
+        "header-6454e8ff9586e12be416cccf93017241": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-a38ece2f98b44eca1cbb851507ce31f9": null,
+        "header-c093d254705fca960ea3a5f90f146947": null,
         "background_color": "",
         "text_color": "",
-        "header-55b44627424a8843760507529538b4dc": null,
-        "paragraph-7e06f5ea13da3d1f65d5c55b78a1e058": null
+        "header-531471c2701da1c5eaa013ce08cbefb0": null,
+        "paragraph-873635b4e740200beb284218568b948d": null
       },
       "blocks": {
         "banner_Tt47j": {
@@ -54,10 +54,10 @@
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-14f72c6f100cd14b4cab3487d1d1fa30": null,
+        "header-52b607bddc1851560ab1facdec17022c": null,
         "collection": "altijd-nodig",
         "heading": "Altijd nodig!",
-        "header-28462d935aeb41b5758fe00dddb91a1f": null,
+        "header-ea459db3126183fd5d6701dac3a2ea8b": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -70,7 +70,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-fbfb91ab288ff4af8911b816ff637005": null,
+        "header-d2f46c923748eb9cf798880bf41ed338": null,
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -79,11 +79,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-0806647f3a1bb9591b5e3bd91d3a6588": null,
+        "header-706373cad6281b38857af8394b8b575f": null,
         "background_color": "",
         "text_color": "",
-        "header-5706f584a732dcfca7ef79e022533f4e": null,
-        "paragraph-2ae45298f5ea80bcb03682b905cb7e5d": null
+        "header-8a4c483618b7936559e4dfb764877c04": null,
+        "paragraph-ccadac1ac94605beac46616f037360b9": null
       },
       "blocks": {},
       "block_order": [],
@@ -93,11 +93,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-783cd8d748f912fe0bdcddb64b4f1f6c": null,
+        "header-7ca4a8f750bc060364aa6ccce0557bc7": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-c879fa7ae8217e9ea410f485658876bc": null,
+        "header-da7dd137d0ce742319efb6c78206df4b": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -105,7 +105,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-fbe1d34fd7dd7a7a35dd19d021cb15a4": null,
+        "header-e1ced4ab8f4fd02893be46eab29e6640": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -114,11 +114,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-e02517ca3da18d317fcb9e2430a3884a": null,
+        "header-14d57d07418f2e7d638ace719cb33094": null,
         "background_color": "",
         "text_color": "",
-        "header-50ce91e5de45c15f7fbd91c50dcf6338": null,
-        "paragraph-2d8092745bacd74b7d2400d397c80b11": null
+        "header-1eb9199269e2d17faeead997a6874a78": null,
+        "paragraph-58130bdd1dd08f4b4c197e05baac7090": null
       },
       "blocks": {
         "testimonial_UA9Ft": {
@@ -161,12 +161,25 @@
         "testimonial_WBPaP"
       ],
       "name": "Testimonials"
+    },
+    "17785991655b863a82": {
+      "settings": {
+        "background_color": "#f4f8fe"
+      },
+      "blocks": {
+        "shop_the_look_shop_the_look_7HtpHf": {
+          "settings": {
+            "use_theme_settings": true
+          }
+        }
+      }
     }
   },
   "order": [
     "block_marketing_banners_9m79i",
     "cart-order",
     "block_marketing_products_FR9qz",
+    "17785991655b863a82",
     "block_marketing_testimonials_mpA4Y",
     "block_marketing_media_text_tQPwtw"
   ]

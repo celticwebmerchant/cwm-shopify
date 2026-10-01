@@ -237,6 +237,9 @@
       "hours": "Jam",
       "minutes": "Menit",
       "seconds": "Detik"
+    },
+    "cart_confirm": {
+      "heading": "Ditambahkan ke keranjang"
     }
   },
   "newsletter": {

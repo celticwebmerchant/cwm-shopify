@@ -33,15 +33,15 @@
     "block_header_callout_AGfLm9": {
       "disabled": true,
       "settings": {
-        "heading": "Chroniken von Mythodea",
+        "heading": "MPS Borken",
         "subheading": "Noch",
-        "countdown_end_date": "2026-04-30"
+        "countdown_end_date": "2026-09-26"
       },
       "blocks": {
         "button_y9x84q": {
           "settings": {
-            "text": "Zur LARP-Kollektion",
-            "url": "shopify://collections/larp"
+            "text": "Festival Kleidung shoppen",
+            "url": "shopify://collections/fantasy-larp-kleding"
           }
         }
       },

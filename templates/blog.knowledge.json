@@ -20,81 +20,10 @@
         "width": "is-align-wide",
         "text_align": "center",
         "padding_block": 1,
+        "anchor": "",
+        "custom_class": "",
         "background_color": "",
         "text_color": ""
-      }
-    },
-    "block_marketing_grid_AqGxiU": {
-      "type": "block-marketing-grid",
-      "blocks": {
-        "banner_bHKjVb": {
-          "type": "banner",
-          "settings": {
-            "label": "",
-            "heading": "Onderhoud van staal en metaal",
-            "text": "",
-            "link_url": "shopify://blogs/tips-tricks-zwaarden-wapens/onderhoud-van-staal-en-metaal",
-            "image": "shopify://shop_images/DSC00948.jpg",
-            "focus_x": 50,
-            "focus_y": 50,
-            "overlay": "medium",
-            "design": "blue"
-          }
-        },
-        "banner_FHqJNq": {
-          "type": "banner",
-          "settings": {
-            "label": "",
-            "heading": "Hoe draag je Viking beenwindsels",
-            "text": "",
-            "link_url": "shopify://blogs/tips-tricks-outfit-accessoires/hoe-draag-je-een-viking-birka-broek",
-            "image": "shopify://shop_images/DSC09062-2_afa12cde-e584-4dc4-b485-4c2dbdd8642e.jpg",
-            "focus_x": 50,
-            "focus_y": 50,
-            "overlay": "medium",
-            "design": "blue"
-          }
-        },
-        "banner_DJDqEg": {
-          "type": "banner",
-          "settings": {
-            "label": "",
-            "heading": "Hoe trek ik mijn harnas aan",
-            "text": "",
-            "link_url": "shopify://blogs/tips-tricks/hoe-trek-ik-mijn-harnas-aan",
-            "image": "shopify://shop_images/DSC08162_ca9871da-8948-446f-a0f9-2c9f8146cb82.jpg",
-            "focus_x": 50,
-            "focus_y": 50,
-            "overlay": "medium",
-            "design": "blue"
-          }
-        }
-      },
-      "block_order": [
-        "banner_bHKjVb",
-        "banner_FHqJNq",
-        "banner_DJDqEg"
-      ],
-      "name": "Grid",
-      "settings": {
-        "heading": "",
-        "subtext": "",
-        "header_align": "left",
-        "width": "is-align-full",
-        "columns_desktop": 3,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
-        "grid_gap": 0.5,
-        "padding_block": 3,
-        "display_mode": "creative",
-        "slider_navigation": true,
-        "slider_pagination": true,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
-        "background_color": "#ffffff",
-        "text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
       }
     },
     "block_marketing_blogs_4kGTB7": {
@@ -148,6 +77,8 @@
         "show_image": false,
         "image_ratio": "landscape",
         "show_article_count": false,
+        "anchor": "",
+        "custom_class": "",
         "width": "is-align",
         "columns_desktop": 5,
         "columns_tablet": 3,
@@ -157,9 +88,184 @@
         "background_color": "#0f1f38",
         "text_color": "#ffffff",
         "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
+        "card_text_color": "#111111"
+      }
+    },
+    "block_marketing_articles_3UkKWA": {
+      "type": "block-marketing-articles",
+      "blocks": {
+        "blog_yTLzjW": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-helmen-pantser"
+          }
+        },
+        "blog_nQUVh7": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-zwaarden-wapens"
+          }
+        },
+        "blog_JyYzg7": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-zwaarden-wapens"
+          }
+        },
+        "blog_kdEazJ": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-helmen-pantser"
+          }
+        },
+        "blog_N6chAA": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-outfit-accessoires"
+          }
+        },
+        "blog_JDz7gd": {
+          "type": "blog",
+          "settings": {
+            "blog": "larp-re-enactment-kamp"
+          }
+        },
+        "blog_gMYfp7": {
+          "type": "blog",
+          "settings": {
+            "blog": "over-larp-cosmetica"
+          }
+        }
+      },
+      "block_order": [
+        "blog_yTLzjW",
+        "blog_nQUVh7",
+        "blog_JyYzg7",
+        "blog_kdEazJ",
+        "blog_N6chAA",
+        "blog_JDz7gd",
+        "blog_gMYfp7"
+      ],
+      "name": "Articles",
+      "settings": {
+        "heading": "Een greep uit onze kennisbank",
+        "subheading": "",
+        "text_align": "center",
+        "display_mode": "grid",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "card_layout": "horizontal",
+        "show_image": true,
+        "image_ratio": "adapt",
+        "show_blog_title": true,
+        "show_date": false,
+        "show_excerpt": false,
+        "show_cta": true,
+        "articles_per_blog": 2,
+        "max_articles": 8,
+        "random_mode": true,
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "width": "is-align",
+        "columns_desktop": 2,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 1,
+        "padding_block": 3,
+        "background_color": "#f8f8f8",
+        "text_color": "",
+        "card_background_color": "#ffffff",
+        "card_text_color": "#111111"
+      }
+    },
+    "block_marketing_grid_AqGxiU": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "banner_bHKjVb": {
+          "type": "banner",
+          "settings": {
+            "label": "",
+            "heading": "Hoe berg je leren pantser veilig op?",
+            "text": "",
+            "link_url": "shopify://blogs/over-helmen-pantser/hoe-berg-je-leren-pantser-veilig-op",
+            "image": "shopify://shop_images/DSC00948.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        },
+        "banner_FHqJNq": {
+          "type": "banner",
+          "settings": {
+            "label": "",
+            "heading": "Hoe berg je plaatpantser veilig op?",
+            "text": "",
+            "link_url": "shopify://blogs/over-helmen-pantser/hoe-berg-je-plaatpantser-veilig-op",
+            "image": "shopify://shop_images/dsc00850_8cf73e50-6d19-4358-ae33-4bcb587ea3ca.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        },
+        "banner_W9pBLk": {
+          "type": "banner",
+          "settings": {
+            "label": "",
+            "heading": "Wat is roest en hoe kun je het voorkomen bij harnas onderdelen?",
+            "text": "",
+            "link_url": "shopify://blogs/over-helmen-pantser/wat-is-roest-en-hoe-kun-je-het-voorkomen-bij-harnas-onderdelen",
+            "image": "shopify://shop_images/dsc04222_c48bb2ef-4496-4703-8d64-bd9b336100e9.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        },
+        "banner_e9FMc7": {
+          "type": "banner",
+          "settings": {
+            "label": "",
+            "heading": "Wat zijn bramen op Battle-Ready wapens en waarom moet je deze verwijderen?",
+            "text": "",
+            "link_url": "shopify://blogs/over-zwaarden-wapens/wat-zijn-bramen-op-battle-ready-wapens-en-waarom-moet-je-deze-verwijderen",
+            "image": "shopify://shop_images/Middeleeuws_zwaard_6b6d763a-5a5f-430d-8f9f-b44e7b26daef.webp",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "banner_bHKjVb",
+        "banner_FHqJNq",
+        "banner_W9pBLk",
+        "banner_e9FMc7"
+      ],
+      "name": "Grid",
+      "settings": {
+        "heading": "",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "creative",
+        "slider_navigation": false,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-small",
+        "columns_desktop": 5,
+        "columns_tablet": 2,
+        "columns_mobile": 2,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#ffffff",
+        "text_color": "#111111"
       }
     },
     "block_marketing_cover_bYEzBj": {
@@ -209,81 +315,6 @@
         "custom_class": ""
       }
     },
-    "block_marketing_articles_3UkKWA": {
-      "type": "block-marketing-articles",
-      "blocks": {
-        "blog_JyYzg7": {
-          "type": "blog",
-          "settings": {
-            "blog": "over-zwaarden-wapens"
-          }
-        },
-        "blog_kdEazJ": {
-          "type": "blog",
-          "settings": {
-            "blog": "over-helmen-pantser"
-          }
-        },
-        "blog_N6chAA": {
-          "type": "blog",
-          "settings": {
-            "blog": "over-outfit-accessoires"
-          }
-        },
-        "blog_JDz7gd": {
-          "type": "blog",
-          "settings": {
-            "blog": "larp-re-enactment-kamp"
-          }
-        },
-        "blog_gMYfp7": {
-          "type": "blog",
-          "settings": {
-            "blog": "over-larp-cosmetica"
-          }
-        }
-      },
-      "block_order": [
-        "blog_JyYzg7",
-        "blog_kdEazJ",
-        "blog_N6chAA",
-        "blog_JDz7gd",
-        "blog_gMYfp7"
-      ],
-      "name": "Articles",
-      "settings": {
-        "heading": "Een greep uit onze kennisbank",
-        "subheading": "",
-        "text_align": "center",
-        "card_layout": "horizontal",
-        "show_image": true,
-        "image_ratio": "adapt",
-        "show_blog_title": true,
-        "show_date": false,
-        "show_excerpt": false,
-        "show_cta": true,
-        "articles_per_blog": 2,
-        "max_articles": 8,
-        "random_mode": true,
-        "width": "is-align",
-        "columns_desktop": 2,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
-        "grid_gap": 1,
-        "padding_block": 3,
-        "display_mode": "grid",
-        "slider_navigation": true,
-        "slider_pagination": false,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
-        "background_color": "#f8f8f8",
-        "text_color": "",
-        "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
-      }
-    },
     "main": {
       "type": "main-blog",
       "disabled": true,
@@ -299,6 +330,8 @@
         "show_excerpt": true,
         "show_cta": true,
         "articles_per_page": 12,
+        "anchor": "",
+        "custom_class": "",
         "width": "alignwide",
         "padding_block": 3,
         "columns_desktop": 4,
@@ -308,18 +341,16 @@
         "background_color": "#f8f8f8",
         "text_color": "#111111",
         "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": "#111111"
       }
     }
   },
   "order": [
     "block_page_breadcrumbs_PLeJee",
-    "block_marketing_grid_AqGxiU",
     "block_marketing_blogs_4kGTB7",
-    "block_marketing_cover_bYEzBj",
+    "block_marketing_grid_AqGxiU",
     "block_marketing_articles_3UkKWA",
+    "block_marketing_cover_bYEzBj",
     "main"
   ]
 }

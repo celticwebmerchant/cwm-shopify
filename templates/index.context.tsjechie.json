@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "tsjechie"
+  },
+  "parent": "index.json",
+  "sections": {
+    "block_marketing_cover_EyVVzr": {
+      "settings": {
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50
+      },
+      "blocks": {
+        "button_nXdQMm": {
+          "settings": {
+            "url": "shopify://collections/nieuw-1"
+          }
+        }
+      }
+    },
+    "best-products": {
+      "settings": {
+        "collection": "middeleeuwse-kleding"
+      },
+      "blocks": {}
+    }
+  }
+}

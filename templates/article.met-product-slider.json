@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "back_link_tbay9G": {
+          "type": "back_link",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "back_link_tbay9G",
+        "title",
+        "content",
+        "share"
+      ],
+      "settings": {
+        "custom_class": "",
+        "width": "is-align-small",
+        "show_sidebar": false,
+        "background_color": "#f8f8f8",
+        "article_background": "#ffffff",
+        "text_color": ""
+      }
+    },
+    "17836255292d798044": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7374992_3Lxnnn": {
+          "type": "ai_gen_block_7374992",
+          "settings": {
+            "products": [
+              "vroegmiddeleeuwse-jurk-brida-naturel",
+              "100-wollen-deken-mantel-vissegraat-blauw",
+              "10de-eeuwse-vikingbroche",
+              "10de-eeuwse-rusvik-armband",
+              "12de-eeuwse-normandische-gesp",
+              "11de-eeuwse-neushelm",
+              "deepeeka-13de-eeuws-kruisvaarderszwaard",
+              "13de-eeuwse-secret",
+              "15de-eeuwse-ketelhoed-ralf-gepolijst"
+            ],
+            "heading": "Gerelateerde producten",
+            "subheading": "",
+            "heading_alignment": "center",
+            "heading_size": 32,
+            "subheading_size": 16,
+            "products_per_row": 4,
+            "product_gap": 10,
+            "section_padding": 20,
+            "desktop_width_percent": 80,
+            "show_navigation": true,
+            "autoplay": false,
+            "autoplay_speed": 5,
+            "nav_button_size": 30,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "card_background": "#ffffff",
+            "product_title_color": "#000000",
+            "product_price_color": "#000000",
+            "nav_button_color": "#616161",
+            "nav_button_hover_color": "#3b3b3b",
+            "nav_button_icon_color": "#ffffff",
+            "dot_color": "#cdcdcd",
+            "card_border_radius": 0,
+            "product_title_size": 16,
+            "product_price_size": 14
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7374992_3Lxnnn"
+      ],
+      "settings": {}
+    },
+    "block_marketing_cover_qcQaMG": {
+      "type": "block-marketing-cover",
+      "blocks": {
+        "button_iMYKK8": {
+          "type": "button",
+          "settings": {
+            "text": "Doneer ook",
+            "url": "shopify://products/donatie",
+            "style": "primary",
+            "button_color": "#000000",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_iMYKK8"
+      ],
+      "name": "Cover",
+      "settings": {
+        "subheading": "",
+        "heading": "Maak het verschil, doneer nu!",
+        "text": "",
+        "image": "shopify://shop_images/Banner_Blog_v1.jpg",
+        "focus_x": 50,
+        "focus_y": 50,
+        "overlay": "medium",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "width": "is-align-full",
+        "height": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "anchor": "",
+        "custom_class": ""
+      }
+    },
+    "block_marketing_articles_related_UVqLh9": {
+      "type": "block-marketing-articles-related",
+      "name": "Related articles",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "text_align": "center",
+        "max_articles": 4,
+        "show_fallback": true,
+        "card_layout": "vertical",
+        "show_image": true,
+        "image_ratio": "portrait",
+        "show_blog_title": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_cta": true,
+        "width": "is-align-wide",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 2,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111",
+        "card_background_color": "#ffffff",
+        "card_text_color": "#111111"
+      }
+    },
+    "block_marketing_cover_xGxRnh": {
+      "type": "block-marketing-cover",
+      "blocks": {
+        "button_bjHAj9": {
+          "type": "button",
+          "settings": {
+            "text": "Ga terug naar het overzicht",
+            "url": "shopify://pages/blog-lookbook",
+            "style": "outline",
+            "button_color": "#ffffff",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_bjHAj9"
+      ],
+      "name": "Cover",
+      "settings": {
+        "subheading": "Lees onze nieuwste blogs!",
+        "heading": "",
+        "text": "",
+        "image": "shopify://shop_images/Dec2025_-_Banners_blog_detailpagina.webp",
+        "focus_x": 80,
+        "focus_y": 10,
+        "overlay": "medium",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "width": "is-align-full",
+        "height": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "anchor": "",
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17836255292d798044",
+    "block_marketing_cover_qcQaMG",
+    "block_marketing_articles_related_UVqLh9",
+    "block_marketing_cover_xGxRnh"
+  ]
+}

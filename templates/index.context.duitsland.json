@@ -15,14 +15,15 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/1-NL-DEBanner_Tudor_Feb2026_1_c646dee4-2057-41e0-bf79-4a94d3b062be.jpg",
-        "focus_x": 85,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }

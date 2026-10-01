@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "spanje"
+  },
+  "parent": "header-group.json",
+  "sections": {
+    "block_header_callout_AGfLm9": {
+      "disabled": false,
+      "settings": {
+        "heading": "Mercado Cervantino",
+        "subheading": "Faltan",
+        "countdown_end_date": "2026-10-08"
+      },
+      "blocks": {
+        "button_y9x84q": {
+          "settings": {
+            "text": "Descubre la colección de ropa",
+            "url": "shopify://collections/kleding"
+          }
+        }
+      }
+    }
+  }
+}

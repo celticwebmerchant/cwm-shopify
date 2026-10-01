@@ -13,20 +13,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-2f31e6c003b3b0b0f4186af4f830563a": null,
+        "header-74a1883de132f3514beb17e7a50507b8": null,
         "heading": "",
         "subheading": "",
-        "header-cacbcd4073e79480d2113063efc49654": null,
+        "header-19e75e1dccebccda134babae6556f0c4": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-7186a0686efdb582a6469c539df28440": null,
+        "header-e794a593da09ed0a8d99446088216cc2": null,
         "background_color": "",
         "text_color": "",
-        "header-22230c7c96e3f33f5a0351a2ccc9eecf": null,
-        "paragraph-1449a8786a12a6c9312ea0ec6a2b489b": null
+        "header-07cbd50f9a20d3f3c08fd17d0ec88d79": null,
+        "paragraph-cc92a69f12de6da14ed1d4406154dc2a": null
       },
       "blocks": {
         "banner_xkBD6": {
@@ -50,10 +50,10 @@
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-a73fc589f01635667805f732ce7402f9": null,
+        "header-8b1f0af2c3d571bd8d9afcc44675e7cb": null,
         "collection": "altijd-nodig",
         "heading": "Toujours nécessaire",
-        "header-9be32763f87b695c3441a59b054fb960": null,
+        "header-4a68d453316c3728ef34461a011e8e4f": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -66,7 +66,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-25c3a4cd93485b874278ba225b66b8af": null,
+        "header-67de4478511190f6fbacd9049fe63541": null,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -75,11 +75,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-68cd26b60ec9ecd243b14c9ebcdfea0a": null,
+        "header-94678f9ac27cd2881c11d01ee7300fdd": null,
         "background_color": "",
         "text_color": "",
-        "header-6ae15dcc70745095dbe88b39450cd52d": null,
-        "paragraph-209a28ce2ed59df7e850ab0b4cf2f07f": null
+        "header-888e7c41b1e24239c1786562d2c0fe53": null,
+        "paragraph-9b1582145489412b38b93046b3f58827": null
       },
       "blocks": {},
       "block_order": [],
@@ -89,11 +89,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-2eef0c7378a5e52445aa74b5b6e6571d": null,
+        "header-490d8014977cdaf5bef1f20a7a24daa1": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-3489a5f5105303c82ca89237a356ca76": null,
+        "header-5967010e08ffb4c05e1bff17ca6fc296": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -101,7 +101,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-9e6f1acb83eabada105bc06eca8b8656": null,
+        "header-462d14e6fa39127cb022c46c917c535d": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -110,11 +110,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-51eaf3df8ff46d34840f139797d02eb7": null,
+        "header-d7f36933a70973b46dba1fa95bf60d6e": null,
         "background_color": "",
         "text_color": "",
-        "header-25b1cbeb2e2d1df9ccdbc243401949f1": null,
-        "paragraph-a7d03f4f526619d95e83c3ac9089056c": null
+        "header-b87b7fb500c10989635d775cbb34d20d": null,
+        "paragraph-19ad8ec4a12077a3cc181002e79cba8b": null
       },
       "blocks": {
         "testimonial_C7Lyd": {
@@ -173,6 +173,7 @@
     "block_marketing_banners_YBJBC",
     "cart-order",
     "block_marketing_products_RG4BG",
+    "17785991655b863a82",
     "block_marketing_testimonials_tAYta",
     "block_marketing_media_text_tQPwtw"
   ]

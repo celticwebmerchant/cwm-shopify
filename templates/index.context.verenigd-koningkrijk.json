@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-623a4d7e67796c972672e277ce887670": null,
+        "header-17cc56ce475896aa9baba4909f2843b4": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-c478c9f85f95b6304d20a4ad055a3a7e": null,
+        "header-3d080eba60d5e58e7a13603b3ffa4d48": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-431d194999dc1e2819a2308f08584987": null,
+        "header-c6c01c90d4cecd1990c80ccf9c39012b": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-e77c55f6c658a43ed664ce2aa85c2f0d": null,
+        "header-64ba9fc91697956cbf52f9585524ce66": null,
         "background_color": "",
         "text_color": "",
-        "header-e880f6cd76aad829a8bfb36a2abc546e": null,
-        "paragraph-bd868c9285c1081155e407d92ad8b93d": null
+        "header-563900da17d162608b4068cde10e5c64": null,
+        "paragraph-eb24f1a39c61436f455013ae7f5057dc": null
       },
       "blocks": {
         "testimonial_fFDRz": {
@@ -88,16 +88,17 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "subheading": "Ostara Sale",
+        "subheading": "",
         "heading": "",
-        "image": "shopify://shop_images/1-UK_Banner_GBPantser1_Feb2026_285092cb-87fe-4118-bc51-4147f2e03cd6.webp",
-        "focus_x": 90,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
@@ -119,6 +120,16 @@
         "image_text_aJBEwL": {
           "settings": {
             "image": "shopify://shop_images/Jacobite_tribe.jpg"
+          }
+        }
+      }
+    },
+    "block_marketing_media_text_eUmREH": {
+      "settings": {},
+      "blocks": {
+        "image_text_xddkDV": {
+          "settings": {
+            "image": "shopify://shop_images/DSC04498_443c13b8-4da6-4607-862f-ec0d38490132.jpg"
           }
         }
       }

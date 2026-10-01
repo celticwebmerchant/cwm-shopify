@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "zweden"
+  },
+  "parent": "header-group.json",
+  "sections": {
+    "block_header_callout_AGfLm9": {
+      "disabled": true,
+      "settings": {
+        "heading": "Gudahagens Vikingamarknad",
+        "subheading": "Bara",
+        "countdown_end_date": "2026-09-19"
+      },
+      "blocks": {
+        "button_y9x84q": {
+          "settings": {
+            "text": "Köp vikingakläder",
+            "url": "shopify://collections/viking-kleding"
+          }
+        }
+      },
+      "block_order": [
+        "button_y9x84q"
+      ]
+    }
+  }
+}

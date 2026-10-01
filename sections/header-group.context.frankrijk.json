@@ -25,16 +25,17 @@
       }
     },
     "block_header_callout_AGfLm9": {
-      "disabled": true,
+      "disabled": false,
       "settings": {
-        "heading": "Les Médiévales de Rouen",
+        "heading": "Rose d’Or",
         "subheading": "Encore",
-        "countdown_end_date": "2026-05-14"
+        "countdown_end_date": "2026-10-10",
+        "countdown_message": ""
       },
       "blocks": {
         "button_y9x84q": {
           "settings": {
-            "text": "Collection vêtements médiévaux",
+            "text": "Collection de vêtements médiévaux",
             "url": "shopify://collections/middeleeuwse-kleding"
           }
         }

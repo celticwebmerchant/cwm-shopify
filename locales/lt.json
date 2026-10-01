@@ -69,7 +69,7 @@
       "low_stock": "Yra sandėlyje",
       "low_stock_count": "{{ quantity }} vnt. sandėlyje",
       "backorder": "Galima užsakyti",
-      "out_of_stock": "Išparduota"
+      "out_of_stock": "Išparduota! Praneškite man"
     },
     "volume_pricing": {
       "title": "Kiekybinė kainodara",
@@ -212,7 +212,12 @@
       "total": "Suma"
     },
     "item_added": "Prekė įdėta į krepšelį",
-    "quantity_error": "Galite pridėti tik {{ quantity }} šios prekės."
+    "quantity_error": "Galite pridėti tik {{ quantity }} šios prekės.",
+    "discount_code": "Nuolaidos kodas",
+    "discount_code_placeholder": "Įveskite kodą",
+    "discount_code_empty": "Įveskite nuolaidos kodą",
+    "apply": "Taikyti",
+    "remove_discount": "Pašalinti nuolaidą"
   },
   "search": {
     "title": "Paieškos rezultatai",
@@ -237,6 +242,9 @@
       "hours": "Valandos",
       "minutes": "Minutės",
       "seconds": "Sekundės"
+    },
+    "cart_confirm": {
+      "heading": "Įdėta į krepšelį"
     }
   },
   "newsletter": {

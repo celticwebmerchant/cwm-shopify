@@ -13,13 +13,66 @@
   },
   "parent": "index.json",
   "sections": {
+    "block_marketing_media_text_7RLen": {
+      "type": "block-marketing-media-text",
+      "disabled": true,
+      "settings": {
+        "header-aa4959d99a8858950e3a5ffbee52460d": null,
+        "heading": "",
+        "subheading": "",
+        "text_align": "center",
+        "header-916f79fa9d9b23d00fbd1158f0fb342a": null,
+        "width": "is-align",
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "header-3a1933c2299761257ce1c62bc0a4a869": null,
+        "background_color": "",
+        "text_color": "",
+        "header-e9ac6bff4577c0b09de7a32cff85ddc9": null,
+        "paragraph-1270294968c75848f0e99d2bd4f9bcb6": null
+      },
+      "blocks": {
+        "image_text_Yan43": {
+          "type": "image_text",
+          "disabled": false,
+          "settings": {
+            "header-5bac20592a68e94565fd4efd8acd9336": null,
+            "heading": "Vacature magazijnmedewerker ecommerce",
+            "text": "<p>Heb jij een passie voor Vikingen, middeleeuwen, reenactment of historische festivals? En steek je graag je handen uit de mouwen? Dan zoeken wij jou!<br/><br/></p>",
+            "cta_text": "Lees verder",
+            "cta_url": "shopify://pages/vacatures",
+            "cta_style": "primary",
+            "header-a5794cab047b28bd033dab39473d594d": null,
+            "image": "shopify://shop_images/DSC04118_cf3484d1-f7b0-45ea-a8a6-7049962f2993.jpg",
+            "image_height": "portrait",
+            "focus_x": 25,
+            "focus_y": 30,
+            "header-2042d89c64e1d2c3eaead46462d4ea69": null,
+            "image_position": "left",
+            "image_width": "40",
+            "vertical_alignment": "center",
+            "header-8520eafa634ad74ad8575a65bea331be": null,
+            "background_color": "#0f1f38",
+            "text_color": "#f8f8f8",
+            "button_color": "",
+            "button_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_text_Yan43"
+      ],
+      "name": "Media & text"
+    },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "subheading": "Maak je uitrusting compleet",
-        "heading": "Shop op tijdperk",
-        "text": "",
-        "image": "shopify://shop_images/1-NL-DEBanner_Tudor_Feb2026_1.jpg",
-        "focus_x": 85,
+        "subheading": "",
+        "heading": "Ontdek de nieuwe collectie!",
+        "text": "<p><br/><br/></p>",
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium",
         "text_alignment": "center"
       },
@@ -27,17 +80,68 @@
         "button_nXdQMm": {
           "settings": {
             "text": "Shop nu",
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
     },
+    "block_marketing_grid_eKTaaA": {
+      "settings": {},
+      "blocks": {
+        "banner_DW6Yt": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "header-b1d697908c111711a1cf19ad9b8b5be7": null,
+            "label": "",
+            "heading": "Vacatures",
+            "text": "<p>Wij zoeken jou!</p>",
+            "link_url": "https://www.celticwebmerchant.com/pages/vacatures",
+            "header-1b2eead90a6f03b4a72ffb7697b8994a": null,
+            "image": "shopify://shop_images/DSC04122_49cf81ae-34ea-4830-8e57-51fd9a335ba3.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "light",
+            "header-c40f1a57e9dd66cd87dd95f6712b06b4": null,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "banner_DW6Yt",
+        "banner_PH6hGr",
+        "banner_9aKPPM",
+        "banner_gMVXQH",
+        "banner_qUNK67",
+        "banner_8pmcRb"
+      ]
+    },
     "block_marketing_grid_93tkDC": {
       "settings": {},
       "blocks": {
+        "banner_6PNJpD": {
+          "settings": {
+            "image": "shopify://shop_images/DSC08934.jpg"
+          }
+        },
         "banner_9A6wwJ": {
           "settings": {
             "image": "shopify://shop_images/burgundian_knight1.jpg"
+          }
+        },
+        "banner_nKKc7L": {
+          "settings": {
+            "image": "shopify://shop_images/DSC02438_6a4686f1-e8b3-40c1-ab89-afac97b2c805.jpg"
+          }
+        }
+      }
+    },
+    "block_marketing_media_text_iDhD8j": {
+      "settings": {},
+      "blocks": {
+        "image_text_G9gzXM": {
+          "settings": {
+            "image": "shopify://shop_images/DSC08356_1.jpg"
           }
         }
       }
@@ -51,6 +155,33 @@
           }
         }
       }
+    },
+    "block_marketing_media_text_eUmREH": {
+      "settings": {},
+      "blocks": {},
+      "block_order": [
+        "image_text_xddkDV"
+      ]
     }
-  }
+  },
+  "order": [
+    "block_marketing_cover_EyVVzr",
+    "block_marketing_grid_eKTaaA",
+    "block_marketing_collections_KLibTG",
+    "block_marketing_products_bnYjLh",
+    "best-products",
+    "block_marketing_grid_93tkDC",
+    "block_marketing_products_EaRW4A",
+    "block_marketing_products_pXat79",
+    "block_marketing_media_text_iDhD8j",
+    "17653968662b835c7e",
+    "block_marketing_articles_mcEqQJ",
+    "block_marketing_media_text_7RLen",
+    "block_marketing_articles_HAGXAT",
+    "block_marketing_media_text_mEgbKY",
+    "block_marketing_articles_wJ9gkm",
+    "block_marketing_articles_qtkjtB",
+    "block_marketing_media_text_eUmREH",
+    "block_marketing_brands_small_gekrHy"
+  ]
 }

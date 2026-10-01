@@ -237,6 +237,9 @@
       "hours": "小时",
       "minutes": "分钟",
       "seconds": "秒"
+    },
+    "cart_confirm": {
+      "heading": "已加入购物车"
     }
   },
   "newsletter": {

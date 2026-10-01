@@ -237,6 +237,9 @@
       "hours": "Timer",
       "minutes": "Minutter",
       "seconds": "Sekunder"
+    },
+    "cart_confirm": {
+      "heading": "Lagt i handlekurven"
     }
   },
   "newsletter": {

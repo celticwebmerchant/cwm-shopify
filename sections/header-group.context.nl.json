@@ -14,13 +14,17 @@
   "parent": "header-group.json",
   "sections": {
     "block_header_callout_AGfLm9": {
-      "disabled": true,
-      "settings": {},
+      "disabled": false,
+      "settings": {
+        "heading": "Fantasy Fest",
+        "countdown_end_date": "2026-10-10",
+        "countdown_message": ""
+      },
       "blocks": {
         "button_y9x84q": {
           "settings": {
             "text": "Shop festival kleding",
-            "url": "shopify://collections/elfia-haarzuilens-arcen"
+            "url": "shopify://collections/fantasy-larp-kleding"
           }
         }
       }

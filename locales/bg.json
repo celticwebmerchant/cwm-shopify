@@ -237,6 +237,9 @@
       "hours": "Часа",
       "minutes": "Минути",
       "seconds": "Секунди"
+    },
+    "cart_confirm": {
+      "heading": "Добавено в количката"
     }
   },
   "newsletter": {

@@ -16,7 +16,7 @@
           "type": "button",
           "settings": {
             "text": "Shop nu",
-            "url": "shopify://collections/tijdperk",
+            "url": "shopify://collections/nieuw-1",
             "style": "outline",
             "button_color": "#ffffff",
             "button_text_color": ""
@@ -28,12 +28,12 @@
       ],
       "name": "Cover",
       "settings": {
-        "subheading": "Alleen vandaag",
-        "heading": "Koninklijke kortingen",
+        "subheading": "",
+        "heading": "Ontdek de nieuwe collectie!",
         "text": "",
-        "image": "shopify://shop_images/1-NL-DEBanner_Tudor_Feb2026_1.webp",
-        "focus_x": 80,
-        "focus_y": 15,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium",
         "loading": "eager",
         "fetchpriority": "high",
@@ -53,12 +53,12 @@
           "settings": {
             "label": "",
             "heading": "Tribe Sale: alleen voor leden",
-            "text": "<p>Fakkels, vuurkorven & lantaarns</p>",
+            "text": "<p>Vachten, veren en botten</p>",
             "link_url": "shopify://collections/tribe-sale-members-only",
-            "image": "shopify://shop_images/file_7bf7664a-8f6c-4bdf-99c5-bd96e83b08e2.webp",
+            "image": "shopify://shop_images/DSC08072_1.jpg",
             "focus_x": 50,
             "focus_y": 50,
-            "overlay": "medium",
+            "overlay": "light",
             "design": "red"
           }
         },
@@ -69,7 +69,7 @@
             "heading": "Bijna uitverkocht",
             "text": "<p>Koop voor het te laat is!</p>",
             "link_url": "shopify://collections/bijna-uitverkocht-koop-snel",
-            "image": "shopify://shop_images/DSC08128_014dc76d-a5a5-45a7-b278-7520695b396f.jpg",
+            "image": "shopify://shop_images/DSC04808_f8f3534f-177d-4f77-800d-24cc4e1bfa4d.jpg",
             "focus_x": 50,
             "focus_y": 50,
             "overlay": "light",
@@ -83,7 +83,7 @@
             "heading": "Terug op voorraad!",
             "text": "<p>Koop nu!</p>",
             "link_url": "shopify://collections/weer-op-voorraad",
-            "image": "shopify://shop_images/DSC08115.jpg",
+            "image": "shopify://shop_images/DSC07364_4ccf0b68-2960-42ed-9c35-1128a8dd0e33.jpg",
             "focus_x": 50,
             "focus_y": 50,
             "overlay": "light",
@@ -232,6 +232,35 @@
         "text_color": "#111111",
         "card_background_color": "",
         "card_text_color": ""
+      }
+    },
+    "block_marketing_products_bnYjLh": {
+      "type": "block-marketing-products",
+      "settings": {
+        "collection": "nieuw-1",
+        "heading": "Nieuwe aanwinsten!",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 4,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#ffffff",
+        "text_color": "#111111"
       }
     },
     "best-products": {
@@ -420,10 +449,10 @@
             "cta_text": "Meld me aan!",
             "cta_url": "#nieuwsbrief",
             "cta_style": "outline",
-            "image": "shopify://shop_images/DSC08248_f0cec56f-f9b1-496a-b27c-46ec117feddb.jpg",
+            "image": "shopify://shop_images/DSC08233_63bcc802-3229-44fb-a9e7-ba0f79b57f5e.jpg",
             "image_height": "square",
             "focus_x": 50,
-            "focus_y": 50,
+            "focus_y": 45,
             "image_position": "right",
             "image_width": "40",
             "vertical_alignment": "center",
@@ -808,7 +837,7 @@
         "brand_4A7fPM": {
           "type": "brand",
           "settings": {
-            "collection": "epic-armoury"
+            "collection": "marshal-historical"
           }
         },
         "brand_3kAF6b": {
@@ -894,6 +923,7 @@
     "block_marketing_cover_EyVVzr",
     "block_marketing_grid_eKTaaA",
     "block_marketing_collections_KLibTG",
+    "block_marketing_products_bnYjLh",
     "best-products",
     "block_marketing_grid_93tkDC",
     "block_marketing_products_EaRW4A",

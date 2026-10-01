@@ -237,6 +237,9 @@
       "hours": "時間",
       "minutes": "分",
       "seconds": "秒"
+    },
+    "cart_confirm": {
+      "heading": "カートに追加しました"
     }
   },
   "newsletter": {

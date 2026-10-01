@@ -15,14 +15,15 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/CH_Banner_Bourgondische_Ridder_CH_Feb2026_2_5532712e-52cb-4eb5-8e45-7d000fd5aa21.jpg",
-        "focus_x": 15,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }

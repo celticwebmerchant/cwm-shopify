@@ -28,6 +28,21 @@
           }
         }
       }
+    },
+    "block_header_callout_AGfLm9": {
+      "disabled": false,
+      "settings": {
+        "heading": "Gallo-Romeins Weekend",
+        "countdown_end_date": "2026-10-03"
+      },
+      "blocks": {
+        "button_y9x84q": {
+          "settings": {
+            "text": "Historische kleding shoppen",
+            "url": "shopify://collections/kleding"
+          }
+        }
+      }
     }
   }
 }

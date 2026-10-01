@@ -237,6 +237,9 @@
       "hours": "ชั่วโมง",
       "minutes": "นาที",
       "seconds": "วินาที"
+    },
+    "cart_confirm": {
+      "heading": "เพิ่มลงในตะกร้าแล้ว"
     }
   },
   "newsletter": {

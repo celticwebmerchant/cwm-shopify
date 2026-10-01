@@ -69,7 +69,7 @@
       "low_stock": "W magazynie",
       "low_stock_count": "Zostało tylko {{ quantity }} w magazynie, kup teraz!",
       "backorder": "Dostępne na zamówienie",
-      "out_of_stock": "Wyprzedane! Zarejestruj się i otrzymaj 10% zniżki"
+      "out_of_stock": "Wyprzedane! Powiadom mnie"
     },
     "volume_pricing": {
       "title": "Rabat ilościowy",
@@ -232,7 +232,10 @@
     "recent": "Ostatnie wyszukiwania"
   },
   "marketing": {
-    "products_heading": "Nasze najnowsze produkty"
+    "products_heading": "Nasze najnowsze produkty",
+    "cart_confirm": {
+      "heading": "Dodano do koszyka"
+    }
   },
   "newsletter": {
     "heading": "Newsletter",

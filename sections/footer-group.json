@@ -34,15 +34,7 @@
           "type": "usp",
           "settings": {
             "text": "Niet goed? Binnen 30 dagen retour",
-            "link": "https://celticwebmerchant.zendesk.com/hc/nl/sections/4422369305746-Retour",
-            "icon": "none"
-          }
-        },
-        "usp-4": {
-          "type": "usp",
-          "settings": {
-            "text": "Laagste prijs garantie",
-            "link": "https://celticwebmerchant.zendesk.com/hc/nl/articles/4422423278866-Laagste-prijsgarantie-en-beste-service-garantie",
+            "link": "https://support.celticwebmerchant.com/hc/nl/categories/34937554769938-Retour-omruilen",
             "icon": "none"
           }
         }
@@ -50,8 +42,7 @@
       "block_order": [
         "usp-1",
         "usp-2",
-        "usp-3",
-        "usp-4"
+        "usp-3"
       ],
       "custom_css": [
         "> * .block-footer-usps__icon {color: #22c55e !important;}"
@@ -78,19 +69,10 @@
         "service_etMkLr": {
           "type": "service",
           "settings": {
-            "heading": "",
+            "heading": "Klantenservice",
             "text": "<p>Bekijk eerst de veelgestelde vragen. Kom je er zelf niet uit? Vul het contactformulier in en we mailen je op werkdagen binnen 24 uur terug.</p>",
             "link": "https://support.celticwebmerchant.com/hc",
-            "link_text": ""
-          }
-        },
-        "showroom_deinET": {
-          "type": "showroom",
-          "settings": {
-            "heading": "",
-            "text": "",
-            "link": "https://support.celticwebmerchant.com/hc/nl/articles/34940749980306-Waarom-is-de-showroom-niet-altijd-geopend-en-is-bezoek-op-aanvraag-mogelijk",
-            "link_text": ""
+            "link_text": "Neem contact op"
           }
         },
         "text_Tig8n8": {
@@ -106,7 +88,7 @@
           "type": "text",
           "settings": {
             "heading": "Bedrijfsgegevens",
-            "text": "<p>Celtic WebMerchant BV<br/>Marisstraat 8a<br/>3364 AZ Sliedrecht<br/>Nederland<br/><br/>BTW-nummer: NL864375803B01<br/>EORI-nummer: NL864375803<br/>KvK-nummer: <a href=\"https://www.kvk.nl/bestellen/#/87703211000035123672?origin=search\" target=\"_blank\" title=\"https://www.kvk.nl/bestellen/#/87703211000035123672?origin=search\">87703211</a></p>",
+            "text": "<p>Celtic WebMerchant BV<br/>Marisstraat 8a<br/>3364 AZ Sliedrecht<br/>Nederland <br/><br/>BTW-nummer: NL864375803B01<br/>EORI-nummer: NL864375803<br/>KvK-nummer: <a href=\"https://www.kvk.nl/bestellen/#/87703211000035123672?origin=search\" target=\"_blank\" title=\"https://www.kvk.nl/bestellen/#/87703211000035123672?origin=search\">87703211</a></p>",
             "link": "shopify://pages/about-us",
             "link_text": "Over ons"
           }
@@ -115,7 +97,6 @@
       "block_order": [
         "newsletter_iWfWmC",
         "service_etMkLr",
-        "showroom_deinET",
         "text_Tig8n8",
         "text_xT7atR"
       ],
@@ -129,6 +110,8 @@
       "type": "block-footer-links",
       "settings": {
         "footer_menu": "footer-service",
+        "extra_link_text": "Ik wil gebruik maken van mijn herroepingsrecht",
+        "extra_link_url": "https://support.celticwebmerchant.com/hc/nl/requests/new?ticket_form_id=36524823170962&tf_subject=Ik wil gebruik maken van mijn herroepingsrecht",
         "width": "is-align-small",
         "background_color": "#0f1f38",
         "text_color": "#ffffff"
@@ -220,7 +203,7 @@
         "language_AegVFt": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -242,7 +225,7 @@
         "language_4k6dU3": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "be"
           }
@@ -250,7 +233,7 @@
         "language_aPDXBn": {
           "type": "language",
           "settings": {
-            "label": "Duits",
+            "label": "Deutsch",
             "language_code": "de",
             "region": "be"
           }
@@ -258,7 +241,7 @@
         "language_p9aP9c": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "be"
           }
@@ -272,7 +255,7 @@
         "language_gtzjwt": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -286,7 +269,7 @@
         "language_4R7RzQ": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -300,7 +283,7 @@
         "language_knPt8J": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -314,7 +297,7 @@
         "language_jPyQer": {
           "type": "language",
           "settings": {
-            "label": "Deens",
+            "label": "Dansk",
             "language_code": "da",
             "region": "dk"
           }
@@ -322,7 +305,7 @@
         "language_KRXMn9": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "dk"
           }
@@ -336,7 +319,7 @@
         "language_7LCb9j": {
           "type": "language",
           "settings": {
-            "label": "Duits",
+            "label": "Deutsch",
             "language_code": "de",
             "region": "de"
           }
@@ -344,7 +327,7 @@
         "language_d7yHb6": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "de"
           }
@@ -358,7 +341,7 @@
         "language_pd9bQb": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -369,12 +352,20 @@
             "title": "Finland"
           }
         },
+        "language_eCFz3V": {
+          "type": "language",
+          "settings": {
+            "label": "suomi",
+            "language_code": "fi",
+            "region": "fi"
+          }
+        },
         "language_RUENLg": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "fi"
           }
         },
         "region_F9if4H": {
@@ -386,7 +377,7 @@
         "language_GCqjDt": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "fr"
           }
@@ -394,7 +385,7 @@
         "language_JEiQ3c": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "fr"
           }
@@ -408,7 +399,7 @@
         "language_4GYz68": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -419,12 +410,20 @@
             "title": "Hongarije"
           }
         },
+        "language_Af9jMr": {
+          "type": "language",
+          "settings": {
+            "label": "magyar",
+            "language_code": "hu",
+            "region": "hu"
+          }
+        },
         "language_xcimLn": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "hu"
           }
         },
         "region_WEkqci": {
@@ -436,7 +435,7 @@
         "language_4d3rTp": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "ie"
           }
@@ -450,7 +449,7 @@
         "language_GyE6aM": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -464,7 +463,7 @@
         "language_YXTYaf": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "gb"
           }
@@ -478,7 +477,7 @@
         "language_3WadTw": {
           "type": "language",
           "settings": {
-            "label": "Italiaans",
+            "label": "Italiano",
             "language_code": "it",
             "region": "it"
           }
@@ -486,7 +485,7 @@
         "language_DjeUYX": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "it"
           }
@@ -500,7 +499,7 @@
         "language_GDHYdH": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "gb"
           }
@@ -511,10 +510,18 @@
             "title": "Kroatië"
           }
         },
+        "language_dEwYUP": {
+          "type": "language",
+          "settings": {
+            "label": "Hrvatski",
+            "language_code": "hr",
+            "region": "hr"
+          }
+        },
         "language_tRkUbj": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -525,12 +532,20 @@
             "title": "Letland"
           }
         },
+        "language_HPmxma": {
+          "type": "language",
+          "settings": {
+            "label": "Latviešu",
+            "language_code": "lv",
+            "region": "lv"
+          }
+        },
         "language_iA498f": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "lv"
           }
         },
         "region_4fE6jw": {
@@ -539,12 +554,20 @@
             "title": "Litouwen"
           }
         },
+        "language_r39tVt": {
+          "type": "language",
+          "settings": {
+            "label": "lietuvių",
+            "language_code": "lt",
+            "region": "lt"
+          }
+        },
         "language_d4GaQ7": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "lt"
           }
         },
         "region_nVKTdm": {
@@ -556,7 +579,7 @@
         "language_MNBkYP": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "eu"
           }
@@ -564,7 +587,7 @@
         "language_naAtqf": {
           "type": "language",
           "settings": {
-            "label": "Duits",
+            "label": "Deutsch",
             "language_code": "de",
             "region": "eu"
           }
@@ -572,7 +595,7 @@
         "language_b8zbxp": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -586,7 +609,7 @@
         "language_hhUGWW": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -600,7 +623,7 @@
         "language_faNYdn": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "eu"
           }
@@ -608,7 +631,7 @@
         "language_tRNz4U": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -630,7 +653,7 @@
         "language_8ejhiw": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": ""
           }
@@ -644,7 +667,7 @@
         "language_FR7Xr9": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -655,12 +678,20 @@
             "title": "Noorwegen"
           }
         },
+        "language_kVeyr9": {
+          "type": "language",
+          "settings": {
+            "label": "norsk",
+            "language_code": "no",
+            "region": "no"
+          }
+        },
         "language_7Wjiba": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "int"
+            "region": "no"
           }
         },
         "region_VgAzbU": {
@@ -672,7 +703,7 @@
         "language_GNq9pF": {
           "type": "language",
           "settings": {
-            "label": "Duits",
+            "label": "Deutsch",
             "language_code": "de",
             "region": "at"
           }
@@ -680,7 +711,7 @@
         "language_76EmNK": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "at"
           }
@@ -694,7 +725,7 @@
         "language_8n3bRT": {
           "type": "language",
           "settings": {
-            "label": "Pools",
+            "label": "Polski",
             "language_code": "pl",
             "region": "pl"
           }
@@ -702,7 +733,7 @@
         "language_B7ndxx": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "pl"
           }
@@ -713,10 +744,18 @@
             "title": "Portugal"
           }
         },
+        "language_rC9e7K": {
+          "type": "language",
+          "settings": {
+            "label": "português",
+            "language_code": "pt",
+            "region": "pt"
+          }
+        },
         "language_CEKfci": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "eu"
           }
@@ -727,12 +766,20 @@
             "title": "Roemenië"
           }
         },
+        "language_mNLyLG": {
+          "type": "language",
+          "settings": {
+            "label": "română",
+            "language_code": "ro",
+            "region": "ro"
+          }
+        },
         "language_FzWVEj": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "ro"
           }
         },
         "region_nHCeVC": {
@@ -744,7 +791,7 @@
         "language_BqVwMU": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -755,12 +802,20 @@
             "title": "Slovenië"
           }
         },
+        "language_KepkRB": {
+          "type": "language",
+          "settings": {
+            "label": "slovénščina",
+            "language_code": "sl",
+            "region": "si"
+          }
+        },
         "language_p34hyA": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "si"
           }
         },
         "region_HfzHyU": {
@@ -769,12 +824,20 @@
             "title": "Slowakije"
           }
         },
+        "language_3PtJp3": {
+          "type": "language",
+          "settings": {
+            "label": "slovenčina",
+            "language_code": "sk",
+            "region": "sk"
+          }
+        },
         "language_YrNe7i": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "sk"
           }
         },
         "region_PqmRdX": {
@@ -786,7 +849,7 @@
         "language_6zk7jQ": {
           "type": "language",
           "settings": {
-            "label": "Spaans",
+            "label": "Español",
             "language_code": "es",
             "region": "es"
           }
@@ -794,7 +857,7 @@
         "language_FjQDBp": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "es"
           }
@@ -805,12 +868,20 @@
             "title": "Tsjechië"
           }
         },
+        "language_wQiQmd": {
+          "type": "language",
+          "settings": {
+            "label": "čeština",
+            "language_code": "cs",
+            "region": "cz"
+          }
+        },
         "language_7YBYiX": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
-            "region": "eu"
+            "region": "cz"
           }
         },
         "region_3BqBne": {
@@ -822,7 +893,7 @@
         "language_L4NUdB": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "gb"
           }
@@ -836,7 +907,7 @@
         "language_PLPMdQ": {
           "type": "language",
           "settings": {
-            "label": "Zweeds",
+            "label": "Svenska",
             "language_code": "sv",
             "region": "se"
           }
@@ -844,7 +915,7 @@
         "language_4fxpC7": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "se"
           }
@@ -858,7 +929,7 @@
         "language_UtP3Fq": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "ch"
           }
@@ -866,7 +937,7 @@
         "language_bMFjc7": {
           "type": "language",
           "settings": {
-            "label": "Duits",
+            "label": "Deutsch",
             "language_code": "de",
             "region": "ch"
           }
@@ -874,7 +945,7 @@
         "language_HhzEz7": {
           "type": "language",
           "settings": {
-            "label": "Italiaans",
+            "label": "Italiano",
             "language_code": "it",
             "region": "ch"
           }
@@ -882,7 +953,7 @@
         "language_CPUNjf": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "ch"
           }
@@ -902,7 +973,7 @@
         "language_qHkDJL": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -910,7 +981,7 @@
         "language_WbANnP": {
           "type": "language",
           "settings": {
-            "label": "Frans",
+            "label": "Français",
             "language_code": "fr",
             "region": "int"
           }
@@ -924,7 +995,7 @@
         "language_HBbkJx": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -932,7 +1003,7 @@
         "language_HJkyaz": {
           "type": "language",
           "settings": {
-            "label": "Spaans",
+            "label": "Español",
             "language_code": "es",
             "region": "int"
           }
@@ -952,7 +1023,7 @@
         "language_Q8fwnT": {
           "type": "language",
           "settings": {
-            "label": "Spaans",
+            "label": "Español",
             "language_code": "es",
             "region": "int"
           }
@@ -960,7 +1031,7 @@
         "language_RhQtJW": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -971,10 +1042,18 @@
             "title": "Brazilië"
           }
         },
+        "language_rLwUzf": {
+          "type": "language",
+          "settings": {
+            "label": "português",
+            "language_code": "pt",
+            "region": "int"
+          }
+        },
         "language_9Xzw8t": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -988,7 +1067,7 @@
         "language_UYhdD4": {
           "type": "language",
           "settings": {
-            "label": "Spaans",
+            "label": "Español",
             "language_code": "es",
             "region": "int"
           }
@@ -996,7 +1075,7 @@
         "language_4tDAej": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1016,7 +1095,7 @@
         "language_KMqFMy": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1030,7 +1109,7 @@
         "language_PyQzLc": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1044,7 +1123,7 @@
         "language_QdmBcF": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1058,7 +1137,7 @@
         "language_xkAg9C": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1072,7 +1151,7 @@
         "language_8qJrhL": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1086,7 +1165,7 @@
         "language_4kaQKx": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1100,7 +1179,7 @@
         "language_3pQQxm": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1114,7 +1193,7 @@
         "language_YaQa6X": {
           "type": "language",
           "settings": {
-            "label": "Engels",
+            "label": "English",
             "language_code": "en",
             "region": "int"
           }
@@ -1144,6 +1223,7 @@
         "region_Gi3fKF",
         "language_pd9bQb",
         "region_yg4NQY",
+        "language_eCFz3V",
         "language_RUENLg",
         "region_F9if4H",
         "language_GCqjDt",
@@ -1151,6 +1231,7 @@
         "region_MUekxM",
         "language_4GYz68",
         "region_6i8MHM",
+        "language_Af9jMr",
         "language_xcimLn",
         "region_WEkqci",
         "language_4d3rTp",
@@ -1164,10 +1245,13 @@
         "region_DD3LEn",
         "language_GDHYdH",
         "region_jLWGhn",
+        "language_dEwYUP",
         "language_tRkUbj",
         "region_Qmxjb8",
+        "language_HPmxma",
         "language_iA498f",
         "region_4fE6jw",
+        "language_r39tVt",
         "language_d4GaQ7",
         "region_nVKTdm",
         "language_MNBkYP",
@@ -1184,6 +1268,7 @@
         "region_JJ9pWd",
         "language_FR7Xr9",
         "region_zHEbBX",
+        "language_kVeyr9",
         "language_7Wjiba",
         "region_VgAzbU",
         "language_GNq9pF",
@@ -1192,19 +1277,24 @@
         "language_8n3bRT",
         "language_B7ndxx",
         "region_E9MmB7",
+        "language_rC9e7K",
         "language_CEKfci",
         "region_izfU43",
+        "language_mNLyLG",
         "language_FzWVEj",
         "region_nHCeVC",
         "language_BqVwMU",
         "region_6mXMXP",
+        "language_KepkRB",
         "language_p34hyA",
         "region_HfzHyU",
+        "language_3PtJp3",
         "language_YrNe7i",
         "region_PqmRdX",
         "language_6zk7jQ",
         "language_FjQDBp",
         "region_ywmiNL",
+        "language_wQiQmd",
         "language_7YBYiX",
         "region_3BqBne",
         "language_L4NUdB",
@@ -1228,6 +1318,7 @@
         "language_Q8fwnT",
         "language_RhQtJW",
         "region_cVVKwn",
+        "language_rLwUzf",
         "language_9Xzw8t",
         "region_gqjiRY",
         "language_UYhdD4",
@@ -1280,10 +1371,7 @@
       "settings": {
         "show_view_cart": true,
         "disable_on_cart": true,
-        "show_vendor": false,
-        "show_recommended": false,
-        "max_recommended": 4,
-        "hide_out_of_stock": false
+        "show_vendor": false
       }
     },
     "cart-confirm": {
@@ -1324,6 +1412,36 @@
       ],
       "settings": {}
     },
+    "block_page_menu_GJpUfD": {
+      "type": "block-page-menu",
+      "name": "Mobile menu",
+      "settings": {
+        "primary_menu": "sale-menu",
+        "product_menu": "product-menu",
+        "secondary_menu": "tribe-menu",
+        "tertiary_menu": "extra-menu",
+        "show_product_thumbs": true
+      }
+    },
+    "block_cart_recommended_7AJJDh": {
+      "type": "block-cart-recommended",
+      "name": "Recommended drawer",
+      "settings": {
+        "heading": "",
+        "max_products": 4,
+        "hide_out_of_stock": true,
+        "card_layout": "horizontal",
+        "card_sizing": "smaller",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_rating": false,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_stock": false,
+        "show_delivery": false,
+        "quick_add": true
+      }
+    },
     "block_modal_share_naUyNL": {
       "type": "block-modal-share",
       "name": "Share modal",
@@ -1336,17 +1454,6 @@
         "show_email": true,
         "show_copy_link": true,
         "modal_id": "share-modal"
-      }
-    },
-    "block_page_menu_GJpUfD": {
-      "type": "block-page-menu",
-      "name": "Mobile menu",
-      "settings": {
-        "primary_menu": "sale-menu",
-        "product_menu": "product-menu",
-        "secondary_menu": "tribe-menu",
-        "tertiary_menu": "extra-menu",
-        "show_product_thumbs": true
       }
     },
     "block_embed_klaviyo_x89YJD": {
@@ -1380,8 +1487,9 @@
     "modal-region",
     "cart-preview",
     "cart-confirm",
-    "block_modal_share_naUyNL",
     "block_page_menu_GJpUfD",
+    "block_cart_recommended_7AJJDh",
+    "block_modal_share_naUyNL",
     "block_embed_klaviyo_x89YJD"
   ]
 }

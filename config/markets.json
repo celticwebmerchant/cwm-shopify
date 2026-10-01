@@ -53,6 +53,39 @@
     },
     "zwitserland": {
       "parent": "@default"
+    },
+    "noorwegen": {
+      "parent": "@default"
+    },
+    "finland": {
+      "parent": "@default"
+    },
+    "kroatie": {
+      "parent": "@default"
+    },
+    "tsjechie": {
+      "parent": "@default"
+    },
+    "roemenie": {
+      "parent": "@default"
+    },
+    "slovenie": {
+      "parent": "@default"
+    },
+    "slowakije": {
+      "parent": "@default"
+    },
+    "litouwen": {
+      "parent": "@default"
+    },
+    "letland": {
+      "parent": "@default"
+    },
+    "hongarije": {
+      "parent": "@default"
+    },
+    "portugal": {
+      "parent": "@default"
     }
   }
 }

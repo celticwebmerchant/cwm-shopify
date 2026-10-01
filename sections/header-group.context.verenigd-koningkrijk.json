@@ -33,15 +33,28 @@
           "settings": {
             "link": ""
           }
-        },
-        "usp-4": {
-          "settings": {
-            "text": "Dagelijks vanaf EU naar UK",
-            "link": "",
-            "icon": "star"
-          }
         }
       }
+    },
+    "block_header_callout_AGfLm9": {
+      "disabled": false,
+      "settings": {
+        "heading": "Battle of Hastings",
+        "subheading": "Only",
+        "show_countdown": true,
+        "countdown_end_date": "2026-10-10"
+      },
+      "blocks": {
+        "button_y9x84q": {
+          "settings": {
+            "text": "Shop reenactment gear",
+            "url": "shopify://collections/reenactment"
+          }
+        }
+      },
+      "block_order": [
+        "button_y9x84q"
+      ]
     }
   }
 }

@@ -16,14 +16,15 @@
     "block_marketing_cover_EyVVzr": {
       "settings": {
         "text": "",
-        "image": "shopify://shop_images/1-IE-Banner_Volva_Dali_Feb2026_3.jpg",
-        "focus_x": 0,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
@@ -60,6 +61,18 @@
       },
       "blocks": {}
     },
+    "block_marketing_products_bnYjLh": {
+      "settings": {
+        "heading": "New arrivals! / Earraí nua!"
+      },
+      "blocks": {}
+    },
+    "best-products": {
+      "settings": {
+        "collection": "viking-kleding"
+      },
+      "blocks": {}
+    },
     "block_marketing_grid_93tkDC": {
       "settings": {},
       "blocks": {
@@ -70,7 +83,9 @@
         },
         "banner_9A6wwJ": {
           "settings": {
-            "label": ""
+            "label": "",
+            "image": "shopify://shop_images/DSC04498_443c13b8-4da6-4607-862f-ec0d38490132.jpg",
+            "overlay": "light"
           }
         },
         "banner_nPEhgz": {

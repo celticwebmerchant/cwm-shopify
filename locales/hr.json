@@ -69,7 +69,7 @@
       "low_stock": "Dostupno",
       "low_stock_count": "{{ quantity }} dostupno",
       "backorder": "Dostupno po narudžbi",
-      "out_of_stock": "Nema na zalihama"
+      "out_of_stock": "Rasprodano! Obavijesti me"
     },
     "volume_pricing": {
       "title": "Popust na količinu",
@@ -212,7 +212,12 @@
       "total": "Ukupno"
     },
     "item_added": "Artikl je dodan u košaricu",
-    "quantity_error": "Možete dodati samo {{ quantity }} ovog artikla."
+    "quantity_error": "Možete dodati samo {{ quantity }} ovog artikla.",
+    "discount_code": "Kod za popust",
+    "discount_code_placeholder": "Unesite kôd",
+    "discount_code_empty": "Unesite kod za popust",
+    "apply": "Primijeni",
+    "remove_discount": "Ukloni popust"
   },
   "search": {
     "title": "Rezultati pretraživanja",
@@ -237,6 +242,9 @@
       "hours": "Sati",
       "minutes": "Minute",
       "seconds": "Sekunde"
+    },
+    "cart_confirm": {
+      "heading": "Dodano u košaricu"
     }
   },
   "newsletter": {

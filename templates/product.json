@@ -162,7 +162,7 @@
         "max_products": 8,
         "hide_out_of_stock": true,
         "display_mode": "slider",
-        "slider_navigation": false,
+        "slider_navigation": true,
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 2,
@@ -248,7 +248,7 @@
         "show_vendor": false,
         "show_badges": true,
         "quick_add": false,
-        "width": "is-align-wide",
+        "width": "is-align",
         "grid_columns": 4,
         "grid_columns_tablet": 3,
         "grid_columns_mobile": 2,
@@ -302,6 +302,36 @@
         "background_color": "#f8f8f8",
         "text_color": "#111111"
       }
+    },
+    "block_marketing_products_NTdfe4": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "altijd-nodig",
+        "heading": "Altijd nodig voor onderhoud",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_badges": false,
+        "show_rating": false,
+        "quick_add": true,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -311,6 +341,7 @@
     "17622440393afaba32",
     "product-discovery",
     "product-blog",
-    "block_product_reviews_keNkJP"
+    "block_product_reviews_keNkJP",
+    "block_marketing_products_NTdfe4"
   ]
 }

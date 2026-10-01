@@ -68,7 +68,7 @@
       "low_stock": "På lager",
       "low_stock_count": "Kun {{ quantity }}  tilbage på lager, køb hurtigt!",
       "backorder": "Kan leveres på bestilling",
-      "out_of_stock": "Udsolgt! Tilmeld dig og modtag 10% rabat"
+      "out_of_stock": "Udsolgt! Giv mig besked"
     },
     "volume_pricing": {
       "title": "Mængderabat",
@@ -242,6 +242,9 @@
       "hours": "Timer",
       "minutes": "Minutter",
       "seconds": "Sekunder"
+    },
+    "cart_confirm": {
+      "heading": "Tilføjet til kurven"
     }
   },
   "newsletter": {

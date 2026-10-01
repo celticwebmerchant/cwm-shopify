@@ -69,7 +69,7 @@
       "low_stock": "Em stock",
       "low_stock_count": "{{ quantity }} em stock",
       "backorder": "Disponível por encomenda",
-      "out_of_stock": "Esgotado"
+      "out_of_stock": "Esgotado! Avise-me"
     },
     "volume_pricing": {
       "title": "Preços por volume",
@@ -212,7 +212,12 @@
       "total": "Total"
     },
     "item_added": "Item adicionado ao carrinho",
-    "quantity_error": "Só pode adicionar {{ quantity }} deste item."
+    "quantity_error": "Só pode adicionar {{ quantity }} deste item.",
+    "discount_code": "Código de desconto",
+    "discount_code_placeholder": "Digite o código",
+    "discount_code_empty": "Insira um código de desconto",
+    "apply": "Aplicar",
+    "remove_discount": "Remover desconto"
   },
   "search": {
     "title": "Resultados da pesquisa",
@@ -237,6 +242,9 @@
       "hours": "Horas",
       "minutes": "Minutos",
       "seconds": "Segundos"
+    },
+    "cart_confirm": {
+      "heading": "Adicionado ao carrinho"
     }
   },
   "newsletter": {

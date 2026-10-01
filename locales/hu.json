@@ -69,7 +69,7 @@
       "low_stock": "Raktáron",
       "low_stock_count": "{{ quantity }} raktáron",
       "backorder": "Megrendelhető",
-      "out_of_stock": "Nincs készleten"
+      "out_of_stock": "Elfogyott! Értesíts"
     },
     "volume_pricing": {
       "title": "Mennyiségi kedvezmény",
@@ -212,7 +212,12 @@
       "total": "Összesen"
     },
     "item_added": "Termék hozzáadva a kosárhoz",
-    "quantity_error": "Ebből a termékből csak {{ quantity }} darabot adhatsz hozzá."
+    "quantity_error": "Ebből a termékből csak {{ quantity }} darabot adhatsz hozzá.",
+    "discount_code": "Kedvezménykód",
+    "discount_code_placeholder": "Írja be a kódot",
+    "discount_code_empty": "Adjon meg egy kedvezménykódot",
+    "apply": "Jelentkezés",
+    "remove_discount": "Kedvezmény eltávolítása"
   },
   "search": {
     "title": "Keresési eredmények",
@@ -237,6 +242,9 @@
       "hours": "Óra",
       "minutes": "Perc",
       "seconds": "Másodperc"
+    },
+    "cart_confirm": {
+      "heading": "Kosárba helyezve"
     }
   },
   "newsletter": {

@@ -14,16 +14,16 @@
   "parent": "header-group.json",
   "sections": {
     "block_header_callout_AGfLm9": {
-      "disabled": true,
+      "disabled": false,
       "settings": {
-        "heading": "Tuscany Medieval Festival",
+        "heading": "Tuscany Medieval Festival a Monteriggioni",
         "subheading": "Ancora",
-        "countdown_end_date": "2026-05-08"
+        "countdown_end_date": "2026-10-02"
       },
       "blocks": {
         "button_y9x84q": {
           "settings": {
-            "text": "Alla collezione abbigliamento medievale",
+            "text": "Acquista abbigliamento medievale",
             "url": "shopify://collections/middeleeuwse-kleding"
           }
         }

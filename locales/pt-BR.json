@@ -237,6 +237,9 @@
       "hours": "Horas",
       "minutes": "Minutos",
       "seconds": "Segundos"
+    },
+    "cart_confirm": {
+      "heading": "Adicionado ao carrinho"
     }
   },
   "newsletter": {

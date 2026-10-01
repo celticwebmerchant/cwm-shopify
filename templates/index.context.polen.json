@@ -15,14 +15,15 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/PL_Banner_Bourgondische_Ridder_PL_Feb2026_1.jpg",
-        "focus_x": 80,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
@@ -36,6 +37,12 @@
           }
         }
       }
+    },
+    "best-products": {
+      "settings": {
+        "collection": "viking-kleding"
+      },
+      "blocks": {}
     },
     "block_marketing_media_text_mEgbKY": {
       "settings": {},

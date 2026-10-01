@@ -40,12 +40,12 @@
         "button_text": "Inloggen",
         "width": "is-align",
         "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
         "background_color": "#0f1f38",
         "text_color": "#ffffff",
         "button_background_color": "",
-        "button_text_color": "",
-        "anchor": "",
-        "custom_class": ""
+        "button_text_color": ""
       }
     },
     "block_marketing_articles_nDUabL": {
@@ -66,9 +66,14 @@
         "heading": "Actieve challenges",
         "subheading": "",
         "text_align": "center",
+        "display_mode": "grid",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "card_layout": "vertical",
         "show_image": true,
-        "image_ratio": "landscape",
+        "image_ratio": "portrait",
         "show_blog_title": true,
         "show_date": false,
         "show_excerpt": true,
@@ -76,23 +81,18 @@
         "articles_per_blog": 4,
         "max_articles": 12,
         "random_mode": false,
+        "anchor": "",
+        "custom_class": "",
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.5,
         "padding_block": 3,
-        "display_mode": "grid",
-        "slider_navigation": true,
-        "slider_pagination": false,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
         "background_color": "",
         "text_color": "",
         "card_background_color": "",
-        "card_text_color": "",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": ""
       }
     }
   },

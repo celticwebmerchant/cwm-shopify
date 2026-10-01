@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "italie"
+  },
+  "sections": {
+    "footer-usps": {
+      "blocks": {
+        "usp-1": {
+          "settings": {
+            "text": "Gratis verzending boven € 75"
+          }
+        }
+      }
+    }
+  }
+}

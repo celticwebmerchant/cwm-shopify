@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-d5eba46f5239a2f7c9d34c7838db1222": null,
+        "header-9d383ad177bb22a291a43b842c99ae00": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-251c1b339448fa40f94b5930f62f88ae": null,
+        "header-01e5de7819665194cc75a9ec15aa2faa": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-2bebbf5f5ac8bb3d98ef4ee21dfad5d3": null,
+        "header-3ff7fcce1fc034346525bf08bb42feb0": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-f2d5d0fa89954a183b148c56dd34ad58": null,
+        "header-590e1bf05a10435ae6bedc0ff29b77ce": null,
         "background_color": "",
         "text_color": "",
-        "header-2baf0d5c710a48b11d8782cc08fcbe6b": null,
-        "paragraph-0500e96f545d7f5d1cc97487e2b79c21": null
+        "header-2996b6ca4ca38f25d6686b478fb0ddaa": null,
+        "paragraph-8d68ff4d67c3cc7db8cda55b4e6a857e": null
       },
       "blocks": {
         "testimonial_zyBY8": {
@@ -88,23 +88,35 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/1-IT-ES_Banner_Tijdperk_Dec2025_a7e84fcf-ad5f-492c-be65-b7e6dde04298.webp",
-        "focus_x": 85,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
     },
     "best-products": {
       "settings": {
-        "collection": "middeleeuwse-kleding"
+        "collection": "kleding"
       },
       "blocks": {}
+    },
+    "block_marketing_grid_93tkDC": {
+      "settings": {},
+      "blocks": {
+        "banner_nPEhgz": {
+          "settings": {
+            "image": "shopify://shop_images/DSC04498_443c13b8-4da6-4607-862f-ec0d38490132.jpg",
+            "overlay": "light"
+          }
+        }
+      }
     },
     "block_marketing_media_text_iDhD8j": {
       "settings": {},

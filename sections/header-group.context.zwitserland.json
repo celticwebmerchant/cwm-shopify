@@ -13,12 +13,19 @@
   },
   "parent": "header-group.json",
   "sections": {
-    "header-top": {
-      "settings": {},
+    "block_header_callout_AGfLm9": {
+      "disabled": true,
+      "settings": {
+        "heading": "Fête Médiévale d’Estavayer-le-Lac",
+        "subheading": "Encore",
+        "countdown_end_date": "2026-09-18",
+        "countdown_message": ""
+      },
       "blocks": {
-        "usp-4": {
+        "button_y9x84q": {
           "settings": {
-            "icon": "check-mark"
+            "text": "Vêtements médiévaux",
+            "url": "shopify://collections/middeleeuwse-kleding"
           }
         }
       }

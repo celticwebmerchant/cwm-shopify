@@ -1,0 +1,317 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-form": {
+      "type": "block-product-form",
+      "blocks": {
+        "heading_RX6EDQ": {
+          "type": "heading",
+          "settings": {
+            "show_vendor": false
+          }
+        },
+        "rating_CMxGnn": {
+          "type": "rating",
+          "settings": {
+            "scroll_target": "#reviews",
+            "show_count": true,
+            "size": 16,
+            "show_brand": true
+          }
+        },
+        "variant_picker_FRRdBk": {
+          "type": "variant_picker",
+          "settings": {
+            "threshold_dropdown": 10
+          }
+        },
+        "price_zBizDd": {
+          "type": "price",
+          "settings": {}
+        },
+        "notify_wLD7WF": {
+          "type": "notify",
+          "name": "Back in stock subscription",
+          "settings": {}
+        },
+        "wishlist_plus_wishlist_pdp_button_HWNNfm": {
+          "type": "shopify://apps/wishlist-plus/blocks/wishlist-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "settings": {
+            "swym_atw_button_icon": "heart",
+            "swym_atw_icon_thickness": 1.7,
+            "swym_atw_display_btn_text": true,
+            "swym_button_position": "default",
+            "swym_atw_button_vertical_offset": 0,
+            "swym_atw_full_width": true,
+            "swym_atw_button_alignment": "center",
+            "swym_add_to_wishlist_color": "#ffffff",
+            "swym_added_to_wishlist_color": "#ffffff",
+            "swym_button_text_color": "#0f1f38",
+            "swym_atw_border_color": "#0f1f38",
+            "swym_atw_border_thickness": 1,
+            "swym_atw_button_border_radius": 0,
+            "swym_enable_hover_customization": false,
+            "swym_hover_add_to_wishlist_color": "#0f1f38",
+            "swym_hover_added_to_wishlist_color": "#0f1f38",
+            "swym_hover_button_text_color": "#ffffff",
+            "swym_hover_atw_border_color": "#000000",
+            "swym_hover_atw_border_thickness": 2,
+            "swym_hover_atw_button_border_radius": 0,
+            "swym_custom_css": ".atw-button .atw-button-text {font-weight: normal}"
+          }
+        },
+        "trust_usps_dMe7Mk": {
+          "type": "trust_usps",
+          "settings": {
+            "item_1_text": "Klarna: Koop nu, Betaal later!",
+            "item_1_url": "",
+            "item_2_text": "Niet goed? Geld terug binnen 2 werkdagen",
+            "item_2_url": "",
+            "item_3_text": "Levenslange garantie op onze producten",
+            "item_3_url": "",
+            "item_4_text": "",
+            "item_4_url": ""
+          }
+        },
+        "trust_payments_Lra8px": {
+          "type": "trust_payments",
+          "settings": {
+            "method_1": "ideal",
+            "method_2": "visa",
+            "method_3": "mastercard",
+            "method_4": "google_pay",
+            "method_5": "apple_pay",
+            "method_6": "klarna",
+            "method_7": "visa",
+            "method_8": "none",
+            "method_9": "none",
+            "method_10": "none"
+          }
+        },
+        "trust_identity_CTE9dt": {
+          "type": "trust_identity",
+          "disabled": true,
+          "settings": {
+            "tag": "compliance:leeftijdsverificatie",
+            "message": "Dit artikel wordt alleen verkocht aan 18+. We versturen je bestelling na ID verificatie."
+          }
+        }
+      },
+      "block_order": [
+        "heading_RX6EDQ",
+        "rating_CMxGnn",
+        "variant_picker_FRRdBk",
+        "price_zBizDd",
+        "notify_wLD7WF",
+        "wishlist_plus_wishlist_pdp_button_HWNNfm",
+        "trust_usps_dMe7Mk",
+        "trust_payments_Lra8px",
+        "trust_identity_CTE9dt"
+      ],
+      "settings": {
+        "product": "",
+        "width": "is-align-wide",
+        "block_gap": 0.8,
+        "background_color": "#ffffff",
+        "text_color": "#111111"
+      }
+    },
+    "block_product_recommended_afRGwD": {
+      "type": "block-product-recommended",
+      "name": "Recommended products",
+      "settings": {
+        "heading": "",
+        "max_products": 8,
+        "hide_out_of_stock": true,
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 2,
+        "card_layout": "horizontal",
+        "card_sizing": "smaller",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_rating": false,
+        "show_vendor": false,
+        "show_badges": false,
+        "show_stock": false,
+        "show_delivery": false,
+        "quick_add": true,
+        "width": "is-align",
+        "grid_columns": 4,
+        "grid_columns_tablet": 2,
+        "grid_columns_mobile": 2,
+        "padding_block": 2,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111"
+      }
+    },
+    "product-information": {
+      "type": "block-product-information",
+      "settings": {
+        "description_heading": "",
+        "details_heading": "",
+        "sizechart_heading": "",
+        "read_more_text": "",
+        "read_less_text": "",
+        "width": "is-align",
+        "padding_block": 4,
+        "anchor": "product-information",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111"
+      }
+    },
+    "17622440393afaba32": {
+      "type": "apps",
+      "blocks": {
+        "shop_the_look_shop_the_look_awRawz": {
+          "type": "shopify://apps/shop-the-look/blocks/shop-the-look/36dde5f1-9b4e-442e-b806-01ba76d9468d",
+          "settings": {
+            "use_theme_settings": false,
+            "heading_size": 14,
+            "heading_color": "",
+            "title_size": 14,
+            "title_color": "",
+            "price_size": 14,
+            "price_color": "",
+            "button_color": "#000000",
+            "button_hover_color": "",
+            "button_height": 30,
+            "button_padding_x": 10,
+            "button_border_radius": 0
+          }
+        }
+      },
+      "block_order": [
+        "shop_the_look_shop_the_look_awRawz"
+      ],
+      "settings": {
+        "width": "is-align-wide",
+        "padding_block": 0,
+        "background_color": "#ffffff",
+        "text_color": "#111111",
+        "anchor": "",
+        "custom_class": ""
+      }
+    },
+    "product-discovery": {
+      "type": "block-product-discovery",
+      "settings": {
+        "heading": "",
+        "limit": 4,
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_rating": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "quick_add": false,
+        "width": "is-align",
+        "grid_columns": 4,
+        "grid_columns_tablet": 3,
+        "grid_columns_mobile": 2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111"
+      }
+    },
+    "product-blog": {
+      "type": "block-product-blogs",
+      "settings": {
+        "heading": "",
+        "read_more_text": "",
+        "width": "is-align",
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111",
+        "knowledge_background_color": "#0f1f38",
+        "knowledge_text_color": "#ffffff",
+        "tips_background_color": "",
+        "tips_text_color": ""
+      }
+    },
+    "block_product_reviews_keNkJP": {
+      "type": "block-product-reviews",
+      "blocks": {
+        "doran_product_reviews_product_widget_acKtE8": {
+          "type": "shopify://apps/doran-product-reviews/blocks/product-widget/ca90c3ee-bc39-4c25-90cd-fdf0519c6d11",
+          "settings": {
+            "topPadding": 36,
+            "bottomPadding": 36,
+            "is_hide_if_no_reviews": false,
+            "is_use_shopify_font": false,
+            "shopify_font": "sans_serif_n4"
+          }
+        }
+      },
+      "block_order": [
+        "doran_product_reviews_product_widget_acKtE8"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "width": "is-align",
+        "padding_block": 4,
+        "anchor": "reviews",
+        "custom_class": "",
+        "background_color": "#f8f8f8",
+        "text_color": "#111111"
+      }
+    },
+    "block_marketing_products_NTdfe4": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "altijd-nodig",
+        "heading": "Altijd nodig voor onderhoud",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_badges": false,
+        "show_rating": false,
+        "quick_add": true,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "product-form",
+    "block_product_recommended_afRGwD",
+    "product-information",
+    "17622440393afaba32",
+    "product-discovery",
+    "product-blog",
+    "block_product_reviews_keNkJP",
+    "block_marketing_products_NTdfe4"
+  ]
+}

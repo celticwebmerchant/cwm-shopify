@@ -15,6 +15,62 @@
         "banner_bHKjVb": {
           "type": "banner",
           "settings": {
+            "label": "Ruud Van Erve",
+            "heading": "Een laatmiddeleeuwse geleerde aan het woord",
+            "text": "",
+            "link_url": "shopify://blogs/community/historische-reconstructie-vijftiende-eeuwse-jurist-en-geleerde",
+            "image": "shopify://shop_images/vijftiende-eeuwse-jurist.jpg",
+            "focus_x": 50,
+            "focus_y": 0,
+            "overlay": "medium",
+            "design": "green"
+          }
+        },
+        "banner_r94iHf": {
+          "type": "banner",
+          "settings": {
+            "label": "Peter Tobin",
+            "heading": "Ierse Historische Reenactor en Gallowglass-Krijger",
+            "text": "",
+            "link_url": "shopify://blogs/community/peter-tobin-ierse-gallowglass-reenactor",
+            "image": "shopify://shop_images/Petertobin1.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "green"
+          }
+        },
+        "banner_eygpKA": {
+          "type": "banner",
+          "settings": {
+            "label": "Mishka",
+            "heading": "Een koopman met dromen van avontuur",
+            "text": "",
+            "link_url": "shopify://blogs/community/mishka-larp-koopman-zwaardvechter",
+            "image": "shopify://shop_images/Mishka1.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "green"
+          }
+        },
+        "banner_MwRNjG": {
+          "type": "banner",
+          "settings": {
+            "label": "That1Jonah",
+            "heading": "Echte verbinding – waarom deze community voor mij voelt als thuiskomen",
+            "text": "",
+            "link_url": "shopify://blogs/community/echte-verbinding-waarom-deze-community-voor-mij-voelt-als-thuiskomen",
+            "image": "shopify://shop_images/wikker_man_castlefest.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        },
+        "banner_WmP4MQ": {
+          "type": "banner",
+          "settings": {
             "label": "Irma",
             "heading": "Zeg ja. Doe gek. En beland in een kasteel",
             "text": "<p><br/><br/></p>",
@@ -38,47 +94,36 @@
             "focus_y": 50,
             "design": "blue"
           }
-        },
-        "banner_MwRNjG": {
-          "type": "banner",
-          "settings": {
-            "label": "That1Jonah",
-            "heading": "Echte verbinding – waarom deze community voor mij voelt als thuiskomen",
-            "text": "",
-            "link_url": "shopify://blogs/community/echte-verbinding-waarom-deze-community-voor-mij-voelt-als-thuiskomen",
-            "image": "shopify://shop_images/wikker_man_castlefest.jpg",
-            "focus_x": 50,
-            "focus_y": 50,
-            "overlay": "medium",
-            "design": "blue"
-          }
         }
       },
       "block_order": [
         "banner_bHKjVb",
-        "video_fcFD3q",
-        "banner_MwRNjG"
+        "banner_r94iHf",
+        "banner_eygpKA",
+        "banner_MwRNjG",
+        "banner_WmP4MQ",
+        "video_fcFD3q"
       ],
       "name": "Grid",
       "settings": {
         "heading": "",
         "subtext": "",
         "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "width": "is-align-full",
         "columns_desktop": 3,
         "columns_tablet": 2,
         "columns_mobile": 1,
         "grid_gap": 0.5,
         "padding_block": 0,
-        "display_mode": "slider",
-        "slider_navigation": true,
-        "slider_pagination": true,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
-        "background_color": "#ffffff",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "#ffffff",
+        "text_color": "#111111"
       }
     },
     "block_marketing_media_text_GNLxrK": {
@@ -87,15 +132,15 @@
         "image_text_wJnyA3": {
           "type": "image_text",
           "settings": {
-            "image": "shopify://shop_images/dsc03g212.jpg",
-            "image_height": "portrait",
-            "focus_x": 50,
-            "focus_y": 50,
             "heading": "Waarom fantasy festivals meer zijn dan verkleedpartijen",
             "text": "<p>het verhaal van Nienke</p>",
             "cta_text": "",
             "cta_url": "shopify://blogs/community/waarom-fantasyfestivals-meer-zijn-dan-verkleedpartijen",
             "cta_style": "primary",
+            "image": "shopify://shop_images/dsc03g212.jpg",
+            "image_height": "portrait",
+            "focus_x": 50,
+            "focus_y": 50,
             "image_position": "left",
             "image_width": "40",
             "vertical_alignment": "center",
@@ -116,10 +161,10 @@
         "text_align": "center",
         "width": "is-align",
         "padding_block": 0,
-        "background_color": "#0f1f38",
-        "text_color": "#ffffff",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
       }
     },
     "main": {
@@ -136,6 +181,8 @@
         "show_excerpt": true,
         "show_cta": true,
         "articles_per_page": 24,
+        "anchor": "",
+        "custom_class": "",
         "width": "alignwide",
         "padding_block": 3,
         "columns_desktop": 4,
@@ -145,9 +192,7 @@
         "background_color": "#f8f8f8",
         "text_color": "#111111",
         "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": "#111111"
       }
     },
     "block_marketing_articles_f49cgt": {
@@ -168,6 +213,11 @@
         "heading": "Ontdek onze challenges",
         "subheading": "Doe mee aan onze community challenges en verdien loyalty punten terwijl je jouw passie deelt. Laat zien hoe jij Celtic Webmerchant beleeft en maak kans op een exclusieve feature op deze pagina.",
         "text_align": "center",
+        "display_mode": "grid",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "card_layout": "vertical",
         "show_image": true,
         "image_ratio": "portrait",
@@ -178,23 +228,18 @@
         "articles_per_blog": 5,
         "max_articles": 4,
         "random_mode": true,
+        "anchor": "",
+        "custom_class": "",
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.5,
         "padding_block": 3,
-        "display_mode": "grid",
-        "slider_navigation": true,
-        "slider_pagination": false,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
         "background_color": "",
         "text_color": "",
         "card_background_color": "",
-        "card_text_color": "",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": ""
       }
     },
     "block_marketing_media_text_mKTUmk": {
@@ -204,15 +249,15 @@
           "type": "image_text",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/DSC04494_86b4ca50-b410-4966-a81f-0846612522c7.jpg",
-            "image_height": "adapt",
-            "focus_x": 50,
-            "focus_y": 50,
             "heading": "Een kijkje achter de schermen bij Celtic WebMerchant",
             "text": "<p>Wat begon als een passie voor Keltische cultuur, groeide uit tot Celtic Webmerchant zoals je het vandaag kent. In dit exclusieve video-interview nemen de founders je mee terug naar het begin en vertellen zij hoe het avontuur ooit is gestart.</p><p>Ontdek waar onze liefde voor geschiedenis, ambacht en community vandaan komt en wat ons elke dag motiveert om verder te bouwen aan Celtic Webmerchant. </p>",
             "cta_text": "Bekijk de video",
             "cta_url": "",
             "cta_style": "primary",
+            "image": "shopify://shop_images/DSC04494_86b4ca50-b410-4966-a81f-0846612522c7.jpg",
+            "image_height": "adapt",
+            "focus_x": 50,
+            "focus_y": 50,
             "image_position": "left",
             "image_width": "40",
             "vertical_alignment": "center",
@@ -233,10 +278,10 @@
         "text_align": "center",
         "width": "is-align",
         "padding_block": 0,
-        "background_color": "#243406",
-        "text_color": "#ffffff",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "#243406",
+        "text_color": "#ffffff"
       }
     }
   },

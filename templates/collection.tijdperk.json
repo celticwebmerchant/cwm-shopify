@@ -49,26 +49,26 @@
       "type": "block-collection-banners",
       "settings": {
         "menu": "sale-menu",
+        "display_mode": "slider",
         "card_layout": "horizontal",
         "image_ratio": "portrait",
         "show_product_count": false,
         "card_text_align": "left",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "width": "is-align-full",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 1,
         "grid_gap": 0.2,
         "padding_block": 2,
-        "display_mode": "slider",
-        "slider_navigation": true,
-        "slider_pagination": true,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
+        "anchor": "",
         "background_color": "#ffffff",
         "text_color": "",
         "card_background_color": "#0f1f38",
-        "card_text_color": "#ffffff",
-        "anchor": ""
+        "card_text_color": "#ffffff"
       }
     },
     "block_marketing_grid_Jr7BnT": {
@@ -132,6 +132,7 @@
         },
         "banner_LWbhkz": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "label": "",
             "heading": "Introductie: de Scythen",
@@ -159,6 +160,7 @@
         },
         "banner_nfEM3n": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "label": "",
             "heading": "Introductie: De Jastorfcultuur",
@@ -172,6 +174,7 @@
         },
         "banner_XiQwPp": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "label": "",
             "heading": "Introductie: De Etrusken",
@@ -229,21 +232,21 @@
         "heading": "Een wereld vol geschiedenis",
         "subtext": "",
         "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 2,
         "columns_mobile": 1,
         "grid_gap": 0.5,
         "padding_block": 0.5,
-        "display_mode": "slider",
-        "slider_navigation": true,
-        "slider_pagination": true,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
-        "background_color": "",
-        "text_color": "",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     },
     "block_marketing_products_B3XeQr": {
@@ -261,19 +264,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_products_G7LHr6": {
@@ -291,19 +294,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_products_bBrzEF": {
@@ -321,19 +324,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_grid_GKRdWm": {
@@ -467,21 +470,21 @@
         "heading": "Een wereld vol geschiedenis",
         "subtext": "",
         "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 2,
         "columns_mobile": 1,
         "grid_gap": 0.5,
         "padding_block": 0.5,
-        "display_mode": "slider",
-        "slider_navigation": true,
-        "slider_pagination": true,
-        "slider_autoplay": false,
-        "slider_autoplay_speed": 5,
-        "background_color": "",
-        "text_color": "",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     },
     "block_marketing_products_WwewUd": {
@@ -499,19 +502,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_products_tyWcRG": {
@@ -529,19 +532,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_products_mEpeQx": {
@@ -559,19 +562,19 @@
         "quick_add": false,
         "max_products": 12,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "#0f1f38",
-        "text_color": "#ffffff",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
       }
     },
     "block_marketing_products_Tm6AHz": {
@@ -589,19 +592,19 @@
         "quick_add": false,
         "max_products": 12,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "",
-        "text_color": "",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     },
     "block_marketing_products_8kPhbf": {
@@ -619,19 +622,19 @@
         "quick_add": false,
         "max_products": 8,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "rgba(0,0,0,0)",
-        "text_color": "#111111",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
       }
     },
     "block_marketing_products_Xcpk97": {
@@ -649,19 +652,19 @@
         "quick_add": false,
         "max_products": 12,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "#0f1f38",
-        "text_color": "#ffffff",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
       }
     },
     "block_marketing_products_zKw7DC": {
@@ -679,19 +682,19 @@
         "quick_add": false,
         "max_products": 12,
         "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "",
-        "text_color": "",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     }
   },

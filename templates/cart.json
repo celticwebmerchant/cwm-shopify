@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "block_cart_freeship_P6TxLQ": {
+      "type": "block-cart-freeship",
+      "disabled": true,
+      "name": "Free shipping bar",
+      "settings": {
+        "remaining_text": "Nog {amount} te gaan voor gratis verzending",
+        "reached_text": "Je komt in aanmerking voor gratis verzending",
+        "explaining": "",
+        "freeship_eur": 75,
+        "basis": "total",
+        "show_when_empty": false,
+        "width": "is-align-full",
+        "padding_block": 1,
+        "section_background": "",
+        "section_text": "",
+        "card_background": "",
+        "bar_color": "",
+        "track_color": "",
+        "reached_color": "",
+        "anchor": "",
+        "custom_class": ""
+      }
+    },
     "cart-order": {
       "type": "block-cart-order",
       "blocks": {
@@ -47,9 +70,7 @@
         "heading": "",
         "show_continue_shopping": true,
         "show_vendor": false,
-        "show_recommended": false,
-        "max_recommended": 2,
-        "hide_out_of_stock": true,
+        "show_recommended": true,
         "width": "is-align-full",
         "padding_block": 2,
         "background_color": "#f8f8f8",
@@ -64,11 +85,11 @@
         "heading": "Altijd nodig!",
         "card_layout": "vertical",
         "image_ratio": "portrait",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_badges": true,
-        "show_rating": true,
-        "quick_add": false,
+        "show_rating": false,
+        "quick_add": true,
         "max_products": 12,
         "only_available": true,
         "visible_rows": 1,
@@ -84,6 +105,39 @@
         "custom_class": "",
         "background_color": "",
         "text_color": ""
+      }
+    },
+    "17785991655b863a82": {
+      "type": "apps",
+      "blocks": {
+        "shop_the_look_shop_the_look_7HtpHf": {
+          "type": "shopify://apps/shop-the-look/blocks/shop-the-look/36dde5f1-9b4e-442e-b806-01ba76d9468d",
+          "settings": {
+            "use_theme_settings": true,
+            "heading_size": 14,
+            "heading_color": "",
+            "title_size": 14,
+            "title_color": "",
+            "price_size": 14,
+            "price_color": "",
+            "button_color": "#000000",
+            "button_hover_color": "",
+            "button_height": 30,
+            "button_padding_x": 10,
+            "button_border_radius": 0
+          }
+        }
+      },
+      "block_order": [
+        "shop_the_look_shop_the_look_7HtpHf"
+      ],
+      "settings": {
+        "width": "is-align",
+        "padding_block": 0,
+        "background_color": "#f4f8fe",
+        "text_color": "#111111",
+        "anchor": "",
+        "custom_class": ""
       }
     },
     "block_marketing_media_text_tQPwtw": {
@@ -129,71 +183,13 @@
         "background_color": "",
         "text_color": ""
       }
-    },
-    "1777973870e7ac98db": {
-      "type": "apps",
-      "blocks": {
-        "shop_the_look_shop_the_look_static_FQrCmL": {
-          "type": "shopify://apps/shop-the-look/blocks/shop-the-look-static/36dde5f1-9b4e-442e-b806-01ba76d9468d",
-          "settings": {
-            "product": "middeleeuwse-rok-melisende-rood",
-            "template": "inpage",
-            "title": "Shop the look",
-            "customCss": ""
-          }
-        }
-      },
-      "block_order": [
-        "shop_the_look_shop_the_look_static_FQrCmL"
-      ],
-      "settings": {
-        "width": "is-align",
-        "padding_block": 0,
-        "background_color": "#ffffff",
-        "text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
-      }
-    },
-    "17779933598b5852ea": {
-      "type": "apps",
-      "blocks": {
-        "shop_the_look_shop_the_look_gFTHDK": {
-          "type": "shopify://apps/shop-the-look/blocks/shop-the-look/36dde5f1-9b4e-442e-b806-01ba76d9468d",
-          "settings": {
-            "use_theme_settings": true,
-            "heading_size": 14,
-            "heading_color": "",
-            "title_size": 14,
-            "title_color": "",
-            "price_size": 14,
-            "price_color": "",
-            "button_color": "#000000",
-            "button_hover_color": "",
-            "button_height": 30,
-            "button_padding_x": 10,
-            "button_border_radius": 0
-          }
-        }
-      },
-      "block_order": [
-        "shop_the_look_shop_the_look_gFTHDK"
-      ],
-      "settings": {
-        "width": "is-align",
-        "padding_block": 0,
-        "background_color": "#ffffff",
-        "text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
-      }
     }
   },
   "order": [
+    "block_cart_freeship_P6TxLQ",
     "cart-order",
     "block_marketing_products_QKemGE",
-    "block_marketing_media_text_tQPwtw",
-    "1777973870e7ac98db",
-    "17779933598b5852ea"
+    "17785991655b863a82",
+    "block_marketing_media_text_tQPwtw"
   ]
 }

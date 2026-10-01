@@ -41,12 +41,42 @@
         "share"
       ],
       "settings": {
+        "custom_class": "",
         "width": "is-align-small",
         "show_sidebar": false,
         "background_color": "#f8f8f8",
         "article_background": "#ffffff",
-        "text_color": "",
-        "custom_class": ""
+        "text_color": ""
+      }
+    },
+    "block_marketing_products_qN4FUi": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "altijd-nodig",
+        "heading": "",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_badges": false,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 2,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     },
     "block_marketing_cover_qcQaMG": {
@@ -92,6 +122,8 @@
         "heading": "",
         "subheading": "",
         "text_align": "center",
+        "max_articles": 4,
+        "show_fallback": true,
         "card_layout": "vertical",
         "show_image": true,
         "image_ratio": "portrait",
@@ -99,20 +131,18 @@
         "show_date": true,
         "show_excerpt": true,
         "show_cta": true,
-        "max_articles": 4,
-        "show_fallback": true,
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 2,
         "columns_mobile": 2,
         "grid_gap": 0.5,
         "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
         "background_color": "#f8f8f8",
         "text_color": "#111111",
         "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": "#111111"
       }
     },
     "block_marketing_cover_xGxRnh": {
@@ -154,6 +184,7 @@
   },
   "order": [
     "main",
+    "block_marketing_products_qN4FUi",
     "block_marketing_cover_qcQaMG",
     "block_marketing_articles_related_UVqLh9",
     "block_marketing_cover_xGxRnh"

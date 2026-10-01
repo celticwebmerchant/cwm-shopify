@@ -12,12 +12,17 @@
     "logo": "shopify://shop_images/logo-white.png",
     "favicon": "shopify://shop_images/CWM_Favicon_2_a5e67390-f3d6-4b46-9083-89e3db9a57b7.png",
     "seo_description": "Een kostuum of zwaard kopen doe je bij Celtic! Beste winkel voor LARP, reenactment & Cosplay. Gratis verzending boven 75 euro – grootste assortiment van Europa",
-    "cart_type": "preview",
+    "cart_type": "confirmation",
     "price_show_compare": true,
     "price_show_tax_notice": true,
+    "price_hide_zero_cents": true,
     "social_facebook_link": "https://www.facebook.com/celticwebmerchant/",
     "social_instagram_link": "https://www.instagram.com/celticwebmerchantbv/",
     "social_tiktok_link": "https://www.tiktok.com/@celticwebmerchant",
+    "t_timing_days": "Dagen",
+    "t_timing_hours": "Uren",
+    "t_timing_minutes": "Minuten",
+    "t_timing_seconds": "Secondes",
     "content_for_index": [],
     "blocks": {
       "3243910605452009494": {
@@ -110,6 +115,11 @@
           "storefront_layout_drawer_position": "left",
           "storefront_layout_as_section_page": ""
         }
+      },
+      "14421132865913305101": {
+        "type": "shopify://apps/ab-google-analytics/blocks/analytics/2fc433fa-79f5-4d1d-bab2-983d42099561",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

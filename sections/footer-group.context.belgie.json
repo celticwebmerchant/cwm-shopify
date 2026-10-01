@@ -18,6 +18,10 @@
         "payment_enable": true
       },
       "blocks": {}
+    },
+    "footer-service": {
+      "settings": {},
+      "blocks": {}
     }
   }
 }

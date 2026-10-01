@@ -15,17 +15,21 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/AT_Banner_Bourgondische_Ridder_AT_Feb2026_3.jpg",
-        "focus_x": 100,
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
-      }
+      },
+      "block_order": [
+        "button_nXdQMm"
+      ]
     },
     "block_marketing_grid_eKTaaA": {
       "settings": {},

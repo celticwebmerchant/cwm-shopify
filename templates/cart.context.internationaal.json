@@ -13,10 +13,10 @@
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-ea33077778bb4bbe70d28ffff2155a69": null,
+        "header-6193f9b3e82a56c54dca188e43a33e34": null,
         "collection": "altijd-nodig",
         "heading": "Always needed",
-        "header-28c59a0f3ad4fa9aea012ab0a774cfdb": null,
+        "header-338d1fef858b3126688ad71bb209c676": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -29,7 +29,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-b18da740ce8551c0dfd22ee742e73fca": null,
+        "header-b1a2b73dd6acec9c94143ff53fdb9f57": null,
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-e6fd133775795bd19a0f470d52389605": null,
+        "header-7b73b14fe844962006026cc76c7dd5f8": null,
         "background_color": "",
         "text_color": "",
-        "header-f6cbf9a55a43af029a551f705c6f2ed2": null,
-        "paragraph-69387245c4652fc2d96f03e97c5decff": null
+        "header-dd648d193639f0cd3a61221f4efde1ba": null,
+        "paragraph-c88c04bb3a3f46b747fd99a557293870": null
       },
       "blocks": {},
       "block_order": [],
@@ -52,11 +52,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-3187308781e554b58eb6227da9c3b461": null,
+        "header-b4a0c0c26f479ad69d09ffaf6fb9c4e5": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-9520954d029f8ef5b88dd4a31e42ebaf": null,
+        "header-eefef09b14da982ab28ae8ba992d7edc": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -64,7 +64,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-723d3d37b7c81e5e69175272f70c74bc": null,
+        "header-ad6122d5c3040b06e1c769b4ad7b6c53": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -73,11 +73,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-ef34c28fd37f66184e5cf87c7ba45265": null,
+        "header-af79fd71c032f87c35ff91989431dc10": null,
         "background_color": "",
         "text_color": "",
-        "header-b40b0bf0d3d166b7cd99995461cfdda8": null,
-        "paragraph-5ede2f8e3d6dff91fd0128ae111c24fa": null
+        "header-f11c756fb8e3a3a2f643621232592ad6": null,
+        "paragraph-1ac134126b7a8d93dcf8c3721fd0384f": null
       },
       "blocks": {
         "testimonial_86UxR": {
@@ -140,6 +140,7 @@
   "order": [
     "cart-order",
     "block_marketing_products_QGfPt",
+    "17785991655b863a82",
     "block_marketing_testimonials_abtWy",
     "block_marketing_media_text_tQPwtw"
   ]

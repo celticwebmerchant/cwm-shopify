@@ -15,14 +15,25 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/1-DK-SEBanner_Viking_Eleanora_Feb2026_3_304afbc0-dad1-4124-90d3-31f0375b8db5.jpg",
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
         "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
+          }
+        }
+      }
+    },
+    "block_marketing_grid_93tkDC": {
+      "settings": {},
+      "blocks": {
+        "banner_nKKc7L": {
+          "settings": {
+            "image": "shopify://shop_images/DSC08164_99d386c5-fc3d-45d3-be2a-8de455620c17.jpg"
           }
         }
       }

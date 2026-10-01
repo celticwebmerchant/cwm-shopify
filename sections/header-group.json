@@ -40,22 +40,12 @@
             "title": "17.000 items op voorraad",
             "icon": "cart"
           }
-        },
-        "usp-4": {
-          "type": "usp",
-          "settings": {
-            "text": "Laagste prijs garantie",
-            "link": "",
-            "title": "Laagste prijs garantie",
-            "icon": "price-tag"
-          }
         }
       },
       "block_order": [
         "usp-1",
         "usp-2",
-        "usp-3",
-        "usp-4"
+        "usp-3"
       ],
       "settings": {
         "show_region_selector": true,
@@ -113,10 +103,10 @@
       "disabled": true,
       "name": "Callout bar",
       "settings": {
-        "heading": "Bijna Elfia Vorden!",
+        "heading": "Midzomer Fair Archeon",
         "subheading": "Nog",
         "show_countdown": true,
-        "countdown_end_date": "2026-05-09",
+        "countdown_end_date": "2026-07-04",
         "countdown_message": "Oeps",
         "width": "alignfull",
         "text_alignment": "center",

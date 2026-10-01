@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "denemarken"
+  },
+  "parent": "header-group.json",
+  "sections": {
+    "block_header_callout_AGfLm9": {
+      "disabled": true,
+      "settings": {
+        "heading": "Fantasy Festival Esbjerg",
+        "subheading": "Kun",
+        "countdown_end_date": "2026-09-19"
+      },
+      "blocks": {
+        "button_y9x84q": {
+          "settings": {
+            "text": "Shop fantasytøj",
+            "url": "shopify://collections/fantasy-larp-kleding"
+          }
+        }
+      }
+    }
+  }
+}

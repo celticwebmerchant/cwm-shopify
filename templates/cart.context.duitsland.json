@@ -13,20 +13,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-3acf096d0a3466afed9b88ac0c50ed0d": null,
+        "header-5ec60b5078fccf2f459e7112e644ed05": null,
         "heading": "",
         "subheading": "",
-        "header-f6e226ce7667483dc6ce54821a829593": null,
+        "header-d07abfcea56c4134fcf625ec6e16cb07": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-5ba2163794746aa8a885e5b4daa221c2": null,
+        "header-f2c32199390e423ef3e4cfb9ea12bcb9": null,
         "background_color": "",
         "text_color": "",
-        "header-be3f0c89a299918451fd41a70edcb30c": null,
-        "paragraph-fac88f69355f1d2d352e3d0705e1b636": null
+        "header-3d8b66cad39266b31d2baa4993b6ec4b": null,
+        "paragraph-18183fae536a81313c792bb5d33a7ff3": null
       },
       "blocks": {
         "banner_qNWAc": {
@@ -50,10 +50,10 @@
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-f37cc7b0ed260dc77e13d71c026b2e8b": null,
+        "header-ab3d1c4df6cd667776183dd43ef115fa": null,
         "collection": "altijd-nodig",
         "heading": "",
-        "header-ef82d6b6f3b9ae307f72dbd1f5233adc": null,
+        "header-3d4c87dca5c985604122a1a4229aab3f": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -66,7 +66,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-e9f938a1a13a59e6099e8542fb99e30d": null,
+        "header-7a69716cec0ac568c0f7385421df0c9b": null,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -75,25 +75,69 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-930529b77349e2fe0703fac83820dba5": null,
+        "header-3308b9dbaa9a690c17e37ebe054a8225": null,
         "background_color": "",
         "text_color": "",
-        "header-60ea9bdccbed3d06012778f4455633cc": null,
-        "paragraph-56bf3a387b8cd637868485d4d2b6a03c": null
+        "header-b013689d7d78e31658110f632046a2e2": null,
+        "paragraph-7bb10aa16966f7f6b70bceae092ba6e5": null
       },
       "blocks": {},
       "block_order": [],
       "name": "Products"
     },
+    "177936379014f20dfe": {
+      "type": "apps",
+      "disabled": false,
+      "settings": {
+        "header-9df147b06e3ef7ef0e69805ca7a89ebb": null,
+        "width": "is-align",
+        "padding_block": 0,
+        "header-cd20216d624b411236441fef50bc980b": null,
+        "background_color": "#f4f8fe",
+        "text_color": "#111111",
+        "header-98bc2012b60ab3c7303d7c6d72dfae5a": null,
+        "anchor": "",
+        "custom_class": ""
+      },
+      "blocks": {
+        "shop_the_look_shop_the_look_CmJcA": {
+          "type": "shopify://apps/shop-the-look/blocks/shop-the-look/36dde5f1-9b4e-442e-b806-01ba76d9468d",
+          "disabled": false,
+          "settings": {
+            "use_theme_settings": true,
+            "header-b71b6e97169e236b442cea90ecbdb8bc": null,
+            "heading_size": 14,
+            "heading_color": "",
+            "header-3b0af0c54f4413cf861601f0d55d4fc9": null,
+            "title_size": 14,
+            "title_color": "",
+            "header-950df0434f6505027166f1e1e1709231": null,
+            "price_size": 14,
+            "price_color": "",
+            "header-b8be8129b6808725c80445d65f7a8d7b": null,
+            "button_color": "#000000",
+            "button_hover_color": "",
+            "button_height": 30,
+            "button_padding_x": 10,
+            "button_border_radius": 0,
+            "header-fb06b3caada383c2753e88040b98e291": null,
+            "paragraph-19f74d0362ec7c733857012e12d06513": null
+          }
+        }
+      },
+      "block_order": [
+        "shop_the_look_shop_the_look_CmJcA"
+      ]
+    },
     "block_marketing_testimonials_DzcLe": {
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-fc10df3dc8800b0650102be489c74c29": null,
+        "header-2c0383a8d10774cf9de80456acdf3fc3": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-baef6ab7f510e6c5c18546f01c73934b": null,
+        "header-811e49f9174270441cb3c56ef25eb1bf": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -101,7 +145,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-692ce6d8b03be0c7853709895ce90ed9": null,
+        "header-c84fd931b6af133c5ad3f7bd6e99eafe": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -110,11 +154,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-13421140f93714b09c038c7efcfaabd5": null,
+        "header-5f5e3a606ea58cffbd7ed2e10de0c0bb": null,
         "background_color": "",
         "text_color": "",
-        "header-7d1afcac2f0d8e32b73084cfc24017db": null,
-        "paragraph-d2c52f76f4901a6bda7f56d48e13d6f6": null
+        "header-6a253f0dfdac7d95e35c8ff0d03de444": null,
+        "paragraph-b349a28136c956b3e3e2934c3c65338e": null
       },
       "blocks": {
         "testimonial_zwcHN": {
@@ -163,6 +207,18 @@
         "show_continue_shopping": false
       },
       "blocks": {}
+    },
+    "17785991655b863a82": {
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "block_cart_freeship_P6TxLQ": {
+      "disabled": true,
+      "settings": {
+        "freeship_eur": 80
+      },
+      "blocks": {}
     }
   },
   "context": {
@@ -170,9 +226,12 @@
   },
   "parent": "cart.json",
   "order": [
+    "block_cart_freeship_P6TxLQ",
     "block_marketing_banners_Xrqmw",
     "cart-order",
+    "17785991655b863a82",
     "block_marketing_products_X8JB7",
+    "177936379014f20dfe",
     "block_marketing_testimonials_DzcLe",
     "block_marketing_media_text_tQPwtw"
   ]

@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "cart": {
+    "discount_code": "Rabattkode",
+    "discount_code_placeholder": "Skriv inn koden",
+    "discount_code_empty": "Skriv inn en rabattkode",
+    "apply": "Søke",
+    "remove_discount": "Fjern rabatt"
+  },
+  "product": {
+    "inventory": {
+      "out_of_stock": "Utsolgt! Gi meg beskjed"
+    }
+  },
+  "marketing": {
+    "cart_confirm": {
+      "heading": "Lagt i handlekurven"
+    }
+  }
+}

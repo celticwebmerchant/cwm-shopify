@@ -15,16 +15,17 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "subheading": "Maak je uitrusting compleet",
-        "heading": "Shop op tijdperk",
+        "subheading": "",
+        "heading": "Ontdek de nieuwe collectie!",
         "text": "",
-        "image": "shopify://shop_images/1-BE-Banner_Bourgondische_Ridder_Feb2026_3_7921c4ad-3a87-406e-b533-bd488bd16637.webp",
-        "focus_x": 100
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }
@@ -34,8 +35,7 @@
       "blocks": {
         "banner_PH6hGr": {
           "settings": {
-            "heading": "Tribe Sale: enkel voor leden",
-            "text": "<p>Enkel voor leden</p>"
+            "heading": "Tribe Sale: enkel voor leden"
           }
         },
         "banner_9aKPPM": {

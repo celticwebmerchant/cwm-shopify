@@ -69,7 +69,7 @@
       "low_stock": "En stock",
       "low_stock_count": "Plus que {{ quantity }} en stock, achetez vite !",
       "backorder": "Disponible sur commande",
-      "out_of_stock": "Épuisé ! Inscrivez-vous et recevez 10 % de réduction"
+      "out_of_stock": "Épuisé ! Prévenez-moi"
     },
     "volume_pricing": {
       "title": "Remise sur quantité",
@@ -232,7 +232,10 @@
     "recent": "Recherches récentes"
   },
   "marketing": {
-    "products_heading": "Nos derniers produits"
+    "products_heading": "Nos derniers produits",
+    "cart_confirm": {
+      "heading": "Ajouté au panier"
+    }
   },
   "newsletter": {
     "heading": "Newsletter",

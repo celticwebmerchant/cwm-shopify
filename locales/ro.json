@@ -69,7 +69,7 @@
       "low_stock": "În stoc",
       "low_stock_count": "{{ quantity }} în stoc",
       "backorder": "Disponibil la comandă",
-      "out_of_stock": "Nu există în stoc"
+      "out_of_stock": "Stoc epuizat! Anunță-mă"
     },
     "volume_pricing": {
       "title": "Prețuri pentru cantități mari",
@@ -212,7 +212,12 @@
       "total": "Total"
     },
     "item_added": "Articol adăugat în coș",
-    "quantity_error": "Puteți adăuga doar {{ quantity }} din acest articol."
+    "quantity_error": "Puteți adăuga doar {{ quantity }} din acest articol.",
+    "discount_code": "Cod de reducere",
+    "discount_code_placeholder": "Introduceți codul",
+    "discount_code_empty": "Introduceți un cod de reducere",
+    "apply": "Aplică",
+    "remove_discount": "Eliminați reducerea"
   },
   "search": {
     "title": "Rezultatele căutării",
@@ -237,6 +242,9 @@
       "hours": "Ore",
       "minutes": "Minute",
       "seconds": "Secunde"
+    },
+    "cart_confirm": {
+      "heading": "Adăugat în coș"
     }
   },
   "newsletter": {

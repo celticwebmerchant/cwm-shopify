@@ -17,20 +17,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-96eaab5d62a999313147c3306473641f": null,
+        "header-03984aefdee96876ab290b5793e32b69": null,
         "heading": "",
         "subheading": "",
-        "header-eab30d5a5608a08c61d3038e97d3e22e": null,
+        "header-9da8064c8790755b676cde17f47b7cb2": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-a11132308298ce372d8996b99d8fe7ae": null,
+        "header-61deb7a2c19b352ebdea6a1816fd2dbd": null,
         "background_color": "",
         "text_color": "",
-        "header-70dbaebb7714fa923a465bf61f99898f": null,
-        "paragraph-cc0a6a1ba4702a3a59ba728e133d8871": null
+        "header-d7e2c2bd657acddb17d83179882cecec": null,
+        "paragraph-3b345304df086d5fea622e16b26cbcef": null
       },
       "blocks": {
         "banner_PJHLU": {
@@ -54,11 +54,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-1c7d7f19892264b325d2cfdd4bb77536": null,
+        "header-266be0c940d603161c0738a7d50e1599": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-355135ed798374cabff2c00bb33e7c76": null,
+        "header-95b649baa0d17abee17e50d7e5e97acc": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -66,7 +66,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-96a76008bfe580aaedac2a2444a6096c": null,
+        "header-75ddc01cd0fd5dea53440d7e0f23f9e7": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -75,11 +75,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-ce9416731f96cba217627d6ff6bee65f": null,
+        "header-1f04163d81c2fd01913778f06aa8e693": null,
         "background_color": "",
         "text_color": "",
-        "header-b2d232eb7c5273d0432bb4f8946c47e3": null,
-        "paragraph-c07515a58b65f8e502fa52bc2fe1e371": null
+        "header-61167a4218a125b11d8b915621e27be5": null,
+        "paragraph-ccc5f6f126591cbfda3b32fc582f1a60": null
       },
       "blocks": {
         "testimonial_im39y": {
@@ -122,12 +122,21 @@
         "testimonial_nqkFP"
       ],
       "name": "Testimonials"
+    },
+    "block_cart_freeship_P6TxLQ": {
+      "settings": {
+        "freeship_pln": 30000,
+        "freeship_dkk": 800
+      },
+      "blocks": {}
     }
   },
   "order": [
+    "block_cart_freeship_P6TxLQ",
     "block_marketing_banners_Fcify",
     "cart-order",
     "block_marketing_products_QKemGE",
+    "17785991655b863a82",
     "block_marketing_testimonials_jMRUC",
     "block_marketing_media_text_tQPwtw"
   ]

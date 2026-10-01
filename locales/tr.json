@@ -237,6 +237,9 @@
       "hours": "Saat",
       "minutes": "Dakika",
       "seconds": "Saniye"
+    },
+    "cart_confirm": {
+      "heading": "Sepete eklendi"
     }
   },
   "newsletter": {

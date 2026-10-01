@@ -69,7 +69,7 @@
       "low_stock": "Varastossa",
       "low_stock_count": "{{ quantity }} varastossa",
       "backorder": "Saatavilla jälkitoimituksena",
-      "out_of_stock": "Loppunut varastosta"
+      "out_of_stock": "Loppuunmyyty! Ilmoita minulle"
     },
     "volume_pricing": {
       "title": "Määräalennus",
@@ -212,7 +212,12 @@
       "total": "Yhteensä"
     },
     "item_added": "Tuote lisätty ostoskoriin",
-    "quantity_error": "Voit lisätä vain {{ quantity }} tätä tuotetta."
+    "quantity_error": "Voit lisätä vain {{ quantity }} tätä tuotetta.",
+    "discount_code": "Alennuskoodi",
+    "discount_code_placeholder": "Syötä koodi",
+    "discount_code_empty": "Syötä alennuskoodi",
+    "apply": "Käytä",
+    "remove_discount": "Poista alennus"
   },
   "search": {
     "title": "Hakutulokset",
@@ -237,6 +242,9 @@
       "hours": "Tuntia",
       "minutes": "Minuuttia",
       "seconds": "Sekuntia"
+    },
+    "cart_confirm": {
+      "heading": "Lisätty ostoskoriin"
     }
   },
   "newsletter": {

@@ -1,0 +1,349 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "block_marketing_cover_cNKBer": {
+      "type": "block-marketing-cover",
+      "blocks": {
+        "button_iJPbzj": {
+          "type": "button",
+          "settings": {
+            "text": "",
+            "url": "",
+            "style": "primary",
+            "button_color": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_iJPbzj"
+      ],
+      "name": "Cover",
+      "settings": {
+        "subheading": "",
+        "heading": "Beloon jezelf met de beste vakantiegeld deals!",
+        "text": "",
+        "image": "shopify://shop_images/Banner_Vakantiegeld1_Mei2026.webp",
+        "focus_x": 85,
+        "focus_y": 20,
+        "overlay": "light",
+        "loading": "eager",
+        "fetchpriority": "auto",
+        "width": "is-align-full",
+        "height": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "anchor": "",
+        "custom_class": ""
+      }
+    },
+    "block_marketing_collections_MHL8ze": {
+      "type": "block-marketing-collections",
+      "blocks": {
+        "collection_3m4DKX": {
+          "type": "collection",
+          "settings": {
+            "collection": "vakantiegeld-deals-zwaarden-wapens"
+          }
+        },
+        "collection_irNdG3": {
+          "type": "collection",
+          "settings": {
+            "collection": "vakantiegeld-deals-luxe-kleding"
+          }
+        },
+        "collection_JR4678": {
+          "type": "collection",
+          "settings": {
+            "collection": "vakantiegeld-deals-pantser"
+          }
+        },
+        "collection_FfRxYG": {
+          "type": "collection",
+          "settings": {
+            "collection": "vakantiegeld-deals-tenten"
+          }
+        },
+        "collection_QcbEez": {
+          "type": "collection",
+          "settings": {
+            "collection": "vakantiegeld"
+          }
+        }
+      },
+      "block_order": [
+        "collection_3m4DKX",
+        "collection_irNdG3",
+        "collection_JR4678",
+        "collection_FfRxYG",
+        "collection_QcbEez"
+      ],
+      "name": "Collections",
+      "settings": {
+        "heading": "Je extraatje is binnen, tijd voor die langverwachte upgrade",
+        "subheading": "",
+        "text_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": true,
+        "slider_autoplay_speed": 5,
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_product_count": false,
+        "card_text_align": "left",
+        "show_all_collections": false,
+        "sort": "alphabetical",
+        "hide_empty_collections": true,
+        "hide_all_collection": true,
+        "anchor": "",
+        "custom_class": "",
+        "width": "is-align-small",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "background_color": "",
+        "text_color": "",
+        "card_background_color": "",
+        "card_text_color": ""
+      }
+    },
+    "collection-banners": {
+      "type": "block-collection-banners",
+      "settings": {
+        "menu": "sale-menu",
+        "display_mode": "slider",
+        "card_layout": "horizontal",
+        "image_ratio": "portrait",
+        "show_product_count": false,
+        "card_text_align": "left",
+        "slider_navigation": true,
+        "slider_pagination": true,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-full",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 1,
+        "grid_gap": 0.2,
+        "padding_block": 2,
+        "anchor": "",
+        "background_color": "#ffffff",
+        "text_color": "",
+        "card_background_color": "#0f1f38",
+        "card_text_color": "#ffffff"
+      }
+    },
+    "block_marketing_products_WwewUd": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "vakantiegeld-deals-zwaarden-wapens",
+        "heading": "Gun jezelf dat meesterwerk!",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
+      }
+    },
+    "block_marketing_products_B3XeQr": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "vakantiegeld-deals-pantser",
+        "heading": "Grijp je kans en maak je pantser compleet!",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
+      }
+    },
+    "block_marketing_products_G7LHr6": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "vakantiegeld-deals-luxe-kleding",
+        "heading": "Investeer in luxe kleding",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_products_bBrzEF": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "vakantiegeld-deals-tenten",
+        "heading": "Alle tenten voor scherpe prijzen",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
+      }
+    },
+    "block_marketing_media_text_XBAX4c": {
+      "type": "block-marketing-media-text",
+      "blocks": {
+        "image_text_EyhXQ7": {
+          "type": "image_text",
+          "settings": {
+            "heading": "Festivals en evenementen Kalender 2026",
+            "text": "",
+            "cta_text": "Lees meer",
+            "cta_url": "shopify://blogs/community/middeleeuwse-fantasy-festivals-kalender-2026",
+            "cta_style": "primary",
+            "image": "shopify://shop_images/6896072040_sachsenzelt_saxon_tent_zelt_mittelalter_wikingerzelt_2x4m_naturJkxNkpQdorqF0.jpg",
+            "image_height": "square",
+            "focus_x": 50,
+            "focus_y": 50,
+            "image_position": "left",
+            "image_width": "40",
+            "vertical_alignment": "center",
+            "background_color": "#243406",
+            "text_color": "#ffffff",
+            "button_color": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_text_EyhXQ7"
+      ],
+      "name": "Media & text",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "text_align": "center",
+        "width": "is-align-wide",
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "block_marketing_products_LxVXRX": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "vakantiegeld",
+        "heading": "Alle deals",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 0,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#111111"
+      }
+    }
+  },
+  "order": [
+    "block_marketing_cover_cNKBer",
+    "block_marketing_collections_MHL8ze",
+    "collection-banners",
+    "block_marketing_products_WwewUd",
+    "block_marketing_products_B3XeQr",
+    "block_marketing_products_G7LHr6",
+    "block_marketing_products_bBrzEF",
+    "block_marketing_media_text_XBAX4c",
+    "block_marketing_products_LxVXRX"
+  ]
+}

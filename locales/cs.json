@@ -69,7 +69,7 @@
       "low_stock": "Skladem",
       "low_stock_count": "{{ quantity }} skladem",
       "backorder": "Dostupné na objednávku",
-      "out_of_stock": "Není skladem"
+      "out_of_stock": "Vyprodáno! Dejte mi vědět"
     },
     "volume_pricing": {
       "title": "Množstevní slevy",
@@ -212,7 +212,12 @@
       "total": "Celkem"
     },
     "item_added": "Položka byla přidána do košíku",
-    "quantity_error": "Můžete přidat pouze {{ quantity }} kusů této položky."
+    "quantity_error": "Můžete přidat pouze {{ quantity }} kusů této položky.",
+    "discount_code": "Slevový kód",
+    "discount_code_placeholder": "Zadejte kód",
+    "discount_code_empty": "Zadejte slevový kód",
+    "apply": "Použít",
+    "remove_discount": "Odebrat slevu"
   },
   "search": {
     "title": "Výsledky hledání",
@@ -237,6 +242,9 @@
       "hours": "Hodin",
       "minutes": "Minut",
       "seconds": "Sekund"
+    },
+    "cart_confirm": {
+      "heading": "Přidáno do košíku"
     }
   },
   "newsletter": {

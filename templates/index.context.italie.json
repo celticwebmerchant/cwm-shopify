@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-293e658733f2ee87ef9da1954c517c60": null,
+        "header-41f634e5e38a4735af83ba8da5d5d42c": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-a56d2a154cc3967a27655302b4f6e32a": null,
+        "header-0ce459aff7634326afee9089df43dcb0": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-fa29e684261cf97cbb21939922e424e5": null,
+        "header-c7f1e742becd73f2de76b8c3ca8b55c2": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-77eca43e091ed5ea8ff1619d798a5be7": null,
+        "header-6254f7f32fa289d16a58856d2a912e1b": null,
         "background_color": "",
         "text_color": "",
-        "header-b530845b45a61032e256378282e47e94": null,
-        "paragraph-670478bd7941a9fed5e5f2dc8e59018c": null
+        "header-dd29f6e6b6d80cadaf4daf4347245dd2": null,
+        "paragraph-85e9b028e4311d999aaa413a199d5324": null
       },
       "blocks": {
         "testimonial_Qx8AW": {
@@ -88,14 +88,16 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/1-IT-ES_Banner_Tijdperk_Dec2025_87755b7a-8b4c-4d05-b87c-c480296565e4.webp",
-        "focus_x": 85,
+        "heading": "vakantiegeld",
+        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "focus_x": 50,
+        "focus_y": 50,
         "overlay": "medium"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/tijdperk"
+            "url": "shopify://collections/nieuw-1"
           }
         }
       }

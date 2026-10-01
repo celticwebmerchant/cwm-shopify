@@ -237,6 +237,9 @@
       "hours": "Giờ",
       "minutes": "Phút",
       "seconds": "Giây"
+    },
+    "cart_confirm": {
+      "heading": "Đã thêm vào giỏ hàng"
     }
   },
   "newsletter": {

@@ -237,6 +237,9 @@
       "hours": "Часов",
       "minutes": "Минут",
       "seconds": "Секунд"
+    },
+    "cart_confirm": {
+      "heading": "Добавлено в корзину"
     }
   },
   "newsletter": {

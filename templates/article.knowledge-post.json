@@ -41,12 +41,12 @@
         "share"
       ],
       "settings": {
+        "custom_class": "",
         "width": "is-align-small",
         "show_sidebar": false,
         "background_color": "#f8f8f8",
         "article_background": "#ffffff",
-        "text_color": "",
-        "custom_class": ""
+        "text_color": ""
       }
     },
     "block_marketing_products_WNAKH3": {
@@ -60,23 +60,23 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_badges": true,
-        "show_rating": true,
+        "show_rating": false,
         "quick_add": false,
         "max_products": 4,
         "only_available": true,
-        "width": "is-align-wide",
+        "visible_rows": 3,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "grid_gap": 0.2,
-        "visible_rows": 1,
-        "show_more_text": "",
-        "show_less_text": "",
         "padding_block": 3,
-        "background_color": "",
-        "text_color": "",
         "anchor": "",
-        "custom_class": ""
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
       }
     },
     "block_marketing_cover_qcQaMG": {
@@ -122,6 +122,8 @@
         "heading": "",
         "subheading": "",
         "text_align": "center",
+        "max_articles": 4,
+        "show_fallback": true,
         "card_layout": "vertical",
         "show_image": true,
         "image_ratio": "portrait",
@@ -129,20 +131,18 @@
         "show_date": true,
         "show_excerpt": true,
         "show_cta": true,
-        "max_articles": 4,
-        "show_fallback": true,
         "width": "is-align-wide",
         "columns_desktop": 4,
         "columns_tablet": 2,
         "columns_mobile": 2,
         "grid_gap": 0.5,
         "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
         "background_color": "#f8f8f8",
         "text_color": "#111111",
         "card_background_color": "#ffffff",
-        "card_text_color": "#111111",
-        "anchor": "",
-        "custom_class": ""
+        "card_text_color": "#111111"
       }
     },
     "block_marketing_cover_xGxRnh": {

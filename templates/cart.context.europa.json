@@ -13,20 +13,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-addc5fbea3ad9a273f35c38160fcd80e": null,
+        "header-12e40b15e2d66829e7b0192696ad7295": null,
         "heading": "",
         "subheading": "g",
-        "header-112f82b2e3b2bb62656a0b36d58ebbf0": null,
+        "header-490cabe62bb917a97c76aca2f5434885": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-ffa86971928546f9dd682c9e79f1cf76": null,
+        "header-0b493add52ea62c8f68902521102567a": null,
         "background_color": "",
         "text_color": "",
-        "header-d7774ec5d09df2b9b1527af2f163a2cd": null,
-        "paragraph-7971886fc600df05c42e706eccdf567a": null
+        "header-37ad5120f58d9c6a99f7a2da945ccc66": null,
+        "paragraph-a758aaec5ca16bed3392c5158331f0cc": null
       },
       "blocks": {
         "banner_nPcdi": {
@@ -50,10 +50,10 @@
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-298e7c6b48bbd27bc41d05fa751aff85": null,
+        "header-6658d5389fa9f1b2ff0eae99a6f6a630": null,
         "collection": "altijd-nodig",
         "heading": "Always needed",
-        "header-ffd153e1b45ed9c625aeb3e4923a0ae4": null,
+        "header-ea4d7c437ab55a2dfbf446be5ee0fe14": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -66,7 +66,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-521c9752de084d060b2a7f528a7ee9fb": null,
+        "header-4531204bb8b2b7f48ba150dc69d930a1": null,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -75,11 +75,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-e2fc3754eb33a39d0010638f6be594a9": null,
+        "header-03b6c31d0939de2be06dc77cdd067192": null,
         "background_color": "",
         "text_color": "",
-        "header-72c44766996d5810aab75be01536f6bc": null,
-        "paragraph-f6afb650bb55e3c88a0460ad43ce6a5c": null
+        "header-5331d039bcd41379839781c89ff10110": null,
+        "paragraph-bc05b520049f51fcf5a2839a6545beab": null
       },
       "blocks": {},
       "block_order": [],
@@ -89,11 +89,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-1a06ea3995c33c152ba7aea959c391bf": null,
+        "header-29c2d4d64b1bb3062d212c85edf27f28": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-6125a5c853da3652a9361286f4c4595a": null,
+        "header-658441f753734f36590e053731c4ada4": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -101,7 +101,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-b1deeebba640e8221b467a6d96309c38": null,
+        "header-8bb397689ba802c2998b5da2c125477c": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -110,11 +110,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-c08ba0565475f72885e19c503adcd8e5": null,
+        "header-cdf23dd33377753b17b4150c818f29f0": null,
         "background_color": "",
         "text_color": "",
-        "header-cee584841049ca22c23df67a39998241": null,
-        "paragraph-3c66a39e8c787b9d2cfd3d3eeb69ad26": null
+        "header-8f004b569100ef0045fedbff1f4c6273": null,
+        "paragraph-98bd4ae40d5daf7015fc635832133f22": null
       },
       "blocks": {
         "testimonial_ffPBk": {
@@ -173,6 +173,7 @@
     "block_marketing_banners_qU3DG",
     "cart-order",
     "block_marketing_products_UALKY",
+    "17785991655b863a82",
     "block_marketing_testimonials_nXCwa",
     "block_marketing_media_text_tQPwtw"
   ]

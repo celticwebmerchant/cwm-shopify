@@ -69,7 +69,7 @@
       "low_stock": "I lager",
       "low_stock_count": "Endast {{ quantity }} kvar i lager, köp snabbt!",
       "backorder": "Finns att beställa",
-      "out_of_stock": "Slutsåld! Anmäl dig och få 10% rabatt"
+      "out_of_stock": "Slutsåld! Meddela mig"
     },
     "volume_pricing": {
       "title": "Volymrabatt",
@@ -232,7 +232,10 @@
     "recent": "Senaste sökningar"
   },
   "marketing": {
-    "products_heading": "Våra senaste produkter"
+    "products_heading": "Våra senaste produkter",
+    "cart_confirm": {
+      "heading": "Tillagd i varukorgen"
+    }
   },
   "newsletter": {
     "heading": "Nyhetsbrev",

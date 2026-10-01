@@ -69,7 +69,7 @@
       "low_stock": "Na zalogi",
       "low_stock_count": "{{ quantity }} na zalogi",
       "backorder": "Na voljo po naročilu",
-      "out_of_stock": "Ni na zalogi"
+      "out_of_stock": "Razprodano! Obvesti me"
     },
     "volume_pricing": {
       "title": "Količinski popusti",
@@ -212,7 +212,12 @@
       "total": "Skupaj"
     },
     "item_added": "Izdelek dodan v košarico",
-    "quantity_error": "Dodate lahko le {{ quantity }} tega izdelka."
+    "quantity_error": "Dodate lahko le {{ quantity }} tega izdelka.",
+    "discount_code": "Koda za popust",
+    "discount_code_placeholder": "Vnesite kodo",
+    "discount_code_empty": "Vnesite kodo za popust",
+    "apply": "Uporabi",
+    "remove_discount": "Odstrani popust"
   },
   "search": {
     "title": "Rezultati iskanja",
@@ -237,6 +242,9 @@
       "hours": "Ure",
       "minutes": "Minute",
       "seconds": "Sekunde"
+    },
+    "cart_confirm": {
+      "heading": "Dodano v košarico"
     }
   },
   "newsletter": {

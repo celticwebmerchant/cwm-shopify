@@ -17,20 +17,20 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-cf39736ddd4fd9da512c52804295b12b": null,
+        "header-414c534a9b85842bd9e49d9b66f7e31a": null,
         "heading": "",
         "subheading": "",
-        "header-83570289723f3e1fb5c63aacf9c7712a": null,
+        "header-9d83f3ca328291077b13e122c47e4f50": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-d0918b9f78409b5e597d9880825898c1": null,
+        "header-b0b756d4dc502a0016a4c0ed4c1c129d": null,
         "background_color": "",
         "text_color": "",
-        "header-363ac82c1ac7c21ce4640fd7c7bbd5a4": null,
-        "paragraph-a69c082691134b0fe7a53c21785b47cc": null
+        "header-14ce03b5ac77c1f05ab53303f98c3847": null,
+        "paragraph-c38d31189b0f1a70952e07f3cd4e679d": null
       },
       "blocks": {
         "banner_6xwMg": {
@@ -55,6 +55,7 @@
     "block_marketing_banners_FzfRq",
     "cart-order",
     "block_marketing_products_QKemGE",
+    "17785991655b863a82",
     "block_marketing_media_text_tQPwtw"
   ]
 }

@@ -70,7 +70,7 @@
       "low_stock": "Op voorraad",
       "low_stock_count": "Nog {{ quantity }} op voorraad, koop snel!",
       "backorder": "Leverbaar op bestelling",
-      "out_of_stock": "Uitverkocht! Meld je aan en ontvang 10% korting"
+      "out_of_stock": "Uitverkocht! Houd me op de hoogte"
     },
     "volume_pricing": {
       "title": "Staffelkorting",

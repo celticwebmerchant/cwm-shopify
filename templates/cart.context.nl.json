@@ -13,47 +13,33 @@
       "type": "block-marketing-banners",
       "disabled": false,
       "settings": {
-        "header-5bf8be3a4409a2750b614f34bc856727": null,
+        "header-26e21673997389442b965a0ce4323d8c": null,
         "heading": "",
         "subheading": "",
-        "header-ee5511c5533f374c051137122ad6dcf0": null,
+        "header-83cee583ff69806be82dfa18ed64a55f": null,
         "anchor": "",
         "custom_class": "",
         "width": "is-align-wide",
         "layout": "stacked",
         "padding_block": 3,
-        "header-e02b6bc3df567ad87671a830776139af": null,
+        "header-e68e3a224ae92e829803d5cb3b5b24bb": null,
         "background_color": "",
         "text_color": "",
-        "header-22462cf686e2d0ab53926893b24d9fec": null,
-        "paragraph-cfe49420e632e0423649abfc7df10112": null
+        "header-100c2f43eb718de201ebaf1d974e16e1": null,
+        "paragraph-403cabf7962ccaa38e2f1fa9579c618b": null
       },
-      "blocks": {
-        "banner_PFHWz": {
-          "type": "banner",
-          "disabled": false,
-          "settings": {
-            "text": "Gratis verzending vanaf €75",
-            "cta_text": "",
-            "cta_url": "",
-            "style": "promo",
-            "dismissible": false
-          }
-        }
-      },
-      "block_order": [
-        "banner_PFHWz"
-      ],
+      "blocks": {},
+      "block_order": [],
       "name": "Banners"
     },
     "block_marketing_products_UJAdR": {
       "type": "block-marketing-products",
       "disabled": false,
       "settings": {
-        "header-c47a5f541b4eebf773f4204d81713e8f": null,
+        "header-0ee3fa49e6d469573872105f1666775b": null,
         "collection": "altijd-nodig",
         "heading": "Altijd nodig",
-        "header-f1b9be8c2ae5cb12014c1509d4c4d62d": null,
+        "header-a2f2686fbca6a26db9bf0c7523c2e294": null,
         "card_layout": "vertical",
         "image_ratio": "portrait",
         "show_secondary_image": false,
@@ -66,7 +52,7 @@
         "visible_rows": 1,
         "show_more_text": "",
         "show_less_text": "",
-        "header-681eba7da047626504b53b485f44a922": null,
+        "header-06291bd815f7915010e6bd03a4139356": null,
         "width": "is-align",
         "columns_desktop": 4,
         "columns_tablet": 3,
@@ -75,11 +61,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-1bfa7e15f78545d163d14840e1fa1d97": null,
+        "header-c2b51cdc4c2564ac4ae1dc70b74216a4": null,
         "background_color": "",
         "text_color": "",
-        "header-6a2bb8e88c6110c85fce00da9017d9bb": null,
-        "paragraph-ef7a44d674b0f236658ff07af0ce1c1d": null
+        "header-02ddd9c6c31ecf546e30e655838a8c53": null,
+        "paragraph-81ad0a4dcc9aefef8d6c0816d0104d68": null
       },
       "blocks": {},
       "block_order": [],
@@ -89,11 +75,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-788b09b347e0d2800694a73ed11b85a7": null,
+        "header-6db70a8cb8ecb3ad45e9cf12916fcdb3": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-087397acd950710e349c9a226ed89442": null,
+        "header-fc75eff62215bae61c428c6adfddf1a1": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -101,7 +87,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-2ebefe79489ee13e4689821771473672": null,
+        "header-d18d6cbd6530a6aaa96b36eb03f2b8e4": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -110,11 +96,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-0cde6d1f899afc566a8525ece4b911f5": null,
+        "header-8b5775355ec84b88bb47c889bd321ad6": null,
         "background_color": "",
         "text_color": "",
-        "header-ff059665e5f7932a258adb481ea85bf5": null,
-        "paragraph-ee79c852c1a40680ac37d9c0fef8a40c": null
+        "header-db3868e52e0363d9ac642ac7508cf361": null,
+        "paragraph-687a8d1f6aa8c9809fff8dde31f5774a": null
       },
       "blocks": {
         "testimonial_Drpr8": {
@@ -158,11 +144,32 @@
       ],
       "name": "Testimonials"
     },
+    "block_cart_freeship_P6TxLQ": {
+      "disabled": false,
+      "settings": {
+        "remaining_text": "Nog {amount} tot gratis verzending!",
+        "reached_text": "Je bestelling wordt gratis verzonden!",
+        "explaining": "",
+        "width": "is-align",
+        "section_background": ""
+      },
+      "blocks": {}
+    },
     "cart-order": {
       "settings": {
         "show_continue_shopping": false
       },
       "blocks": {}
+    },
+    "17785991655b863a82": {
+      "settings": {},
+      "blocks": {
+        "shop_the_look_shop_the_look_7HtpHf": {
+          "settings": {
+            "use_theme_settings": true
+          }
+        }
+      }
     }
   },
   "context": {
@@ -170,9 +177,11 @@
   },
   "parent": "cart.json",
   "order": [
+    "block_cart_freeship_P6TxLQ",
     "block_marketing_banners_aL3Qr",
     "cart-order",
     "block_marketing_products_UJAdR",
+    "17785991655b863a82",
     "block_marketing_testimonials_Wy9RM",
     "block_marketing_media_text_tQPwtw"
   ]
