@@ -311,8 +311,13 @@
       const params = new URLSearchParams({ section_id: sectionId });
       if (variantId) params.set('variant', variantId);
 
+      // Use the locale-aware storefront root (e.g. "/pl/") so the section is
+      // re-rendered in the active language. A bare "/products/" drops the
+      // locale prefix and Shopify falls back to the default locale (nl).
+      const root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+
       try {
-        const res = await fetch('/products/' + encodeURIComponent(handle) + '?' + params.toString(), {
+        const res = await fetch(root + 'products/' + encodeURIComponent(handle) + '?' + params.toString(), {
           headers: { 'Accept': 'text/html' }
         });
         if (!res.ok) return false;

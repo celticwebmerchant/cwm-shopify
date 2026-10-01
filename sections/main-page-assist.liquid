@@ -93,9 +93,11 @@
 
       var enableUrlParams = {{ enable_url_params | json }};
       var backHtml = document.getElementById('assist-back-{{ section.id }}').innerHTML;
+      // Locale-aware root (e.g. "/pl/") so the re-rendered section is in the active language.
+      var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
 
       async function fetchChildren(handle) {
-        var res = await fetch('/search?q=' + encodeURIComponent(handle) + '&type=&sections=main-page-assist');
+        var res = await fetch(root + 'search?q=' + encodeURIComponent(handle) + '&type=&sections=main-page-assist');
         var json = await res.json();
         return json['main-page-assist'] || null;
       }

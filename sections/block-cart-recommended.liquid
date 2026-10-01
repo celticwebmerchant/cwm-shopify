@@ -162,7 +162,10 @@
      */
     function fetchBody(handle) {
       const params = new URLSearchParams({ section_id: sectionId });
-      return fetch('/products/' + encodeURIComponent(handle) + '?' + params.toString(), {
+      // Locale-aware root (e.g. "/pl/") so recommendations render in the
+      // active language; a bare "/products/" would fall back to nl.
+      const root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+      return fetch(root + 'products/' + encodeURIComponent(handle) + '?' + params.toString(), {
         headers: { 'Accept': 'text/html' }
       })
         .then(function(res) { return res.ok ? res.text() : null; })

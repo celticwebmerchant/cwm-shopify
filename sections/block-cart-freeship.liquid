@@ -1,0 +1,230 @@
+{%- comment -%}
+============================================================================
+BLOCK-CART-FREESHIP
+============================================================================
+Free-shipping progress bar for the cart. Carries the settings + section
+background, resolves the threshold for the active currency, and renders the
+reusable html-cart-freeship snippet (which does the markup, states, config
+and asset loading — so it can be reused in the cart-preview drawer later).
+
+- Threshold per currency via fixed settings (freeship_<iso>). Leave empty
+  to hide for that currency.
+- Per-market differences: native via context templates (cart.context.*).
+- Cart-template only (enabled_on).
+
+NOTE: purely visual. Keep the currency values in sync with the shipping app
+(Intuitive Shipping) — no API to read the real thresholds.
+============================================================================
+{%- endcomment -%}
+
+{%- liquid
+  assign currency_key = 'freeship_' | append: cart.currency.iso_code | downcase
+  assign threshold = section.settings[currency_key] | default: 0
+
+  assign is_empty = false
+  if cart.item_count == 0
+    assign is_empty = true
+  endif
+
+  comment
+    Render nothing on an empty cart (unless show_when_empty) so the section
+    wrapper collapses — no empty background strip. Live remove-to-empty is
+    handled by the JS (it hides the .block-cart-freeship section wrapper).
+  endcomment
+  assign do_render = false
+  if threshold > 0
+    if is_empty == false or section.settings.show_when_empty
+      assign do_render = true
+    endif
+  endif
+-%}
+
+{%- if do_render -%}
+  {% style %}
+    #shopify-section-{{ section.id }}.block-cart-freeship {
+      background: {{ section.settings.section_background | default: '#f8f8f8' }};
+      color: {{ section.settings.section_text | default: '#111111' }};
+      padding-block: {{ section.settings.padding_block | default: 1 }}em;
+    }
+    #shopify-section-{{ section.id }} .cart-freeship {
+      --cart-freeship-card: {{ section.settings.card_background | default: '#ffffff' }};
+      --cart-freeship-fill: {{ section.settings.bar_color | default: 'rgb(var(--color-foreground))' }};
+      --cart-freeship-track: {{ section.settings.track_color | default: 'rgba(var(--color-foreground), 0.12)' }};
+      --cart-freeship-reached: {{ section.settings.reached_color | default: '#009922' }};
+    }
+  {% endstyle %}
+
+  {%- comment -%} Section wrapper (#shopify-section + schema class) carries the full-width background; __content carries the width {%- endcomment -%}
+  <div class="block-cart-freeship__content {{ section.settings.width }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"{% if section.settings.anchor != blank %} id="{{ section.settings.anchor }}"{% endif %}>
+    {%- render 'html-cart-freeship',
+      threshold: threshold,
+      basis: section.settings.basis,
+      remaining_text: section.settings.remaining_text,
+      reached_text: section.settings.reached_text,
+      explaining: section.settings.explaining,
+      show_when_empty: section.settings.show_when_empty
+    -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Free shipping bar",
+  "tag": "section",
+  "class": "block-cart-freeship",
+  "enabled_on": {
+    "templates": ["cart"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "remaining_text",
+      "label": "Remaining message",
+      "default": "Nog {amount} te gaan voor gratis verzending",
+      "info": "Use {amount} for the remaining amount. Translatable via Translate & Adapt."
+    },
+    {
+      "type": "text",
+      "id": "reached_text",
+      "label": "Reached message",
+      "default": "Je komt in aanmerking voor gratis verzending"
+    },
+    {
+      "type": "richtext",
+      "id": "explaining",
+      "label": "Explaining message",
+      "info": "Shown in the accordion body. Leave empty for a plain bar without a toggle."
+    },
+    {
+      "type": "header",
+      "content": "Currencies"
+    },
+    {
+      "type": "paragraph",
+      "content": "Free shipping threshold per currency, in whole units (e.g. 75). Leave a currency empty to hide the bar for that currency. For a market that differs, adjust these values in that market's cart template — or turn the section off / remove it there."
+    },
+    { "type": "number", "id": "freeship_eur", "label": "EUR — Euro" },
+    { "type": "number", "id": "freeship_gbp", "label": "GBP — British Pound" },
+    { "type": "number", "id": "freeship_dkk", "label": "DKK — Danish Krone" },
+    { "type": "number", "id": "freeship_sek", "label": "SEK — Swedish Krona" },
+    { "type": "number", "id": "freeship_nok", "label": "NOK — Norwegian Krone" },
+    { "type": "number", "id": "freeship_pln", "label": "PLN — Polish Złoty" },
+    { "type": "number", "id": "freeship_czk", "label": "CZK — Czech Koruna" },
+    { "type": "number", "id": "freeship_huf", "label": "HUF — Hungarian Forint" },
+    { "type": "number", "id": "freeship_ron", "label": "RON — Romanian Leu" },
+    { "type": "number", "id": "freeship_chf", "label": "CHF — Swiss Franc" },
+    { "type": "number", "id": "freeship_usd", "label": "USD — US Dollar" },
+    {
+      "type": "header",
+      "content": "Behavior"
+    },
+    {
+      "type": "select",
+      "id": "basis",
+      "label": "Progress based on",
+      "options": [
+        { "value": "total", "label": "Cart total (after discounts)" },
+        { "value": "subtotal", "label": "Items subtotal (before discounts)" }
+      ],
+      "default": "total"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_when_empty",
+      "label": "Show when cart is empty",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "options": [
+        { "value": "is-align-narrow", "label": "Narrow" },
+        { "value": "is-align-small", "label": "Small" },
+        { "value": "is-align", "label": "Regular" },
+        { "value": "is-align-wide", "label": "Wide" },
+        { "value": "is-align-full", "label": "Full" }
+      ],
+      "default": "is-align-full"
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "default": 1,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "info": "Leave empty for #f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "section_text",
+      "label": "Section text",
+      "info": "Leave empty for #111111"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "info": "Leave empty for white"
+    },
+    {
+      "type": "color",
+      "id": "bar_color",
+      "label": "Bar color",
+      "info": "Leave empty to use theme foreground"
+    },
+    {
+      "type": "color",
+      "id": "track_color",
+      "label": "Track color"
+    },
+    {
+      "type": "color",
+      "id": "reached_color",
+      "label": "Reached color",
+      "info": "Leave empty for green (#009922)"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "ID for scroll links (without #)"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Free shipping bar",
+      "category": "Cart"
+    }
+  ]
+}
+{% endschema %}

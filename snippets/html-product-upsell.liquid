@@ -155,8 +155,11 @@
       const checkboxes = container.querySelectorAll('.product-upsell__checkbox');
       if (!checkboxes.length) return;
 
+      // Locale-aware storefront root (e.g. "/pl/") so cart calls stay in-market.
+      const root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+
       // Sync checkboxes with current cart on load
-      fetch('/cart.js', { headers: { 'Accept': 'application/json' } })
+      fetch(root + 'cart.js', { headers: { 'Accept': 'application/json' } })
         .then(function(res) { return res.json(); })
         .then(function(cart) {
           var inCartIds = cart.items.map(function(item) { return item.variant_id; });
@@ -182,7 +185,7 @@
       });
 
       function addToCart(variantId) {
-        fetch('/cart/add.js', {
+        fetch(root + 'cart/add.js', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -198,7 +201,7 @@
       }
 
       function removeFromCart(variantId) {
-        fetch('/cart.js', { headers: { 'Accept': 'application/json' } })
+        fetch(root + 'cart.js', { headers: { 'Accept': 'application/json' } })
           .then(function(res) { return res.json(); })
           .then(function(cart) {
             var index = -1;
@@ -211,7 +214,7 @@
             
             if (index === -1) return null;
 
-            return fetch('/cart/change.js', {
+            return fetch(root + 'cart/change.js', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
