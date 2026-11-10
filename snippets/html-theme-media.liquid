@@ -438,6 +438,8 @@ Simple (known size):
 		-%}
 
 			{%- when 'external_video' -%}
+			{%- assign render_host = video_host | default: media.host -%}
+			{%- assign render_video_id = video_id | default: media.external_id | default: media.id -%}
 			{%- render 'html-theme-media-video',
 			video: media,
 			alt: alt_text,
@@ -449,8 +451,8 @@ Simple (known size):
 			image_loading: image_loading,
 			mode: mode,
 			external: true,
-			host: video_host | default: media.host,
-			video_id: video_id | default: media.external_id | default: media.id,
+			host: render_host,
+			video_id: render_video_id,
 			autoplay: autoplay,
 			focus_x: focus_x,
 			focus_y: focus_y,

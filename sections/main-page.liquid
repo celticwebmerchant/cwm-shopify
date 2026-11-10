@@ -18,9 +18,10 @@
       {%- when 'featured_image' -%}
         {%- if block.settings.image != blank -%}
           <figure class="main-page__hero main-page__hero--{{ block.settings.image_height }}" {{ block.shopify_attributes }}>
+            {%- assign render_alt = block.settings.image.alt | default: page.title -%}
             {%- render 'html-theme-media-image',
               image: block.settings.image,
-              alt: block.settings.image.alt | default: page.title,
+              alt: render_alt,
               w1: 600,
               w2: 900,
               w3: 1200,

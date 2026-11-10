@@ -128,9 +128,10 @@ DEPENDENCIES:
 		<div class="marketing-grid-video__cover" id="cover-{{ unique_id }}" data-video-cover>
 			{%- if cover_image != blank -%}
 				<div class="is-marketing-card__image">
+					{%- assign render_alt = heading | default: 'Video' -%}
 					{%- render 'html-theme-media-image',
 					image: cover_image,
-					alt: heading | default: 'Video',
+					alt: render_alt,
 					w1: w1,
 					w2: w2,
 					w3: w3,

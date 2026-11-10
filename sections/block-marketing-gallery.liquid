@@ -180,9 +180,10 @@ DEPENDENCIES:
 										<a href="{{ block.settings.link }}" class="block-marketing-gallery__link">
 									{%- endif -%}
 									
+									{%- assign render_alt = block.settings.image.alt | default: block.settings.caption -%}
 									{%- render 'html-theme-media-image',
 										image: block.settings.image,
-										alt: block.settings.image.alt | default: block.settings.caption,
+										alt: render_alt,
 										w1: w1,
 										w2: w2,
 										w3: w3,
@@ -233,9 +234,10 @@ DEPENDENCIES:
 									<a href="{{ block.settings.link }}" class="block-marketing-gallery__link">
 								{%- endif -%}
 								
+								{%- assign render_alt = block.settings.image.alt | default: block.settings.caption -%}
 								{%- render 'html-theme-media-image',
 									image: block.settings.image,
-									alt: block.settings.image.alt | default: block.settings.caption,
+									alt: render_alt,
 									w1: w1,
 									w2: w2,
 									w3: w3,

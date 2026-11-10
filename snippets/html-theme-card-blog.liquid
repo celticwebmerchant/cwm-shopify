@@ -82,9 +82,10 @@ DEPENDENCIES:
 		<div class="card__media">
 			<figure class="card__figure">
 				{%- if card_image -%}
+					{%- assign render_alt = card_image.alt | default: blog.title -%}
 					{%- render 'html-theme-media',
 						media: card_image,
-						alt: card_image.alt | default: blog.title,
+						alt: render_alt,
 						image_ratio: image_ratio,
 						columns_desktop: columns_desktop,
 						columns_tablet: columns_tablet,

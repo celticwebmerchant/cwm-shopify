@@ -112,9 +112,10 @@ DEPENDENCIES:
 					<div class="media-usps__video-wrapper">
 						{%- if section.settings.image != blank -%}
 							<div class="media-usps__poster">
+								{%- assign render_alt = section.settings.image.alt | default: section.settings.heading -%}
 								{%- render 'html-theme-media-image',
 									image: section.settings.image,
-									alt: section.settings.image.alt | default: section.settings.heading,
+									alt: render_alt,
 									w1: w1,
 									w2: w2,
 									w3: w3,
@@ -142,9 +143,10 @@ DEPENDENCIES:
 					</div>
 				{%- elsif section.settings.image != blank -%}
 					<figure class="media-usps__figure">
+						{%- assign render_alt = section.settings.image.alt | default: section.settings.heading -%}
 						{%- render 'html-theme-media-image',
 							image: section.settings.image,
-							alt: section.settings.image.alt | default: section.settings.heading,
+							alt: render_alt,
 							w1: w1,
 							w2: w2,
 							w3: w3,

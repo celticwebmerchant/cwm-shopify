@@ -116,9 +116,10 @@ DEPENDENCIES:
 						{%- when 'image_text' -%}
 							{%- if block.settings.image != blank -%}
 								<figure class="media-text__figure">
+									{%- assign render_alt = block.settings.image.alt | default: block.settings.heading -%}
 									{%- render 'html-theme-media-image',
 										image: block.settings.image,
-										alt: block.settings.image.alt | default: block.settings.heading,
+										alt: render_alt,
 										w1: w1,
 										w2: w2,
 										w3: w3,
@@ -245,9 +246,10 @@ DEPENDENCIES:
 										<div class="media-text__video-cover" data-video-cover="{{ unique_id }}">
 											{%- if poster != blank -%}
 												<figure class="media-text__figure">
+													{%- assign render_alt = block.settings.heading | default: 'Video' -%}
 													{%- render 'html-theme-media-image',
 														image: poster,
-														alt: block.settings.heading | default: 'Video',
+														alt: render_alt,
 														w1: w1,
 														w2: w2,
 														w3: w3,
@@ -261,9 +263,10 @@ DEPENDENCIES:
 												</figure>
 											{%- elsif has_shopify_video and video.preview_image -%}
 												<figure class="media-text__figure">
+													{%- assign render_alt = block.settings.heading | default: 'Video' -%}
 													{%- render 'html-theme-media-image',
 														image: video.preview_image,
-														alt: block.settings.heading | default: 'Video',
+														alt: render_alt,
 														w1: w1,
 														w2: w2,
 														w3: w3,

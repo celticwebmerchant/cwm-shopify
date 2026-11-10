@@ -119,9 +119,10 @@ DEPENDENCIES:
 		
 		<div class="is-marketing-card__image">
 			{%- if collection_image -%}
+				{%- assign render_alt = collection_image.alt | default: collection.title -%}
 				{%- render 'html-theme-media-image',
 					image: collection_image,
-					alt: collection_image.alt | default: collection.title,
+					alt: render_alt,
 					w1: w1,
 					w2: w2,
 					w3: w3,

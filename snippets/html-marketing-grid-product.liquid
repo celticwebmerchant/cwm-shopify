@@ -112,9 +112,10 @@ DEPENDENCIES:
 		<div class="is-marketing-card__image">
 			{%- if product.featured_media -%}
 				<div class="marketing-grid-product__image-primary">
+					{%- assign render_alt = product.featured_media.alt | default: product.title -%}
 					{%- render 'html-theme-media-image',
 						image: product.featured_media,
-						alt: product.featured_media.alt | default: product.title,
+						alt: render_alt,
 						w1: w1,
 						w2: w2,
 						w3: w3,
@@ -128,9 +129,10 @@ DEPENDENCIES:
 				
 				{%- if product.media[1] != null and show_secondary_image -%}
 					<div class="marketing-grid-product__image-secondary">
+						{%- assign render_alt = product.media[1].alt | default: product.title -%}
 						{%- render 'html-theme-media-image',
 							image: product.media[1],
-							alt: product.media[1].alt | default: product.title,
+							alt: render_alt,
 							w1: w1,
 							w2: w2,
 							w3: w3,

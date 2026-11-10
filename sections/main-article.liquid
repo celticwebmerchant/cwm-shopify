@@ -59,9 +59,10 @@
               endif
             -%}
             <figure class="main-article__hero main-article__hero--{{ block.settings.image_height }} main-article__hero--{{ image_width }}" {{ block.shopify_attributes }}>
+              {%- assign render_alt = article.image.alt | default: article.title -%}
               {%- render 'html-theme-media-image',
                 image: article.image,
-                alt: article.image.alt | default: article.title,
+                alt: render_alt,
                 w1: 600,
                 w2: 900,
                 w3: 1200,
@@ -113,12 +114,13 @@
           </div>
 
         {%- when 'share' -%}
+          {%- assign share_url = request.origin | append: article.url -%}
           <div class="main-article__share" {{ block.shopify_attributes }}>
             <div class="main-article__share-inner">
               <span class="main-article__share-label">{{ block.settings.share_label | default: 'Share' }}</span>
               <div class="main-article__share-buttons">
                 <a
-                  href="https://www.facebook.com/sharer/sharer.php?u={{ article.url | absolute_url | url_encode }}"
+                  href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | url_encode }}"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on Facebook"
@@ -127,7 +129,7 @@
                   {%- render 'html-theme-icons', icon: 'facebook', size: 20 -%}
                 </a>
                 <a
-                  href="https://twitter.com/intent/tweet?url={{ article.url | absolute_url | url_encode }}&text={{ article.title | url_encode }}"
+                  href="https://twitter.com/intent/tweet?url={{ share_url | url_encode }}&text={{ article.title | url_encode }}"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on X"
@@ -136,7 +138,7 @@
                   {%- render 'html-theme-icons', icon: 'twitter', size: 20 -%}
                 </a>
                 <a
-                  href="https://pinterest.com/pin/create/button/?url={{ article.url | absolute_url | url_encode }}&media={{ article.image | image_url: width: 1200 | url_encode }}&description={{ article.title | url_encode }}"
+                  href="https://pinterest.com/pin/create/button/?url={{ share_url | url_encode }}&media={{ article.image | image_url: width: 1200 | url_encode }}&description={{ article.title | url_encode }}"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on Pinterest"
@@ -145,7 +147,7 @@
                   {%- render 'html-theme-icons', icon: 'pinterest', size: 20 -%}
                 </a>
                 <a
-                  href="mailto:?subject={{ article.title | url_encode }}&body={{ article.url | absolute_url | url_encode }}"
+                  href="mailto:?subject={{ article.title | url_encode }}&body={{ share_url | url_encode }}"
                   aria-label="Share via Email"
                   class="main-article__share-button"
                 >

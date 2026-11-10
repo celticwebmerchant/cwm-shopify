@@ -119,9 +119,10 @@ DEPENDENCIES:
 	<div class="card__media">
 		<figure class="card__figure">
 			{%- if p.featured_media -%}
+				{%- assign render_alt = p.featured_media.alt | default: p.title -%}
 				{%- render 'html-theme-media',
 					media: p.featured_media,
-					alt: p.featured_media.alt | default: p.title,
+					alt: render_alt,
 					image_ratio: image_ratio,
 					columns_desktop: columns_desktop,
 					columns_tablet: columns_tablet,
@@ -136,9 +137,10 @@ DEPENDENCIES:
 					wrapper: false
 				-%}
 				{%- if has_secondary -%}
+					{%- assign render_alt = p.media[1].alt | default: p.title -%}
 					{%- render 'html-theme-media',
 						media: p.media[1],
-						alt: p.media[1].alt | default: p.title,
+						alt: render_alt,
 						image_ratio: image_ratio,
 						columns_desktop: columns_desktop,
 						columns_tablet: columns_tablet,
