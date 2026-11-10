@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} od {{ max }} zvjezdica, {{ count }} recenzija",
       "total_reviews": "ukupan broj recenzija"
-    }
+    },
+    "notify_me": "Obavještavaj me"
   },
   "collection": {
     "title": "Kolekcija",

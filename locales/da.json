@@ -98,7 +98,8 @@
       "stars": "{{ rating }} fra {{ max }} stjerner, {{ count }} anmeldelser",
       "total_reviews": "samlet antal anmeldelser"
     },
-    "add_to_cart": "I indkøbskurv"
+    "add_to_cart": "I indkøbskurv",
+    "notify_me": "Hold mig opdateret"
   },
   "collection": {
     "title": "Kollektion",

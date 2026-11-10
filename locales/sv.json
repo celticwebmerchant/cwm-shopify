@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} av {{ max }} stjärnor, {{ count }} recensioner",
       "total_reviews": "totalt antal recensioner"
-    }
+    },
+    "notify_me": "Håll mig uppdaterad"
   },
   "collection": {
     "title": "Kollektion",

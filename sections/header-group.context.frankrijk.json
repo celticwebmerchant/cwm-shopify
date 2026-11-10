@@ -25,7 +25,7 @@
       }
     },
     "block_header_callout_AGfLm9": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "heading": "Rose d’Or",
         "subheading": "Encore",

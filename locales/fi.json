@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }}/{{ max }} tähteä, {{ count }} arvostelua",
       "total_reviews": "arvosteluja yhteensä"
-    }
+    },
+    "notify_me": "Pidä minut ajan tasalla"
   },
   "collection": {
     "title": "Kokoelma",

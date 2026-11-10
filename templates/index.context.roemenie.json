@@ -15,15 +15,12 @@
   "sections": {
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
-        "focus_x": 50,
-        "focus_y": 50,
-        "overlay": "medium"
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/nieuw-1"
+            "url": "shopify://collections/kleding"
           }
         }
       }

@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} de {{ max }} estrellas, {{ count }} reseñas",
       "total_reviews": "número total de reseñas"
-    }
+    },
+    "notify_me": "Manténgame informado"
   },
   "collection": {
     "title": "Colección",

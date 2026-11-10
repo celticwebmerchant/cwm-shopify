@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} de {{ max }} étoiles, {{ count }} avis",
       "total_reviews": "nombre total d'avis"
-    }
+    },
+    "notify_me": "Tenez-moi au courant"
   },
   "collection": {
     "title": "Collection",

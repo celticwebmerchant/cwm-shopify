@@ -33,53 +33,68 @@
     "block_marketing_grid_8qQV8w": {
       "type": "block-marketing-grid",
       "blocks": {
-        "banner_mniRBd": {
+        "banner_gwJWB9": {
           "type": "banner",
           "settings": {
             "label": "Viking & vroeg-middeleeuws",
-            "heading": "Viking processies & wiel sieraden",
+            "heading": "Voorouderverering & Animisme: De levende doden in het Viking landschap",
             "text": "",
-            "link_url": "shopify://blogs/vikingen/viking-processies-wiel-sieraden",
-            "image": "shopify://shop_images/dsc03313_af13b296-7547-4e8a-b075-2e0ab2aac23a.webp",
-            "focus_x": 50,
-            "focus_y": 30,
-            "overlay": "light",
-            "design": "green"
-          }
-        },
-        "banner_PwM3j3": {
-          "type": "banner",
-          "settings": {
-            "label": "Oudheid & Romeinen",
-            "heading": "Ocreae, scheenbeschermers in de klassieke oudheid",
-            "text": "",
-            "link_url": "shopify://blogs/oudheid-romeinen/ocreae-scheenbeschermers-in-de-klassieke-oudheid",
-            "image": "shopify://shop_images/dsc04440_bcec064a-0c04-4180-8275-9d9f69937a59.jpg",
-            "focus_x": 45,
-            "focus_y": 65,
-            "overlay": "light",
-            "design": "green"
-          }
-        },
-        "banner_46J9JW": {
-          "type": "banner",
-          "settings": {
-            "label": "Viking & vroeg-middeleeuws",
-            "heading": "Magische taken van de völva",
-            "text": "",
-            "link_url": "shopify://blogs/vikingen/magische-taken-van-de-volva",
-            "image": "shopify://shop_images/DSC07288_e38c687c-94ac-4f2a-b07a-7bc440cdd6bd.jpg",
+            "link_url": "shopify://blogs/vikingen/vikingen-en-de-dood",
+            "image": "shopify://shop_images/dsc08469-2.jpg",
             "focus_x": 50,
             "focus_y": 50,
             "overlay": "light",
-            "design": "green"
+            "design": "blue"
+          }
+        },
+        "banner_HrxfmT": {
+          "type": "banner",
+          "settings": {
+            "label": "Cultuur & spiritualiteit",
+            "heading": "De Pagan herkomst van Sinterklaas: Van Wodan naar Goedheiligman",
+            "text": "",
+            "link_url": "shopify://blogs/cultuur-spiritualiteit/de-pagan-herkomst-van-sinterklaas",
+            "image": "shopify://shop_images/Wild_Hunt_7.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "medium",
+            "design": "blue"
+          }
+        },
+        "banner_eqKDUA": {
+          "type": "banner",
+          "settings": {
+            "label": "Cultuur & spiritualiteit",
+            "heading": "Kosmische Orde en het 'Web of Wyrd'",
+            "text": "",
+            "link_url": "shopify://blogs/cultuur-spiritualiteit/kosmische-orde-en-het-web-of-wyrd-leven-in-harmonie-met-het-lot",
+            "image": "shopify://shop_images/DSC09911_1_9f4e9fe1-255f-4d95-8142-b543cb0590a4.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "light",
+            "design": "blue"
+          }
+        },
+        "banner_yAjWKj": {
+          "type": "banner",
+          "settings": {
+            "label": "Viking & vroeg-middeleeuws",
+            "heading": "Yule Rituelen: Offers, Eden en het Heilige Banket",
+            "text": "",
+            "link_url": "shopify://blogs/vikingen/get-the-look-luxe-viking-man-yule-leif",
+            "image": "shopify://shop_images/Yule_Viking_male_1_0a379282-a1ef-40c7-b962-d98759fe2709.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "light",
+            "design": "blue"
           }
         }
       },
       "block_order": [
-        "banner_mniRBd",
-        "banner_PwM3j3",
-        "banner_46J9JW"
+        "banner_gwJWB9",
+        "banner_HrxfmT",
+        "banner_eqKDUA",
+        "banner_yAjWKj"
       ],
       "custom_css": [],
       "name": "Grid",
@@ -95,7 +110,7 @@
         "width": "is-align-wide",
         "columns_desktop": 3,
         "columns_tablet": 2,
-        "columns_mobile": 2,
+        "columns_mobile": 1,
         "grid_gap": 0.5,
         "padding_block": 1,
         "anchor": "",

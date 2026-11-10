@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-41f634e5e38a4735af83ba8da5d5d42c": null,
+        "header-527fe7d62926905e4603e058504209f6": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-0ce459aff7634326afee9089df43dcb0": null,
+        "header-a0081dcd0c85cb5663b721985d1ba3b0": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-c7f1e742becd73f2de76b8c3ca8b55c2": null,
+        "header-b3eeb8e92d85a1a15435e4f992ecfc91": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-6254f7f32fa289d16a58856d2a912e1b": null,
+        "header-b80ef97f3233f14a15963dd4a0793d8d": null,
         "background_color": "",
         "text_color": "",
-        "header-dd29f6e6b6d80cadaf4daf4347245dd2": null,
-        "paragraph-85e9b028e4311d999aaa413a199d5324": null
+        "header-309eeeb27f991b0c0f45b1547e537878": null,
+        "paragraph-42a3fafc9ddfba87da07598e179be90f": null
       },
       "blocks": {
         "testimonial_Qx8AW": {
@@ -88,16 +88,12 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "heading": "vakantiegeld",
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
-        "focus_x": 50,
-        "focus_y": 50,
-        "overlay": "medium"
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/nieuw-1"
+            "url": "shopify://collections/kleding"
           }
         }
       }

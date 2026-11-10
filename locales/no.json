@@ -17,7 +17,79 @@
   },
   "product": {
     "inventory": {
-      "out_of_stock": "Utsolgt! Gi meg beskjed"
+      "out_of_stock": "Utsolgt! Gi meg beskjed",
+      "in_stock": "På lager",
+      "in_stock_count": "{{ quantity }} på lager",
+      "low_stock": "På lager",
+      "low_stock_count": "{{ quantity }} fortsatt på lager, kjøp nå!",
+      "backorder": "Tilgjengelig på bestilling"
+    },
+    "add_to_cart": "Legg i handlekurven",
+    "choose_options": "Velg alternativer",
+    "sold_out": "Utsolgt",
+    "on_sale": "Salg",
+    "unavailable": "Ikke tilgjengelig",
+    "notify_me": "Hold meg oppdatert",
+    "onetime_purchase": "Engangskjøp",
+    "upsell_heading": "Kjøpes ofte samlet",
+    "recommended_heading": "Anbefalt kombinasjon",
+    "similar_heading": "Lignende produkter",
+    "related_blogs_heading": "Relaterte blogger",
+    "description_heading": "Produktbeskrivelse",
+    "details_heading": "Produktdetaljer",
+    "sizechart_heading": "Størrelsesguide",
+    "description": "Beskrivelse",
+    "vendor": "Selger",
+    "vendor_label": "Selger:",
+    "sku": "SKU",
+    "share": "Del dette produktet",
+    "view_full_details": "Se alle detaljene",
+    "skip_to_info": "Gå til produktinformasjon",
+    "quantity": {
+      "label": "Tall",
+      "increase": "Øk mengden",
+      "decrease": "Reduser antallet",
+      "min_of": "Min {{ quantity }}",
+      "max_of": "Maks {{ quantity }}",
+      "multiples_of": "Multipler av {{ quantity }}",
+      "in_cart": "{{ quantity }} i handlekurven din"
+    },
+    "price": {
+      "from": "Fra {{ price }}",
+      "regular": "Ordinær pris",
+      "sale": "Salgspris",
+      "unit": "Enhetspris",
+      "per": "per",
+      "tax_included": "Inkl. mva.",
+      "tax_excluded": "Ekskl. mva."
+    },
+    "volume_pricing": {
+      "title": "Volumrabatt",
+      "note": "Volumrabatt tilgjengelig",
+      "minimum": "{{ quantity }}+",
+      "price_each": "til {{ price }}/stykke"
+    },
+    "pickup": {
+      "available": "Henting tilgjengelig",
+      "available_at": "Henting tilgjengelig på {{ location }}",
+      "unavailable_at": "Henting ikke tilgjengelig på {{ location }}",
+      "view_store_info": "Se butikkdetaljer",
+      "check_other_stores": "Tilgjengelighet i andre butikker"
+    },
+    "media": {
+      "gallery": "Galleri",
+      "load_image": "Laster inn bilde {{ index }}",
+      "load_video": "Spill av video {{ index }}",
+      "load_model": "Laster inn 3D-modell {{ index }}",
+      "play_video": "Spill av video",
+      "play_model": "Start 3D-visning",
+      "open_media": "Åpne medier {{ index }}",
+      "xr_button": "Utsikt på rommet ditt",
+      "xr_button_label": "Utsikt på rommet ditt"
+    },
+    "rating": {
+      "stars": "{{ rating }} av {{ max }} stjerner, {{ count }} anmeldelser",
+      "total_reviews": "totalt antall anmeldelser"
     }
   },
   "marketing": {

@@ -1,0 +1,1079 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "block_marketing_cover_cNKBer": {
+      "type": "block-marketing-cover",
+      "blocks": {
+        "button_iJPbzj": {
+          "type": "button",
+          "settings": {
+            "text": "",
+            "url": "",
+            "style": "primary",
+            "button_color": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_iJPbzj"
+      ],
+      "name": "Cover",
+      "settings": {
+        "subheading": "Bekijk onze collectie voor",
+        "heading": "Halloween",
+        "text": "",
+        "image": "shopify://shop_images/Banner_Halloween_Okt2026_2.webp",
+        "focus_x": 50,
+        "focus_y": 50,
+        "overlay": "light",
+        "loading": "eager",
+        "fetchpriority": "high",
+        "width": "is-align-full",
+        "height": "medium",
+        "text_position": "bottom",
+        "text_alignment": "center",
+        "anchor": "",
+        "custom_class": ""
+      }
+    },
+    "block_marketing_grid_G4YbJR": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_iqpVWF": {
+          "type": "product",
+          "settings": {
+            "product": "masker-schedel-met-gedraaide-hoorns-966402",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_Ec6Qrf": {
+          "type": "product",
+          "settings": {
+            "product": "masker-krampus-demon-966406",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_6YbpQY": {
+          "type": "product",
+          "settings": {
+            "product": "masker-cult-schedel-966392",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_gy8EWR": {
+          "type": "product",
+          "settings": {
+            "product": "halfmasker-anubis-966394",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_MwgzfQ": {
+          "type": "product",
+          "settings": {
+            "product": "masker-draken-schedel-met-onderkaak-966409",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_d8nTCG": {
+          "type": "product",
+          "settings": {
+            "product": "masker-krampus-met-hoorns-966405",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_h6NRHd": {
+          "type": "product",
+          "settings": {
+            "product": "masker-eenhoornschedel-966400",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "collection_3qEpHP": {
+          "type": "collection",
+          "settings": {
+            "collection": "larp-personage",
+            "show_description": true,
+            "design": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_iqpVWF",
+        "product_Ec6Qrf",
+        "product_6YbpQY",
+        "product_gy8EWR",
+        "product_MwgzfQ",
+        "product_d8nTCG",
+        "product_h6NRHd",
+        "collection_3qEpHP"
+      ],
+      "name": "Grid",
+      "settings": {
+        "heading": "Maskers",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-wide",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_grid_ihdRQi": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_W3rMHJ": {
+          "type": "product",
+          "settings": {
+            "product": "heksenhoed-zwart-wolvilt",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_QJrG9E": {
+          "type": "product",
+          "settings": {
+            "product": "heksenhoed-met-sterren-rood",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_kkMFhn": {
+          "type": "product",
+          "settings": {
+            "product": "jurk-raven-grijs",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_yAGRfR": {
+          "type": "product",
+          "settings": {
+            "product": "heksenrok-selena",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_ne49C8": {
+          "type": "product",
+          "settings": {
+            "product": "middeleeuws-lijfje-ursula-katoen-bordeaux",
+            "second_image": false,
+            "design": "green"
+          }
+        },
+        "product_RtghJM": {
+          "type": "product",
+          "settings": {
+            "product": "fluwelen-cotehardie-christina-zwart",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_4UdxdW": {
+          "type": "product",
+          "settings": {
+            "product": "wollen-mantel-ceridwen-zwart",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_kX9JJ6": {
+          "type": "product",
+          "settings": {
+            "product": "toverdrankhouder-met-drie-flesjes-zwart",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "collection_MmtJ6w": {
+          "type": "collection",
+          "settings": {
+            "collection": "toverstok-kopen",
+            "show_description": false,
+            "design": "blue"
+          }
+        },
+        "collection_yiM4Xm": {
+          "type": "collection",
+          "settings": {
+            "collection": "fantasy-larp-jurk",
+            "show_description": true,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "product_W3rMHJ",
+        "product_QJrG9E",
+        "product_kkMFhn",
+        "product_yAGRfR",
+        "product_ne49C8",
+        "product_RtghJM",
+        "product_4UdxdW",
+        "product_kX9JJ6",
+        "collection_MmtJ6w",
+        "collection_yiM4Xm"
+      ],
+      "name": "Heks",
+      "settings": {
+        "heading": "Heks",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "block_marketing_grid_jPLkpp": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_6mkLeQ": {
+          "type": "product",
+          "settings": {
+            "product": "zombie-jukbeen",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_Hgq9jK": {
+          "type": "product",
+          "settings": {
+            "product": "zombie-wang",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_LcTKh8": {
+          "type": "product",
+          "settings": {
+            "product": "wondkorst-bloed",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_EdfGhW": {
+          "type": "product",
+          "settings": {
+            "product": "kunstwond-3d-fx-transfers",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_P8CPhn": {
+          "type": "product",
+          "settings": {
+            "product": "pentagram-wond-3d-fx-transfers",
+            "second_image": false,
+            "design": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_6mkLeQ",
+        "product_Hgq9jK",
+        "product_LcTKh8",
+        "product_EdfGhW",
+        "product_P8CPhn"
+      ],
+      "name": "Wonden",
+      "settings": {
+        "heading": "SFX makeup",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-wide",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_grid_9z6PaX": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_3F6tY6": {
+          "type": "product",
+          "settings": {
+            "product": "larp-houthakkersbijl",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_DLGAqX": {
+          "type": "product",
+          "settings": {
+            "product": "larp-staakbijl-190-cm",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_arVYmb": {
+          "type": "product",
+          "settings": {
+            "product": "larp-honkbalknuppel",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_j4Eqq7": {
+          "type": "product",
+          "settings": {
+            "product": "larp-brandbijl",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_83Q8Jx": {
+          "type": "product",
+          "settings": {
+            "product": "larp-kloofbijl",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_RExYnJ": {
+          "type": "product",
+          "settings": {
+            "product": "larp-knots-met-spijkers",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "collection_mjK38a": {
+          "type": "collection",
+          "settings": {
+            "collection": "larp-wapen",
+            "show_description": true,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "product_3F6tY6",
+        "product_DLGAqX",
+        "product_arVYmb",
+        "product_j4Eqq7",
+        "product_83Q8Jx",
+        "product_RExYnJ",
+        "collection_mjK38a"
+      ],
+      "name": "Wapens",
+      "settings": {
+        "heading": "Wapens om van te schrikken",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000"
+      }
+    },
+    "block_marketing_grid_89tjgj": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_rDzLQx": {
+          "type": "product",
+          "settings": {
+            "product": "duivelshoorns-klein",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_DVALgY": {
+          "type": "product",
+          "settings": {
+            "product": "duivelse-hoorn-mok",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_GMUGw4": {
+          "type": "product",
+          "settings": {
+            "product": "oorknopjes-pentagram",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_cnbTWa": {
+          "type": "product",
+          "settings": {
+            "product": "mantel-aaron-zwart",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_9bj74m": {
+          "type": "product",
+          "settings": {
+            "product": "handgeweven-hemd-rood",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_kJVhpA": {
+          "type": "product",
+          "settings": {
+            "product": "leren-boek-summoner",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_H9wbVD": {
+          "type": "product",
+          "settings": {
+            "product": "duivelse-drinkhoorn-met-luxe-drinkhoornhouder",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_z4eQ7t": {
+          "type": "product",
+          "settings": {
+            "product": "herten-schedel-met-gewei-klein",
+            "second_image": false,
+            "design": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_rDzLQx",
+        "product_DVALgY",
+        "product_GMUGw4",
+        "product_cnbTWa",
+        "product_9bj74m",
+        "product_kJVhpA",
+        "product_H9wbVD",
+        "product_z4eQ7t"
+      ],
+      "name": "Duivel",
+      "settings": {
+        "heading": "Duivel",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-wide",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_grid_FVHipy": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_bJDMKe": {
+          "type": "product",
+          "settings": {
+            "product": "franciscaanse-habijt-monnikspij",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_ANjDX9": {
+          "type": "product",
+          "settings": {
+            "product": "tuniek-gadaric-groen",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_HVy3EQ": {
+          "type": "product",
+          "settings": {
+            "product": "merida-jurk-rood",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_Jy8rgt": {
+          "type": "product",
+          "settings": {
+            "product": "renaissance-jurk-lucrezia-rood",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_ppGHTJ": {
+          "type": "product",
+          "settings": {
+            "product": "wapenrok-geoffrey-wit-blauw",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_PYGwbH": {
+          "type": "product",
+          "settings": {
+            "product": "middeleeuwse-kaproen-thilo",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "collection_E3cQLi": {
+          "type": "collection",
+          "settings": {
+            "collection": "middeleeuwse-kleding",
+            "show_description": false,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "product_bJDMKe",
+        "product_ANjDX9",
+        "product_HVy3EQ",
+        "product_Jy8rgt",
+        "product_ppGHTJ",
+        "product_PYGwbH",
+        "collection_E3cQLi"
+      ],
+      "name": "Middeleeuws geinspireerd",
+      "settings": {
+        "heading": "Middeleeuws geinspireerd",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000"
+      }
+    },
+    "block_marketing_grid_NTLpfA": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_Uzbkpp": {
+          "type": "product",
+          "settings": {
+            "product": "tempeliersoverkleed",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_MWVUtM": {
+          "type": "product",
+          "settings": {
+            "product": "mantel-tempelier",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_e4PLYm": {
+          "type": "product",
+          "settings": {
+            "product": "onderarmbeschermers-balthasar",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_LJXMA3": {
+          "type": "product",
+          "settings": {
+            "product": "kruis-cuthert-van-lindisfarne-tin",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_mPa3XU": {
+          "type": "product",
+          "settings": {
+            "product": "malienkap-met-vierkante-hals-verzinkt-8-mm",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "collection_XFnp64": {
+          "type": "collection",
+          "settings": {
+            "collection": "pauldrons",
+            "show_description": false,
+            "design": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_Uzbkpp",
+        "product_MWVUtM",
+        "product_e4PLYm",
+        "product_LJXMA3",
+        "product_mPa3XU",
+        "collection_XFnp64"
+      ],
+      "name": "Tempelier",
+      "settings": {
+        "heading": "Tempelier",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-wide",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_grid_9b9FMb": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_YTbRKM": {
+          "type": "product",
+          "settings": {
+            "product": "keltische-tuniek-korte-mouwen-groen",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_bHyP4e": {
+          "type": "product",
+          "settings": {
+            "product": "viking-hangeroc-aleiga-blauw",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_WYjXrt": {
+          "type": "product",
+          "settings": {
+            "product": "schapenvacht-voor-schouders-ragnar",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_yM9e8d": {
+          "type": "product",
+          "settings": {
+            "product": "gotland-thorshamer-brons",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_g7FBNU": {
+          "type": "product",
+          "settings": {
+            "product": "thorsbergbroek-ragnar-zwart",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_n3tpmc": {
+          "type": "product",
+          "settings": {
+            "product": "viking-beenwindsels-wol-diverse-kleuren",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "collection_FPFpeA": {
+          "type": "collection",
+          "settings": {
+            "collection": "viking-riem",
+            "show_description": true,
+            "design": "blue"
+          }
+        },
+        "collection_AUPRjW": {
+          "type": "collection",
+          "settings": {
+            "collection": "viking-mantel",
+            "show_description": true,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "product_YTbRKM",
+        "product_bHyP4e",
+        "product_WYjXrt",
+        "product_yM9e8d",
+        "product_g7FBNU",
+        "product_n3tpmc",
+        "collection_FPFpeA",
+        "collection_AUPRjW"
+      ],
+      "name": "Viking",
+      "settings": {
+        "heading": "Viking",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000"
+      }
+    },
+    "block_marketing_grid_7ixBeM": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_H4qhmE": {
+          "type": "product",
+          "settings": {
+            "product": "klassieke-elvenoren-m-l",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_YzTm6t": {
+          "type": "product",
+          "settings": {
+            "product": "astherii-tuniek-groen",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_8YRG3k": {
+          "type": "product",
+          "settings": {
+            "product": "mantel-serafina-groen",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_YpGDGJ": {
+          "type": "product",
+          "settings": {
+            "product": "elven-hoofdband-larp-bruin-leer",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_9Wt7xT": {
+          "type": "product",
+          "settings": {
+            "product": "elfentuniek-groen",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_efbxdq": {
+          "type": "product",
+          "settings": {
+            "product": "dark-elven-eventide-gorget",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_hDRHqF": {
+          "type": "product",
+          "settings": {
+            "product": "godinnen-jurk-aphrodite-wit",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_BhqxFW": {
+          "type": "product",
+          "settings": {
+            "product": "dark-elf-zwart-bruin-leren-korset",
+            "second_image": false,
+            "design": "red"
+          }
+        },
+        "product_JVh6WQ": {
+          "type": "product",
+          "settings": {
+            "product": "elvenpruik-lang",
+            "second_image": false,
+            "design": "red"
+          }
+        }
+      },
+      "block_order": [
+        "product_H4qhmE",
+        "product_YzTm6t",
+        "product_8YRG3k",
+        "product_YpGDGJ",
+        "product_9Wt7xT",
+        "product_efbxdq",
+        "product_hDRHqF",
+        "product_BhqxFW",
+        "product_JVh6WQ"
+      ],
+      "name": "Elf",
+      "settings": {
+        "heading": "Elf",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align-wide",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_grid_D98P8w": {
+      "type": "block-marketing-grid",
+      "blocks": {
+        "product_dYyFYU": {
+          "type": "product",
+          "settings": {
+            "product": "16de-eeuwse-lantaarn",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_bWhkwd": {
+          "type": "product",
+          "settings": {
+            "product": "bijenwas-theelichtjes-set-van-10",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_wEyJQb": {
+          "type": "product",
+          "settings": {
+            "product": "kleine-kandelaar",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_LFJVEj": {
+          "type": "product",
+          "settings": {
+            "product": "vierkante-kaarshouder-museum-of-london",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_fVFW3f": {
+          "type": "product",
+          "settings": {
+            "product": "kasteel-kaarshouder",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "product_w7QUCG": {
+          "type": "product",
+          "settings": {
+            "product": "handgesmede-kaarshouder-gudrun",
+            "second_image": false,
+            "design": "blue"
+          }
+        },
+        "collection_3NjTfh": {
+          "type": "collection",
+          "settings": {
+            "collection": "licht-voor-huisaltaar",
+            "show_description": false,
+            "design": "blue"
+          }
+        }
+      },
+      "block_order": [
+        "product_dYyFYU",
+        "product_bWhkwd",
+        "product_wEyJQb",
+        "product_LFJVEj",
+        "product_fVFW3f",
+        "product_w7QUCG",
+        "collection_3NjTfh"
+      ],
+      "name": "Middeleeuws geinspireerd",
+      "settings": {
+        "heading": "Lantaarns & Kaarsen",
+        "subtext": "",
+        "header_align": "center",
+        "display_mode": "slider",
+        "slider_navigation": true,
+        "slider_pagination": false,
+        "slider_autoplay": false,
+        "slider_autoplay_speed": 5,
+        "width": "is-align",
+        "columns_desktop": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "grid_gap": 0.5,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000"
+      }
+    },
+    "block_marketing_products_wjK74V": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "fantasy-larp-mantels-jassen",
+        "heading": "Mantels & Capes",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 12,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align-wide",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "#0f1f38",
+        "text_color": "#ffffff"
+      }
+    },
+    "block_marketing_products_zg4bPh": {
+      "type": "block-marketing-products",
+      "name": "Products",
+      "settings": {
+        "collection": "halloween",
+        "heading": "",
+        "card_layout": "vertical",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": false,
+        "max_products": 24,
+        "only_available": true,
+        "visible_rows": 1,
+        "show_more_text": "",
+        "show_less_text": "",
+        "width": "is-align-wide",
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.2,
+        "padding_block": 3,
+        "anchor": "",
+        "custom_class": "",
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "block_marketing_cover_cNKBer",
+    "block_marketing_grid_G4YbJR",
+    "block_marketing_grid_ihdRQi",
+    "block_marketing_grid_jPLkpp",
+    "block_marketing_grid_9z6PaX",
+    "block_marketing_grid_89tjgj",
+    "block_marketing_grid_FVHipy",
+    "block_marketing_grid_NTLpfA",
+    "block_marketing_grid_9b9FMb",
+    "block_marketing_grid_7ixBeM",
+    "block_marketing_grid_D98P8w",
+    "block_marketing_products_wjK74V",
+    "block_marketing_products_zg4bPh"
+  ]
+}

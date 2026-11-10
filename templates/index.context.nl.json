@@ -17,42 +17,42 @@
       "type": "block-marketing-media-text",
       "disabled": true,
       "settings": {
-        "header-aa4959d99a8858950e3a5ffbee52460d": null,
+        "header-73ef49db84471336afd8780dd38688bf": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-916f79fa9d9b23d00fbd1158f0fb342a": null,
+        "header-f29b250bb4c12aca11d2da1f3c1b0c27": null,
         "width": "is-align",
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-3a1933c2299761257ce1c62bc0a4a869": null,
+        "header-6d4a81c2be3543c952e6bf1d224b1346": null,
         "background_color": "",
         "text_color": "",
-        "header-e9ac6bff4577c0b09de7a32cff85ddc9": null,
-        "paragraph-1270294968c75848f0e99d2bd4f9bcb6": null
+        "header-196de3a08bf07e7493d476520b048edb": null,
+        "paragraph-cf14f77e3ea5e1f7c5086fd81544c983": null
       },
       "blocks": {
         "image_text_Yan43": {
           "type": "image_text",
           "disabled": false,
           "settings": {
-            "header-5bac20592a68e94565fd4efd8acd9336": null,
+            "header-c5aa106650a7bbe628387d97664b509b": null,
             "heading": "Vacature magazijnmedewerker ecommerce",
             "text": "<p>Heb jij een passie voor Vikingen, middeleeuwen, reenactment of historische festivals? En steek je graag je handen uit de mouwen? Dan zoeken wij jou!<br/><br/></p>",
             "cta_text": "Lees verder",
             "cta_url": "shopify://pages/vacatures",
             "cta_style": "primary",
-            "header-a5794cab047b28bd033dab39473d594d": null,
+            "header-a0e280d71fbf5a1f62ede1c025f29846": null,
             "image": "shopify://shop_images/DSC04118_cf3484d1-f7b0-45ea-a8a6-7049962f2993.jpg",
             "image_height": "portrait",
             "focus_x": 25,
             "focus_y": 30,
-            "header-2042d89c64e1d2c3eaead46462d4ea69": null,
+            "header-6d1e8180046a9c6ddc0a7b2104322185": null,
             "image_position": "left",
             "image_width": "40",
             "vertical_alignment": "center",
-            "header-8520eafa634ad74ad8575a65bea331be": null,
+            "header-0a0aae2cd416106b81a2d54cbda68095": null,
             "background_color": "#0f1f38",
             "text_color": "#f8f8f8",
             "button_color": "",
@@ -67,20 +67,13 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "subheading": "",
-        "heading": "Ontdek de nieuwe collectie!",
-        "text": "<p><br/><br/></p>",
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
-        "focus_x": 50,
-        "focus_y": 50,
-        "overlay": "medium",
-        "text_alignment": "center"
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg",
+        "focus_x": 50
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "text": "Shop nu",
-            "url": "shopify://collections/nieuw-1"
+            "url": "shopify://collections/kleding"
           }
         }
       }
@@ -88,27 +81,28 @@
     "block_marketing_grid_eKTaaA": {
       "settings": {},
       "blocks": {
-        "banner_DW6Yt": {
+        "banner_VFAke": {
           "type": "banner",
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "header-b1d697908c111711a1cf19ad9b8b5be7": null,
-            "label": "",
-            "heading": "Vacatures",
-            "text": "<p>Wij zoeken jou!</p>",
-            "link_url": "https://www.celticwebmerchant.com/pages/vacatures",
-            "header-1b2eead90a6f03b4a72ffb7697b8994a": null,
-            "image": "shopify://shop_images/DSC04122_49cf81ae-34ea-4830-8e57-51fd9a335ba3.jpg",
+            "header-d15c57408924bf338585a676453b0273": null,
+            "label": "Vacatures",
+            "heading": "Wij zoeken jou!",
+            "text": "",
+            "link_url": "shopify://pages/vacatures",
+            "header-c6d14393534136176556df24a01304a4": null,
+            "image": "shopify://shop_images/DSC06560_ef3662c0-ef5b-4f7d-8593-4b73e50bdeec.jpg",
             "focus_x": 50,
             "focus_y": 50,
             "overlay": "light",
-            "header-c40f1a57e9dd66cd87dd95f6712b06b4": null,
+            "header-e05be2c82518e7600ce57f40bcbbe6fa": null,
             "design": "blue"
           }
         }
       },
       "block_order": [
-        "banner_DW6Yt",
+        "banner_VFAke",
+        "banner_4b4ywQ",
         "banner_PH6hGr",
         "banner_9aKPPM",
         "banner_gMVXQH",

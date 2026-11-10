@@ -14,7 +14,7 @@
   "parent": "header-group.json",
   "sections": {
     "block_header_callout_AGfLm9": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "heading": "Mercado Cervantino",
         "subheading": "Faltan",

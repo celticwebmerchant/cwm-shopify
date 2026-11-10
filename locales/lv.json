@@ -17,9 +17,79 @@
   },
   "product": {
     "inventory": {
-      "out_of_stock": "Izpārdots! Paziņojiet man"
+      "out_of_stock": "Izpārdots! Paziņojiet man",
+      "in_stock": "Noliktavā",
+      "in_stock_count": "Noliktavā ir {{ quantity }}",
+      "low_stock": "Noliktavā",
+      "low_stock_count": "{{ quantity }} joprojām ir noliktavā, iegādājieties tūlīt!",
+      "backorder": "Pieejams pēc pasūtījuma"
     },
-    "recommended_heading": "Ieteicamā kombinācija"
+    "recommended_heading": "Ieteicamā kombinācija",
+    "add_to_cart": "Pievienot grozam",
+    "choose_options": "Izvēlieties opcijas",
+    "sold_out": "Izpārdots",
+    "on_sale": "Izpārdošana",
+    "unavailable": "Nav pieejams",
+    "notify_me": "Informējiet mani par jaunumiem",
+    "onetime_purchase": "Vienreizējs pirkums",
+    "upsell_heading": "Bieži tiek pirktas kopā",
+    "similar_heading": "Līdzīgi produkti",
+    "related_blogs_heading": "Saistītie emuāri",
+    "description_heading": "Produkta apraksts",
+    "details_heading": "Produkta informācija",
+    "sizechart_heading": "Izmēru tabula",
+    "description": "Apraksts",
+    "vendor": "Pārdevējs",
+    "vendor_label": "Pārdevējs:",
+    "share": "Kopīgot šo produktu",
+    "view_full_details": "Skatīt visu informāciju",
+    "skip_to_info": "Dodieties uz produkta informāciju",
+    "quantity": {
+      "label": "Numurs",
+      "increase": "Palielināt daudzumu",
+      "decrease": "Samazināt skaitli",
+      "min_of": "Min. {{ quantity }}",
+      "max_of": "Maks. {{ quantity }}",
+      "multiples_of": "{{ quantity }} daudzkārtņi",
+      "in_cart": "{{ quantity }} jūsu iepirkumu grozā"
+    },
+    "price": {
+      "from": "No {{ price }}",
+      "regular": "Parastā cena",
+      "sale": "Izpārdošanas cena",
+      "unit": "Vienības cena",
+      "per": "uz vienu",
+      "tax_included": "Ieskaitot PVN",
+      "tax_excluded": "Bez PVN"
+    },
+    "volume_pricing": {
+      "title": "Apjoma atlaide",
+      "note": "Pieejama apjoma atlaide",
+      "minimum": "{{ quantity }}+",
+      "price_each": "par {{ price }}/gab."
+    },
+    "pickup": {
+      "available": "Saņemšana pieejama",
+      "available_at": "Saņemšana pieejama {{ location }}",
+      "unavailable_at": "Saņemšana nav pieejama šajā vietā: {{ location }}",
+      "view_store_info": "Skatīt veikala informāciju",
+      "check_other_stores": "Pieejamība citos veikalos"
+    },
+    "media": {
+      "gallery": "Galerija",
+      "load_image": "Notiek attēla {{ index }} ielāde",
+      "load_video": "Atskaņot video {{ index }}",
+      "load_model": "Notiek 3D modeļa ielāde {{ index }}",
+      "play_video": "Atskaņot video",
+      "play_model": "Palaist 3D skatītāju",
+      "open_media": "Atvērt multividi {{ index }}",
+      "xr_button": "Skats jūsu istabā",
+      "xr_button_label": "Skats jūsu istabā"
+    },
+    "rating": {
+      "stars": "{{ rating  }} no {{ max }} zvaigznēm, {{ count }} atsauksmes",
+      "total_reviews": "kopējais atsauksmju skaits"
+    }
   },
   "marketing": {
     "cart_confirm": {

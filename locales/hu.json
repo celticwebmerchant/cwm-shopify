@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }}/{{ max }} csillag, {{ count }} értékelés",
       "total_reviews": "összes értékelés"
-    }
+    },
+    "notify_me": "Tartsatok naprakészen"
   },
   "collection": {
     "title": "Kollekció",

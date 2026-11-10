@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} z {{ max }} hviezdičiek, {{ count }} recenzií",
       "total_reviews": "celkový počet recenzií"
-    }
+    },
+    "notify_me": "Informujte ma"
   },
   "collection": {
     "title": "Kolekcia",

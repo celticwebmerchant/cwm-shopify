@@ -16,7 +16,7 @@
           "type": "button",
           "settings": {
             "text": "Shop nu",
-            "url": "shopify://collections/nieuw-1",
+            "url": "shopify://collections/kleding",
             "style": "outline",
             "button_color": "#ffffff",
             "button_text_color": ""
@@ -28,13 +28,13 @@
       ],
       "name": "Cover",
       "settings": {
-        "subheading": "",
-        "heading": "Ontdek de nieuwe collectie!",
+        "subheading": "Black November: korting op kleding",
+        "heading": "Alleen deze week!",
         "text": "",
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg",
         "focus_x": 50,
         "focus_y": 50,
-        "overlay": "medium",
+        "overlay": "light",
         "loading": "eager",
         "fetchpriority": "high",
         "width": "is-align-full",
@@ -48,14 +48,28 @@
     "block_marketing_grid_eKTaaA": {
       "type": "block-marketing-grid",
       "blocks": {
+        "banner_4b4ywQ": {
+          "type": "banner",
+          "settings": {
+            "label": "",
+            "heading": "Ontdek",
+            "text": "<p>De nieuwe collectie!</p>",
+            "link_url": "shopify://collections/nieuw-1",
+            "image": "shopify://shop_images/Banner_Vakantiegeld1_Mei2026_d1056210-eaba-4efe-a297-af7506186c74.jpg",
+            "focus_x": 50,
+            "focus_y": 50,
+            "overlay": "light",
+            "design": "red"
+          }
+        },
         "banner_PH6hGr": {
           "type": "banner",
           "settings": {
             "label": "",
             "heading": "Tribe Sale: alleen voor leden",
-            "text": "<p>Vachten, veren en botten</p>",
+            "text": "<p>Middeleeuwse zwaarden</p>",
             "link_url": "shopify://collections/tribe-sale-members-only",
-            "image": "shopify://shop_images/DSC08072_1.jpg",
+            "image": "shopify://shop_images/DSC08770_8926361d-e10a-415f-8526-399d393a958b.jpg",
             "focus_x": 50,
             "focus_y": 50,
             "overlay": "light",
@@ -92,6 +106,7 @@
         },
         "banner_qUNK67": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "label": "",
             "heading": "Uitverkoop!",
@@ -120,6 +135,7 @@
         }
       },
       "block_order": [
+        "banner_4b4ywQ",
         "banner_PH6hGr",
         "banner_9aKPPM",
         "banner_gMVXQH",

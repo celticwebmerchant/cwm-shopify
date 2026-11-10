@@ -37,7 +37,7 @@
       }
     },
     "block_header_callout_AGfLm9": {
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "heading": "Battle of Hastings",
         "subheading": "Only",

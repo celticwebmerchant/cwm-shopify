@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} din {{ max }} stele, {{ count }} recenzii",
       "total_reviews": "total recenzii"
-    }
+    },
+    "notify_me": "Ține-mă la curent"
   },
   "collection": {
     "title": "Colecție",

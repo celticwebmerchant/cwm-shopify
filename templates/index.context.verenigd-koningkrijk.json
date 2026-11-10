@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-17cc56ce475896aa9baba4909f2843b4": null,
+        "header-777ad19a26424f348d486e71037e90e7": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-3d080eba60d5e58e7a13603b3ffa4d48": null,
+        "header-8bef0aec5d802e9932920d402717003b": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-c6c01c90d4cecd1990c80ccf9c39012b": null,
+        "header-a4e41e5fcd7bc57cdf70b7d4ef634f40": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-64ba9fc91697956cbf52f9585524ce66": null,
+        "header-d783f320d3dadd3b0a1388598bd54e78": null,
         "background_color": "",
         "text_color": "",
-        "header-563900da17d162608b4068cde10e5c64": null,
-        "paragraph-eb24f1a39c61436f455013ae7f5057dc": null
+        "header-e1bf1d205096eb6b1d8d88e2f472d5e7": null,
+        "paragraph-aa9f9d6edac8c92148a5caae3cb14662": null
       },
       "blocks": {
         "testimonial_fFDRz": {
@@ -88,17 +88,13 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "subheading": "",
-        "heading": "",
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
-        "focus_x": 50,
-        "focus_y": 50,
-        "overlay": "medium"
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg",
+        "focus_x": 50
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/nieuw-1"
+            "url": "shopify://collections/kleding"
           }
         }
       }

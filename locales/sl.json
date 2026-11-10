@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} od {{ max }} zvezdic, {{ count }} ocen",
       "total_reviews": "skupno število ocen"
-    }
+    },
+    "notify_me": "Obveščaj me"
   },
   "collection": {
     "title": "Zbirka",

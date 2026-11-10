@@ -10,7 +10,79 @@
 {
   "product": {
     "inventory": {
-      "out_of_stock": "Välja müüdud! Teavita mind"
+      "out_of_stock": "Välja müüdud! Teavita mind",
+      "in_stock": "Laos",
+      "in_stock_count": "{{ quantity }} laos",
+      "low_stock": "Laos",
+      "low_stock_count": "{{ quantity }} on veel laos, osta kohe!",
+      "backorder": "Saadaval tellimisel"
+    },
+    "add_to_cart": "Lisa ostukorvi",
+    "choose_options": "Vali valikud",
+    "sold_out": "Välja müüdud",
+    "on_sale": "Allahindlus",
+    "unavailable": "Pole saadaval",
+    "notify_me": "Hoia mind kursis",
+    "onetime_purchase": "Ühekordne ost",
+    "upsell_heading": "Tihti ostetakse koos",
+    "recommended_heading": "Soovitatav kombinatsioon",
+    "similar_heading": "Sarnased tooted",
+    "related_blogs_heading": "Seotud blogid",
+    "description_heading": "Toote kirjeldus",
+    "details_heading": "Toote üksikasjad",
+    "sizechart_heading": "Suuruste tabel",
+    "description": "Kirjeldus",
+    "vendor": "Müüja",
+    "vendor_label": "Müüja:",
+    "sku": "SKU",
+    "share": "Jaga seda toodet",
+    "view_full_details": "Kuva kõik üksikasjad",
+    "skip_to_info": "Mine tooteinfo juurde",
+    "quantity": {
+      "label": "Number",
+      "increase": "Suurenda kogust",
+      "decrease": "Vähenda arvu",
+      "min_of": "Min {{ quantity }}",
+      "max_of": "Max {{ quantity }}",
+      "multiples_of": "{{ quantity }} kordsed",
+      "in_cart": "{{ quantity }} teie ostukorvis"
+    },
+    "price": {
+      "from": "Alates {{ price }}",
+      "regular": "Tavaline hind",
+      "sale": "Allahindlushind",
+      "unit": "Ühikuhind",
+      "per": "iga",
+      "tax_included": "KM-ga",
+      "tax_excluded": "Ilma KM"
+    },
+    "volume_pricing": {
+      "title": "Hulgiallahindlus",
+      "note": "Hulgisoodustus saadaval",
+      "minimum": "{{ quantity }}+",
+      "price_each": "hinnaga {{ price }}/tükk"
+    },
+    "pickup": {
+      "available": "Järeletulemine on võimalik",
+      "available_at": "Järeletulemine on võimalik asukohas {{ location }}",
+      "unavailable_at": "Järeletulemine pole asukohas {{ location }} saadaval",
+      "view_store_info": "Kuva poe üksikasjad",
+      "check_other_stores": "Saadavus teistes kauplustes"
+    },
+    "media": {
+      "gallery": "Galerii",
+      "load_image": "Pildi {{ index }} laadimine",
+      "load_video": "Esita videot {{ index }}",
+      "load_model": "3D-mudeli laadimine {{ index }}",
+      "play_video": "Esita videot",
+      "play_model": "Käivita 3D-vaatur",
+      "open_media": "Avatud meedia {{ index }}",
+      "xr_button": "Vaade teie toas",
+      "xr_button_label": "Vaade teie toas"
+    },
+    "rating": {
+      "stars": "{{ rating }} tärni {{ max }} tärnist, {{ count }} arvustust",
+      "total_reviews": "arvustuste koguarv"
     }
   },
   "marketing": {

@@ -1475,6 +1475,97 @@
       ],
       "name": "Klaviyo triggers",
       "settings": {}
+    },
+    "block_embed_klaviyo_bis_JqKpNx": {
+      "type": "block-embed-klaviyo-bis",
+      "blocks": {
+        "string_kWBjTd": {
+          "type": "string",
+          "settings": {
+            "title": "Notify me when back in stock",
+            "replacement": "Hou me op de hoogte!"
+          }
+        },
+        "string_TzFhGA": {
+          "type": "string",
+          "settings": {
+            "title": "Enter your e-mail address below and we will let you know the moment it arrives back in our store.",
+            "replacement": "Vul hieronder je e-mailadres in, dan laten we je weten zodra het artikel weer op voorraad is in onze winkel."
+          }
+        },
+        "string_qkVHAq": {
+          "type": "string",
+          "settings": {
+            "title": "Enter your e-mail address",
+            "replacement": "Je e-mailadres"
+          }
+        },
+        "string_DtdXeE": {
+          "type": "string",
+          "settings": {
+            "title": "This email is invalid",
+            "replacement": "Dit e-mailadres is niet geldig"
+          }
+        },
+        "string_XWihKY": {
+          "type": "string",
+          "settings": {
+            "title": "This field is required",
+            "replacement": "Dit veld is verplicht"
+          }
+        },
+        "string_ay4bUJ": {
+          "type": "string",
+          "settings": {
+            "title": "Optional",
+            "replacement": "Optioneel"
+          }
+        },
+        "string_LHGkTc": {
+          "type": "string",
+          "settings": {
+            "title": "Please check this box to confirm to receive promotional marketing emails.",
+            "replacement": "Vink dit vakje aan om te bevestigen dat je marketingmails wilt ontvangen."
+          }
+        },
+        "string_bzhmmm": {
+          "type": "string",
+          "settings": {
+            "title": "submit!",
+            "replacement": "Verstuur"
+          }
+        },
+        "string_dAgggc": {
+          "type": "string",
+          "settings": {
+            "title": "Thank you!",
+            "replacement": "Bedankt!"
+          }
+        },
+        "string_xHGfCL": {
+          "type": "string",
+          "settings": {
+            "title": "We will inform you when this item is back in stock.",
+            "replacement": "We houden je op de hoogte zodra dit artikel weer op voorraad is!"
+          }
+        }
+      },
+      "block_order": [
+        "string_kWBjTd",
+        "string_TzFhGA",
+        "string_qkVHAq",
+        "string_DtdXeE",
+        "string_XWihKY",
+        "string_ay4bUJ",
+        "string_LHGkTc",
+        "string_bzhmmm",
+        "string_dAgggc",
+        "string_xHGfCL"
+      ],
+      "name": "Klaviyo back in stock",
+      "settings": {
+        "form_id": "U3fSkF"
+      }
     }
   },
   "order": [
@@ -1490,6 +1581,7 @@
     "block_page_menu_GJpUfD",
     "block_cart_recommended_7AJJDh",
     "block_modal_share_naUyNL",
-    "block_embed_klaviyo_x89YJD"
+    "block_embed_klaviyo_x89YJD",
+    "block_embed_klaviyo_bis_JqKpNx"
   ]
 }

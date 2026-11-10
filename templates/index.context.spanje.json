@@ -17,11 +17,11 @@
       "type": "block-marketing-testimonials",
       "disabled": false,
       "settings": {
-        "header-9d383ad177bb22a291a43b842c99ae00": null,
+        "header-fc16f84b59218f8f294afe9348ed7148": null,
         "heading": "",
         "subheading": "",
         "text_align": "center",
-        "header-01e5de7819665194cc75a9ec15aa2faa": null,
+        "header-7948039e95da5e137fe8a284b554c8ba": null,
         "alignment": "center",
         "quote_style": "boxed",
         "display_mode": "grid",
@@ -29,7 +29,7 @@
         "slider_pagination": false,
         "slider_autoplay": false,
         "slider_autoplay_speed": 5,
-        "header-3ff7fcce1fc034346525bf08bb42feb0": null,
+        "header-b7ee72bd5e909d9afb568b34a76d55f5": null,
         "width": "is-align-wide",
         "columns_desktop": 2,
         "columns_tablet": 2,
@@ -38,11 +38,11 @@
         "padding_block": 3,
         "anchor": "",
         "custom_class": "",
-        "header-590e1bf05a10435ae6bedc0ff29b77ce": null,
+        "header-56f325748277c453cde801286c7982bf": null,
         "background_color": "",
         "text_color": "",
-        "header-2996b6ca4ca38f25d6686b478fb0ddaa": null,
-        "paragraph-8d68ff4d67c3cc7db8cda55b4e6a857e": null
+        "header-fbda9ec9e2d04eb6f0c171e2fa352b03": null,
+        "paragraph-336387489a044f772628947523d5bfbc": null
       },
       "blocks": {
         "testimonial_zyBY8": {
@@ -88,15 +88,12 @@
     },
     "block_marketing_cover_EyVVzr": {
       "settings": {
-        "image": "shopify://shop_images/Banner_nieuweproducten_Aug2026_0d249d62-fd3d-4be0-854d-040768cd46b1.webp",
-        "focus_x": 50,
-        "focus_y": 50,
-        "overlay": "medium"
+        "image": "shopify://shop_images/Banner_BlackNovember_Kleding_Nov2026.jpg"
       },
       "blocks": {
         "button_nXdQMm": {
           "settings": {
-            "url": "shopify://collections/nieuw-1"
+            "url": "shopify://collections/kleding"
           }
         }
       }

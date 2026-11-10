@@ -98,7 +98,8 @@
     "rating": {
       "stars": "{{ rating }} iš {{ max }} žvaigždučių, {{ count }} atsiliepimų",
       "total_reviews": "iš viso atsiliepimų"
-    }
+    },
+    "notify_me": "Informuokite mane apie naujienas"
   },
   "collection": {
     "title": "Kolekcija",
