@@ -1,0 +1,117 @@
+{%- comment -%}
+============================================================================
+BLOCK-EMBED-KLAVIYO-BIS
+============================================================================
+Vertaallaag voor de Klaviyo Back in Stock-popup.
+
+Klaviyo staat maar één BIS-formulier per account toe, in één taal. De
+opmaak en teksten blijven in Klaviyo (CWM beheert die zelf); deze section
+draagt per taal de vervangteksten en vervangt ze in de browser zodra de
+popup verschijnt (simpele find & replace op hele teksten).
+
+FEATURES:
+- Klaviyo zet zijn eigen knop op de plek van .klaviyo-bis-trigger
+  (html-product-atc); ook die knoptekst gaat via de paren
+- Blocks "Klaviyo text → Replacement" (vertaalbaar via Translate & Adapt)
+- Vervanging in elke taal (bron = Klaviyo-tekst), alleen op productpagina's
+- Strikt afgebakend: alleen de BIS-knop en het BIS-formulier (form ID setting)
+- Theme editor: console-melding voor bronteksten die niet gevonden worden
+
+DEV-GATE (tijdelijk):
+- Alleen actief met ?dev=klaviyo-bis (blijft hangen per sessie,
+  ?dev=off zet uit). Zonder gate blijft de trigger verborgen.
+- Gate verwijderen = de {% style %}-regel hieronder + DEV_GATE in de JS.
+
+DEPENDENCIES:
+- block-embed-klaviyo-bis.min.js
+- snippets/html-product-atc.liquid (trigger .klaviyo-bis-trigger)
+- Klaviyo onsite app embed + gepubliceerd BIS-formulier in Klaviyo
+============================================================================
+{%- endcomment -%}
+
+{%- if template.name == 'product' -%}
+	{% style %}
+		html:not(.is-dev-klaviyo-bis) .product-atc__notify--klaviyo {
+			display: none !important;
+		}
+	{% endstyle %}
+
+	<script type="application/json" data-klaviyo-bis-config>
+		{
+			"primary": {{ request.locale.primary | json }},
+			"locale": {{ request.locale.iso_code | json }},
+			"designMode": {{ request.design_mode | json }},
+			"formId": {{ section.settings.form_id | strip | json }},
+			"pairs": [
+				{%- assign sep = '' -%}
+				{%- for block in section.blocks -%}
+					{%- if block.type == 'string' and block.settings.title != blank and block.settings.replacement != blank -%}
+						{{ sep }}[{{ block.settings.title | json }}, {{ block.settings.replacement | json }}]
+						{%- assign sep = ',' -%}
+					{%- endif -%}
+				{%- endfor -%}
+			]
+		}
+	</script>
+
+	<script src="{{ 'block-embed-klaviyo-bis.min.js' | asset_url }}" defer></script>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Klaviyo back in stock",
+	"tag": "div",
+	"class": "block-embed-klaviyo-bis",
+	"limit": 1,
+	"enabled_on": {
+		"groups": ["footer"]
+	},
+	"settings": [
+		{
+			"type": "header",
+			"content": "Klaviyo form"
+		},
+		{
+			"type": "text",
+			"id": "form_id",
+			"label": "Back in stock form ID",
+			"info": "Find this in Klaviyo under Forms > Form ID. Replacements only apply inside this form and the back in stock button.",
+			"default": "U3fSkF"
+		},
+		{
+			"type": "header",
+			"content": "Translations"
+		},
+		{
+			"type": "paragraph",
+			"content": "Add one block per text in the Klaviyo back in stock button and form. 'Klaviyo text' must match exactly what Klaviyo shows (one line per block) — do not translate it. Fill 'Replacement' in the primary language and translate it via Translate & Adapt."
+		}
+	],
+	"blocks": [
+		{
+			"type": "string",
+			"name": "Text replacement",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Klaviyo text",
+					"info": "Exactly as shown in the Klaviyo form. Do not translate."
+				},
+				{
+					"type": "text",
+					"id": "replacement",
+					"label": "Replacement",
+					"info": "Translate this field per language via Translate & Adapt."
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Klaviyo back in stock",
+			"category": "Embed"
+		}
+	]
+}
+{% endschema %}

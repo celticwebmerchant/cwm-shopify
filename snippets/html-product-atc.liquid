@@ -101,19 +101,22 @@
     </button>
   </div>
 
-  {%- comment -%} Notify: back in stock (sibling, not updated) {%- endcomment -%}
-  <!-- <div class="product-atc__notify" data-atc-notify>
-    <a 
-      id="custom-notify-button" 
-      href="#" 
-      class="swym-button swym-custom-watchlist swym-add-to-watchlist-view-product product-atc__notify-btn" 
-      data-url="{{ shop.url }}{{ product.url }}" 
-      data-variant-id="{{ v.id }}" 
+  {%- comment -%}
+    Notify: Klaviyo back in stock (sibling, not updated).
+    Zichtbaar via CSS zodra .product-atc__form niet .is-available is.
+    Klaviyo plaatst hier zijn eigen knop en verbergt deze <a>.
+    Vertaling van knop + popup: section block-embed-klaviyo-bis.
+    data-variant-id wordt bijgewerkt door de product:updated-listener hieronder.
+  {%- endcomment -%}
+  <div class="product-atc__notify product-atc__notify--klaviyo" data-atc-notify>
+    <a
+      href="#"
+      role="button"
+      class="klaviyo-bis-trigger product-atc__notify-btn"
       data-product-id="{{ product.id }}"
-    >
-      {{ 'product.notify_me' | t | default: 'Notify me' }}
-    </a>
-  </div> -->
+      data-variant-id="{{ v.id }}"
+    ></a>
+  </div>
 
   {%- comment -%} Wishlist (sibling, not updated) {%- endcomment -%}
     <!-- <div class="product-atc__wishlist" data-atc-wishlist>
