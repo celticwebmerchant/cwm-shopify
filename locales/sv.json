@@ -235,6 +235,23 @@
     "products_heading": "Våra senaste produkter",
     "cart_confirm": {
       "heading": "Tillagd i varukorgen"
+    },
+    "showcase": {
+      "view_product": "Visa produkt",
+      "close": "Stäng",
+      "related_heading": "Relaterade looks",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produkter"
+      },
+      "product_showcases_heading": "Finns i dessa looks",
+      "position": "{{ current }} av {{ total }}",
+      "previous": "Föregående",
+      "next": "Nästa",
+      "variant_label": "Alternativ",
+      "show_all": "Visa alla produkter ({{ count }})",
+      "back_to": "Tillbaka till {{ title }}",
+      "items_heading": "I denna look"
     }
   },
   "newsletter": {

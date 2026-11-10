@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Įdėta į krepšelį"
+    },
+    "showcase": {
+      "view_product": "Peržiūrėti produktą",
+      "close": "Uždaryti",
+      "related_heading": "Susiję deriniai",
+      "product_count": {
+        "one": "{{ count }} produktas",
+        "other": "{{ count }} produktai"
+      },
+      "product_showcases_heading": "Šiuose deriniuose",
+      "position": "{{ current }} iš {{ total }}",
+      "previous": "Ankstesnis",
+      "next": "Kitas",
+      "variant_label": "Parinktis",
+      "show_all": "Rodyti visus produktus ({{ count }})",
+      "back_to": "Grįžti į {{ title }}",
+      "items_heading": "Šiame derinyje"
     }
   },
   "newsletter": {

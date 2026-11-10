@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "เพิ่มลงในตะกร้าแล้ว"
+    },
+    "showcase": {
+      "view_product": "ดูสินค้า",
+      "close": "ปิด",
+      "related_heading": "ลุคที่เกี่ยวข้อง",
+      "product_count": {
+        "one": "{{ count }} สินค้า",
+        "other": "{{ count }} สินค้า"
+      },
+      "product_showcases_heading": "ปรากฏในลุคเหล่านี้",
+      "position": "{{ current }} จาก {{ total }}",
+      "previous": "ก่อนหน้า",
+      "next": "ถัดไป",
+      "variant_label": "ตัวเลือก",
+      "show_all": "ดูสินค้าทั้งหมด ({{ count }})",
+      "back_to": "กลับไปที่ {{ title }}",
+      "items_heading": "ในลุคนี้"
     }
   },
   "newsletter": {

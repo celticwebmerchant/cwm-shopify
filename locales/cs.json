@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Přidáno do košíku"
+    },
+    "showcase": {
+      "view_product": "Zobrazit produkt",
+      "close": "Zavřít",
+      "related_heading": "Související looky",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produktů"
+      },
+      "product_showcases_heading": "K vidění v těchto lookách",
+      "position": "{{ current }} z {{ total }}",
+      "previous": "Předchozí",
+      "next": "Další",
+      "variant_label": "Možnost",
+      "show_all": "Zobrazit všechny produkty ({{ count }})",
+      "back_to": "Zpět na {{ title }}",
+      "items_heading": "V tomto looku"
     }
   },
   "newsletter": {

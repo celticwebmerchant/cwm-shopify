@@ -303,6 +303,23 @@
     },
     "cart_confirm": {
       "heading": "Προστέθηκε στο καλάθι"
+    },
+    "showcase": {
+      "view_product": "Δείτε το προϊόν",
+      "close": "Κλείσιμο",
+      "related_heading": "Σχετικά looks",
+      "product_count": {
+        "one": "{{ count }} προϊόν",
+        "other": "{{ count }} προϊόντα"
+      },
+      "product_showcases_heading": "Σε αυτά τα looks",
+      "position": "{{ current }} από {{ total }}",
+      "previous": "Προηγούμενο",
+      "next": "Επόμενο",
+      "variant_label": "Επιλογή",
+      "show_all": "Δείτε όλα τα προϊόντα ({{ count }})",
+      "back_to": "Πίσω σε {{ title }}",
+      "items_heading": "Σε αυτό το look"
     }
   }
 }

@@ -1,0 +1,168 @@
+{%- comment -%}
+============================================================================
+BLOCK-PRODUCT-SHOWCASES
+============================================================================
+"In these showcases": showcases in which the current product appears.
+Contract: docs/showcase.md
+
+FEATURES:
+- Uses product from context (product page) or the product setting
+- Proof phase: scans all showcases for this product. Later: product metafield
+  showcase.showcases (reverse index kept by the app)
+- Hidden when the product is in no showcase
+- Clicking a showcase opens it in a modal (fetched via the Section Rendering
+  API from the showcase page), so the shopper stays on the product page
+
+DEPENDENCIES:
+- html-marketing-showcase-card snippet
+============================================================================
+{%- endcomment -%}
+
+{{ 'block-marketing-showcase.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'block-marketing-showcase.min.js' | asset_url }}" defer></script>
+
+{% style %}
+	#shopify-section-{{ section.id }}.block-product-showcases {
+		{%- if section.settings.background_color != blank %}
+		background-color: {{ section.settings.background_color }};
+		{%- endif %}
+		padding-block: {{ section.settings.padding_block }}em;
+	}
+{% endstyle %}
+
+{%- liquid
+	comment
+		Only the reverse index (app-owned product metafield $app:showcase.showcases,
+		written only by the Showcase app). No metafield = in no showcase: the app
+		removes it then, so a scan fallback would run on almost every product page.
+		The index can drift after edits outside the app (Matrixify, standard admin)
+		until "Index herbouwen": every indexed showcase is checked to really contain
+		this product (≤ max_showcases × 20 hotspots). Cards are captured from the
+		objects at hand — no handle lookups (Shopify allows 20 per page).
+	endcomment
+	assign current = section.settings.product | default: product
+	assign found = 0
+	assign cards_html = ''
+	if current != blank
+		comment
+			The app id is fixed for the app, same on every store.
+		endcomment
+		assign indexed = current.metafields['app--440461426689--showcase'].showcases.value
+		for showcase in indexed limit: 50
+			if showcase == blank
+				continue
+			endif
+			assign has_product = false
+			for h in showcase.hotspots.value limit: 20
+				assign hp = h.variant.value.product | default: h.product.value
+				if hp.id == current.id
+					assign has_product = true
+					break
+				endif
+			endfor
+			unless has_product
+				continue
+			endunless
+			capture card_html
+				render 'html-marketing-showcase-card', showcase: showcase
+			endcapture
+			assign cards_html = cards_html | append: '<li>' | append: card_html | append: '</li>'
+			assign found = found | plus: 1
+			if found >= section.settings.max_showcases
+				break
+			endif
+		endfor
+	endif
+-%}
+
+{%- if found > 0 -%}
+	<div class="block-product-showcases__content showcase--related-grid {{ section.settings.width }}" data-showcase-remote-scope>
+		<h2 class="block-product-showcases__heading">
+			{{- section.settings.heading | default: 'marketing.showcase.product_showcases_heading' | t -}}
+		</h2>
+		<ul class="block-marketing-showcase__related-grid" role="list">
+			{{ cards_html }}
+		</ul>
+
+		<dialog class="showcase-dialog" data-showcase-remote>
+			<div class="showcase-dialog__bar">
+				<button type="button" class="showcase-dialog__close" data-showcase-dialog-close aria-label="{{ 'marketing.showcase.close' | t }}">
+					{%- render 'html-theme-icons', icon: 'close', size: 20 -%}
+				</button>
+			</div>
+			<div class="showcase-dialog__body" data-showcase-remote-body></div>
+		</dialog>
+	</div>
+{%- elsif request.design_mode -%}
+	<div class="block-marketing-showcase__placeholder {{ section.settings.width }}">
+		<p>This product is not in any showcase yet — the section is hidden on the storefront.</p>
+	</div>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Product showcases",
+	"tag": "section",
+	"class": "block-product-showcases",
+	"disabled_on": {
+		"groups": ["header", "footer"]
+	},
+	"settings": [
+		{
+			"type": "product",
+			"id": "product",
+			"label": "Product",
+			"info": "Leave empty on product pages to use the current product"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"info": "Leave empty to use locale default"
+		},
+		{
+			"type": "range",
+			"id": "max_showcases",
+			"label": "Maximum showcases",
+			"min": 2,
+			"max": 8,
+			"step": 1,
+			"default": 4
+		},
+		{
+			"type": "select",
+			"id": "width",
+			"label": "Width",
+			"options": [
+				{ "value": "is-align-narrow", "label": "Narrow" },
+				{ "value": "is-align-small", "label": "Small" },
+				{ "value": "is-align", "label": "Regular" },
+				{ "value": "is-align-wide", "label": "Wide" },
+				{ "value": "is-align-full", "label": "Full" }
+			],
+			"default": "is-align-wide"
+		},
+		{
+			"type": "range",
+			"id": "padding_block",
+			"label": "Vertical padding",
+			"min": 0,
+			"max": 6,
+			"step": 0.5,
+			"default": 3,
+			"unit": "em"
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background"
+		}
+	],
+	"presets": [
+		{
+			"name": "Product showcases",
+			"category": "Product"
+		}
+	]
+}
+{% endschema %}

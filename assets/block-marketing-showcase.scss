@@ -1,0 +1,737 @@
+/* ==========================================================================
+   BLOCK-MARKETING-SHOWCASE  (+ html-marketing-showcase,
+   html-marketing-showcase-card, block-product-showcases)
+   Structural styles — dynamic per-section values stay inline in the section
+   ========================================================================== */
+
+$showcase-mobile: 40em;
+$showcase-tablet: 60em;
+
+.block-marketing-showcase,
+.block-product-showcases {
+  &__header {
+    text-align: center;
+    margin-block-end: 2em;
+  }
+
+  &__heading {
+    font-family: var(--theme-font-family-serif);
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 40em;
+    margin: 0.75em auto 0;
+  }
+}
+
+.block-product-showcases__heading {
+  margin-block-end: 1.5em;
+}
+
+.block-marketing-showcase {
+  &__content {
+    position: relative;
+    transition: opacity 200ms ease;
+
+    &.is-showcase-loading,
+    .is-showcase-loading > & {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__backbar {
+    margin-block-end: 1em;
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    min-height: 2.75rem;
+    padding: 0 1em;
+    border: 1px solid var(--theme-color-border, #d8cfc6);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+
+    &:hover { border-color: currentColor; }
+  }
+
+  &__layout {
+    display: grid;
+    gap: 2em;
+
+    &--side {
+      @media (min-width: $showcase-tablet) {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+
+        &.block-marketing-showcase__layout--image-right {
+          .block-marketing-showcase__image { order: 2; }
+        }
+
+        .block-marketing-showcase__products {
+          position: sticky;
+          top: 1em;
+        }
+      }
+    }
+  }
+
+  /* Image only: figure + caption with "show all products" */
+  &__figure {
+    margin: 0;
+  }
+
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em 1em;
+    margin-block-start: 0.75em;
+    font-size: 0.9em;
+    opacity: 0.85;
+  }
+
+  &__open-all {
+    min-height: 2.75rem;
+    padding: 0 1.1em;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover { background: rgba(0, 0, 0, 0.04); }
+  }
+
+  &__subheading {
+    font-family: var(--theme-font-family-serif);
+    font-size: 1.4em;
+    font-weight: 400;
+    margin: 0 0 1em;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, 4), minmax(0, 1fr));
+    gap: var(--grid-gap, 0.5em);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $showcase-tablet) {
+      grid-template-columns: repeat(var(--grid-columns-tablet, 3), minmax(0, 1fr));
+    }
+
+    @media (max-width: $showcase-mobile) {
+      grid-template-columns: repeat(var(--grid-columns-mobile, 2), minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+    min-width: 0;
+    border-radius: 0.25em;
+    transition: box-shadow var(--theme-transition-fast, 150ms) ease;
+
+    &.is-showcase-active {
+      box-shadow: 0 0 0 2px var(--theme-color-orange, #f05a22);
+    }
+  }
+
+  /* Number badge on cards — only when numbered */
+  &__num {
+    display: none;
+  }
+
+  &__media-col {
+    min-width: 0;
+  }
+
+  &__related {
+    &:empty { display: none; }
+  }
+
+  &__related-heading {
+    margin: 0 0 0.6em;
+    font-family: var(--theme-font-family-serif);
+    font-weight: 400;
+    font-size: 1.4em;
+  }
+
+  &__related-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__placeholder {
+    padding: 3em 1em;
+    text-align: center;
+    border: 1px dashed var(--theme-color-border, #ccc);
+  }
+}
+
+/* Numbered display (image + products, and the "all products" modal) */
+.showcase--numbered {
+  .showcase__dot-num { display: block; }
+  .showcase__dot-inner::after { display: none; }
+  .showcase__dot-inner {
+    width: 1.75rem;
+    height: 1.75rem;
+    animation: none;
+  }
+
+  .block-marketing-showcase__num {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 0.5em;
+    left: 0.5em;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: var(--theme-color-white, #fff);
+    color: var(--theme-color-black, #111);
+    font-family: var(--theme-font-family-serif);
+    font-size: 0.85em;
+    line-height: 1;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+  }
+
+  .block-marketing-showcase__item.is-showcase-active .block-marketing-showcase__num {
+    background: var(--theme-color-orange, #f05a22);
+    color: var(--theme-color-white, #fff);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Showcase image + dots + dot modal
+   -------------------------------------------------------------------------- */
+
+.showcase {
+  /* Frame: adapts to its context and clips. Natural ratio by default,
+     --showcase-crop turns it into a 'cover' crop. */
+  &__frame {
+    position: relative;
+    aspect-ratio: var(--showcase-crop, var(--showcase-ratio, 0.8));
+    overflow: hidden;
+    container-type: size;
+    line-height: 0;
+  }
+
+  /* Stage: always the photo's natural ratio, carries the dots, covers the
+     frame (cqw/cqh = frame size) and stays centred. */
+  &__stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    aspect-ratio: var(--showcase-ratio, 0.8);
+    width: max(100cqw, calc(100cqh * var(--showcase-ratio, 0.8)));
+    transform: translate(-50%, -50%);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__dot {
+    position: absolute;
+    left: var(--showcase-x);
+    top: var(--showcase-y);
+    transform: translate(-50%, -50%);
+    width: 2.75rem;  // 44px tap target
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus-visible {
+      outline: 2px solid var(--theme-color-white, #fff);
+      outline-offset: -4px;
+      border-radius: 50%;
+    }
+  }
+
+  &__dot-inner {
+    display: grid;
+    place-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--theme-color-white, #fff);
+    color: var(--theme-color-black, #111);
+    box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform var(--theme-transition-fast, 150ms) ease, background-color 150ms ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 50% auto auto 50%;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background: var(--theme-color-blue, #0f1f38);
+      transform: translate(-50%, -50%);
+      transition: background-color 150ms ease;
+    }
+  }
+
+  &__dot-num {
+    display: none;
+    font-family: var(--theme-font-family-serif);
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  &__dot:hover &__dot-inner,
+  &__dot.is-showcase-active &__dot-inner,
+  &__dot[aria-expanded="true"] &__dot-inner {
+    transform: scale(1.2);
+
+    &::after { background: var(--theme-color-orange, #f05a22); }
+  }
+
+  .showcase--numbered &__dot.is-showcase-active &__dot-inner,
+  .showcase--numbered &__dot[aria-expanded="true"] &__dot-inner {
+    background: var(--theme-color-orange, #f05a22);
+    color: var(--theme-color-white, #fff);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &__dot-inner {
+      animation: showcase-pulse 2.4s ease-out infinite;
+    }
+  }
+
+  /* Dot modal — desktop: positioned next to the dot by JS */
+  &__popover {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: min(23rem, calc(100vw - 2rem));
+    background: var(--theme-color-white, #fff);
+    color: var(--theme-color-black, #111);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    line-height: var(--theme-line-height, 1.4);
+    inset: auto;  // JS sets top/left
+    position: fixed;
+
+    &::backdrop {
+      background: transparent;
+    }
+
+    /* Mobile: bottom sheet */
+    @media (max-width: $showcase-mobile) {
+      width: 100%;
+      max-width: none;
+      inset: auto 0 0 0 !important;
+      border-radius: 0.75rem 0.75rem 0 0;
+      box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.2);
+
+      &::backdrop {
+        background: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+
+  &__popover-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 0.875rem;
+
+    @media (max-width: $showcase-mobile) {
+      padding: 0.75rem 1rem calc(1rem + env(safe-area-inset-bottom));
+    }
+  }
+
+  &__popover-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__popover-pos {
+    font-size: 0.8em;
+    opacity: 0.75;
+  }
+
+  &__popover-close {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: -0.5rem -0.5rem -0.5rem 0;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.6;
+
+    &:hover { opacity: 1; }
+  }
+
+  &__popover-main {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  &__popover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+  }
+
+  &__popover-body {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  &__popover-title {
+    margin: 0;
+    font-family: var(--theme-font-family-serif);
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 1.25;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  &__popover-variant {
+    margin: 0;
+    font-size: 0.875em;
+    opacity: 0.75;
+  }
+
+  /* Variant choice */
+  &__variants {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__variants-label {
+    font-size: 0.85em;
+    opacity: 0.75;
+  }
+
+  &__variants-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__variant {
+    min-width: 2.75rem;
+    min-height: 2.5rem;
+    padding: 0 0.6rem;
+    border: 1px solid var(--theme-color-border, #d8cfc6);
+    border-radius: 0.25rem;
+    background: var(--theme-color-white, #fff);
+    color: inherit;
+    font: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+
+    &:hover:not(:disabled) { border-color: currentColor; }
+
+    &[aria-pressed="true"] {
+      background: var(--theme-color-black, #111);
+      border-color: var(--theme-color-black, #111);
+      color: var(--theme-color-white, #fff);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      text-decoration: line-through;
+      cursor: not-allowed;
+    }
+  }
+
+  &__popover-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+
+    .button-order:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: $showcase-mobile) {
+      .button-order__form,
+      .button-order { flex: 1 1 100%; }
+      .button-order { min-height: 3rem; }
+    }
+  }
+
+  &__popover-link {
+    color: inherit;
+    font-size: 0.9em;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  &__popover-nav {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--theme-color-border, #ece6df);
+    padding-top: 0.5rem;
+  }
+
+  &__popover-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-height: 2.75rem;
+    padding: 0 0.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+@keyframes showcase-pulse {
+  0%   { box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3); }
+  70%  { box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0), 0 2px 6px rgba(0, 0, 0, 0.3); }
+  100% { box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0), 0 2px 6px rgba(0, 0, 0, 0.3); }
+}
+
+/* --------------------------------------------------------------------------
+   Page modal ("show all products", product-page showcases)
+   -------------------------------------------------------------------------- */
+
+.showcase-dialog {
+  width: min(80rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--theme-color-white, #fff);
+  color: var(--theme-color-black, #111);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: $showcase-mobile) {
+    width: 100vw;
+    max-width: none;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  &__bar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    pointer-events: none;
+  }
+
+  &__close {
+    pointer-events: auto;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--theme-color-white, #fff);
+    color: inherit;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+
+  &__body {
+    padding: 0 2em 2.5em;
+    margin-top: -2.5rem;
+
+    @media (max-width: $showcase-mobile) {
+      padding: 0 1em 2em;
+    }
+
+    .block-marketing-showcase__content { padding: 0; }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Showcase card (related, product-page showcases)
+   -------------------------------------------------------------------------- */
+
+.showcase-card {
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover .showcase-card__image { transform: scale(1.03); }
+  }
+
+  &__media {
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border-radius: 0.25em;
+    background: var(--theme-color-grey, #f2f2f2);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease;
+  }
+
+  &__body {
+    padding-block-start: 0.6em;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--theme-font-family-serif);
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+
+  &__count {
+    margin: 0.15em 0 0;
+    font-size: 0.875em;
+    opacity: 0.75;
+  }
+}
+
+/* Swapping a related showcase in place */
+[data-showcase-root].is-showcase-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   Related styles (class on the showcase root)
+   -------------------------------------------------------------------------- */
+
+/* Grid: cards below the block (and the product-page showcases) */
+.block-product-showcases .block-marketing-showcase__related-grid,
+.showcase--related-grid .block-marketing-showcase__related {
+  margin-block-start: 3em;
+
+  .block-marketing-showcase__related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1em;
+
+    @media (max-width: $showcase-tablet) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: $showcase-mobile) {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0.75em;
+      padding-block-end: 0.5em;
+
+      > li {
+        flex: 0 0 70%;
+        scroll-snap-align: start;
+      }
+    }
+  }
+}
+
+/* Strip: thumbnails under the image */
+.showcase--related-strip .block-marketing-showcase__related {
+  margin-block-start: 0.75em;
+
+  .block-marketing-showcase__related-heading {
+    font-family: inherit;
+    font-size: 0.85em;
+    opacity: 0.75;
+    margin-bottom: 0.4em;
+  }
+
+  .block-marketing-showcase__related-grid {
+    display: flex;
+    gap: 0.5em;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-block-end: 0.25em;
+    scrollbar-width: thin;
+
+    > li {
+      flex: 0 0 5.5rem;
+      scroll-snap-align: start;
+    }
+  }
+
+  .showcase-card__media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .showcase-card__body {
+    padding-block-start: 0.3em;
+  }
+
+  .showcase-card__title {
+    font-family: inherit;
+    font-size: 0.75em;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .showcase-card__count {
+    display: none;
+  }
+}

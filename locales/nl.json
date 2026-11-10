@@ -246,6 +246,23 @@
     },
     "cart_confirm": {
       "heading": "Toegevoegd aan winkelwagen"
+    },
+    "showcase": {
+      "view_product": "Bekijk product",
+      "close": "Sluiten",
+      "related_heading": "Gerelateerde looks",
+      "product_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} producten"
+      },
+      "product_showcases_heading": "Te zien in deze looks",
+      "position": "{{ current }} van {{ total }}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "variant_label": "Optie",
+      "show_all": "Bekijk alle producten ({{ count }})",
+      "back_to": "Terug naar {{ title }}",
+      "items_heading": "In deze showcase"
     }
   },
   "newsletter": {

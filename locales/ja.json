@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "カートに追加しました"
+    },
+    "showcase": {
+      "view_product": "商品を見る",
+      "close": "閉じる",
+      "related_heading": "関連ルック",
+      "product_count": {
+        "one": "{{ count }}点の商品",
+        "other": "{{ count }}点の商品"
+      },
+      "product_showcases_heading": "このルックに登場",
+      "position": "{{ current }} / {{ total }}",
+      "previous": "前へ",
+      "next": "次へ",
+      "variant_label": "オプション",
+      "show_all": "すべての商品を見る（{{ count }}）",
+      "back_to": "{{ title }}に戻る",
+      "items_heading": "このルックのアイテム"
     }
   },
   "newsletter": {

@@ -1,0 +1,715 @@
+{%- comment -%}
+============================================================================
+BLOCK-MARKETING-SHOWCASE
+============================================================================
+Showcase built from three parts: image (dots + a modal per dot), items (the
+showcase's products as theme cards) and related (other showcases).
+Contract: docs/showcase.md
+
+DISPLAY (setting "display"):
+- image          : image only (inline), ring dots, every dot opens its modal.
+                   "Show all products" opens the full showcase (image + items
+                   + related) in a page modal.
+- image_products : image + items. Dots are numbered; the number links a dot
+                   to its product card.
+
+RELATED (setting "related_style" + showcase_line + showcase.related_mode):
+- strip (default): thumbnails under the image; grid: cards below the block.
+- Two kinds of related: a line (showcase_line, one per showcase) is
+  thematic/editorial — no shared products needed; products = showcases
+  sharing products. Setting "related_source": line_or_products (default),
+  line only, products only. A line shows its members in line order, headed
+  by the line title.
+- related_mode on the showcase: auto (default) or off (never).
+- Clicking one swaps the showcase in place (Section Rendering API on the
+  showcase page) with a "back to …" button — block-marketing-showcase.js.
+
+IMAGE = FRAME + STAGE: see html-marketing-showcase.
+
+DEPENDENCIES:
+- html-marketing-showcase, html-marketing-showcase-card, html-theme-card,
+  html-theme-icons snippets
+============================================================================
+{%- endcomment -%}
+
+{{ 'block-marketing-showcase.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'block-marketing-showcase.min.js' | asset_url }}" defer></script>
+
+{% style %}
+	#shopify-section-{{ section.id }}.block-marketing-showcase {
+		{%- if section.settings.background_color != blank %}
+		background-color: {{ section.settings.background_color }};
+		{%- endif %}
+		{%- if section.settings.text_color != blank %}
+		color: {{ section.settings.text_color }};
+		{%- endif %}
+		padding-block: {{ section.settings.padding_block }}em;
+	}
+{% endstyle %}
+
+{%- liquid
+	assign showcase = section.settings.showcase
+	if showcase == blank and metaobject != blank and metaobject.system.type == 'showcase'
+		assign showcase = metaobject
+	endif
+
+	assign display = section.settings.display | default: 'image_products'
+	assign is_image_only = false
+	if display == 'image'
+		assign is_image_only = true
+	endif
+
+	assign related_style = section.settings.related_style | default: 'strip'
+	assign is_strip = false
+	if related_style == 'strip'
+		assign is_strip = true
+	endif
+
+	assign is_side = false
+	if section.settings.layout == 'side' or is_image_only
+		assign is_side = true
+	endif
+-%}
+
+{%- if showcase != blank -%}
+	{%- liquid
+		assign showcase_title = showcase.title.value | default: showcase.system.handle
+		assign heading = section.settings.heading | default: showcase_title
+
+		comment
+			Unique products in hotspot order (variant wins)
+		endcomment
+		assign product_ids = ','
+		assign product_count = 0
+		for hotspot in showcase.hotspots.value
+			assign hp = hotspot.variant.value.product | default: hotspot.product.value
+			if hp == blank
+				continue
+			endif
+			assign needle = ',' | append: hp.id | append: ','
+			if product_ids contains needle
+				continue
+			endif
+			assign product_ids = product_ids | append: hp.id | append: ','
+			assign product_count = product_count | plus: 1
+		endfor
+
+		comment
+			Related: off → none. Otherwise the showcase's line (showcase_line,
+			one line per showcase) → the other members in line order. No line →
+			auto: showcases sharing products, sorted by overlap via an inverted
+			rank key. Entries are '<rank>~~<card html>': cards are rendered from
+			the objects at hand, never via shop.metaobjects.showcase[handle]
+			(Shopify allows only 20 handle lookups per page; more = Liquid error).
+			Liquid loops see at most 50 entries without paginate: the line lookup
+			scans the first 50 lines; auto uses the reverse index.
+		endcomment
+		assign related_mode = showcase.related_mode.value | default: 'auto'
+		assign related_source = section.settings.related_source | default: 'line_or_products'
+		assign related_keys = ''
+		assign showcase_line = nil
+		if section.settings.show_related and related_mode != 'off'
+			if related_source != 'products'
+			for line in shop.metaobjects.showcase_line.values limit: 50
+				for member in line.showcases.value
+					if member.system.handle == showcase.system.handle
+						assign showcase_line = line
+						break
+					endif
+				endfor
+				if showcase_line != nil
+					break
+				endif
+			endfor
+			endif
+
+			if showcase_line != nil
+				for member in showcase_line.showcases.value
+					if member == blank or member.system.handle == showcase.system.handle
+						continue
+					endif
+					capture card_html
+						render 'html-marketing-showcase-card', showcase: member
+					endcapture
+					assign rank = forloop.index | plus: 1000 | append: ''
+					assign related_keys = related_keys | append: rank | append: '~~' | append: card_html | append: '§§'
+				endfor
+				assign related_list = related_keys | split: '§§'
+			elsif related_source != 'line'
+				comment
+					Auto via the reverse index: for each product of this showcase
+					(≤ 20 dots), the showcases that product is in. Pass 1 counts
+					shared products per showcase as ",<handle>," tokens; pass 2
+					renders the best max_related from the objects at hand (no
+					handle lookups). Every list loop is capped at 50.
+				endcomment
+				assign self_token = ',' | append: showcase.system.handle | append: ','
+				assign tokens = ''
+				assign uniq = ','
+				for hotspot in showcase.hotspots.value limit: 20
+					assign hp = hotspot.variant.value.product | default: hotspot.product.value
+					if hp == blank
+						continue
+					endif
+					assign seen_key = '|p' | append: hp.id | append: '|'
+					if tokens contains seen_key
+						continue
+					endif
+					assign tokens = tokens | append: seen_key
+					for other in hp.metafields['app--440461426689--showcase'].showcases.value limit: 50
+						if other == blank
+							continue
+						endif
+						assign tok = ',' | append: other.system.handle | append: ','
+						if tok == self_token
+							continue
+						endif
+						assign tokens = tokens | append: tok
+						unless uniq contains tok
+							assign uniq = uniq | append: other.system.handle | append: ','
+						endunless
+					endfor
+				endfor
+				assign ranked = ''
+				assign wrapped = '#' | append: tokens | append: '#'
+				assign uniq_list = uniq | split: ','
+				for handle in uniq_list
+					if handle == blank
+						continue
+					endif
+					assign tok = ',' | append: handle | append: ','
+					assign shared = wrapped | split: tok | size | minus: 1
+					assign rank = 1000 | minus: shared | append: ''
+					assign ranked = ranked | append: rank | append: '~~' | append: handle | append: '§§'
+				endfor
+				assign top = ranked | split: '§§' | sort
+				comment
+					Pass 2: render each top showcase once, keyed by rank for sorting
+				endcomment
+				assign rendered = ','
+				for hotspot in showcase.hotspots.value limit: 20
+					assign hp = hotspot.variant.value.product | default: hotspot.product.value
+					if hp == blank
+						continue
+					endif
+					for other in hp.metafields['app--440461426689--showcase'].showcases.value limit: 50
+						if other == blank
+							continue
+						endif
+						assign tok = ',' | append: other.system.handle | append: ','
+						if rendered contains tok
+							continue
+						endif
+						for entry in top limit: section.settings.max_related
+							assign entry_handle = entry | split: '~~' | last
+							if entry_handle == other.system.handle
+								capture card_html
+									render 'html-marketing-showcase-card', showcase: other
+								endcapture
+								assign entry_rank = entry | split: '~~' | first
+								assign related_keys = related_keys | append: entry_rank | append: '~~' | append: card_html | append: '§§'
+								assign rendered = rendered | append: other.system.handle | append: ','
+								break
+							endif
+						endfor
+					endfor
+				endfor
+				assign related_list = related_keys | split: '§§' | sort
+			endif
+		endif
+		if related_list == nil
+			assign related_list = '' | split: ''
+		endif
+
+		comment
+			Card context: beside the image → horizontal cards in one column
+		endcomment
+		if is_side
+			assign card_layout = 'horizontal'
+			assign c_desktop = 1
+			assign c_tablet = 1
+			assign c_mobile = section.settings.columns_mobile
+		else
+			assign card_layout = section.settings.card_layout
+			assign c_desktop = section.settings.columns_desktop
+			assign c_tablet = section.settings.columns_tablet
+			assign c_mobile = section.settings.columns_mobile
+		endif
+
+		if is_side
+			assign img_sizes = '(min-width: 60em) 60vw, 100vw'
+		else
+			assign img_sizes = '100vw'
+		endif
+
+		assign items_heading = section.settings.products_heading | default: 'marketing.showcase.items_heading' | t
+		assign related_heading = section.settings.related_heading | default: 'marketing.showcase.related_heading' | t
+		assign back_label = 'marketing.showcase.back_to' | t: title: '__TITLE__'
+		assign count_label = 'marketing.showcase.product_count' | t: count: 99 | replace: '99', '__COUNT__'
+		assign show_all_label = 'marketing.showcase.show_all' | t: count: 99 | replace: '99', '__COUNT__'
+
+		assign root_classes = 'showcase--related-' | append: related_style
+	-%}
+
+	{%- capture header_inner -%}
+		<h2 class="block-marketing-showcase__heading">{{ heading | escape }}</h2>
+		{%- if section.settings.show_description and showcase.description.value != blank -%}
+			<div class="block-marketing-showcase__description">{{ showcase.description.value | escape | newline_to_br }}</div>
+		{%- endif -%}
+	{%- endcapture -%}
+
+	{%- capture backbar -%}
+		<div class="block-marketing-showcase__backbar" data-showcase-backbar data-label="{{ back_label | escape }}" hidden>
+			<button type="button" class="block-marketing-showcase__back" data-showcase-back>
+				{%- render 'html-theme-icons', icon: 'chevron-left', size: 16 -%}
+				<span data-showcase-back-label></span>
+			</button>
+		</div>
+	{%- endcapture -%}
+
+	{%- capture items_html -%}
+		<div class="block-marketing-showcase__products" data-showcase-part="items">
+			<div class="block-marketing-showcase__products-head">
+				<h3 class="block-marketing-showcase__subheading">{{ items_heading }}</h3>
+			</div>
+			<ul
+				class="block-marketing-showcase__grid"
+				style="--grid-columns: {{ c_desktop }}; --grid-columns-tablet: {{ c_tablet }}; --grid-columns-mobile: {{ c_mobile }}; --grid-gap: {{ section.settings.grid_gap }}em;"
+				role="list"
+			>
+				{%- assign rendered_ids = ',' -%}
+				{%- assign card_num = 0 -%}
+				{%- for hotspot in showcase.hotspots.value -%}
+					{%- liquid
+						assign product = hotspot.variant.value.product | default: hotspot.product.value
+						if product == blank
+							continue
+						endif
+						assign needle = ',' | append: product.id | append: ','
+						if rendered_ids contains needle
+							continue
+						endif
+						assign rendered_ids = rendered_ids | append: product.id | append: ','
+						assign card_num = card_num | plus: 1
+					-%}
+					<li class="block-marketing-showcase__item" data-showcase-card="{{ product.id }}">
+						<span class="block-marketing-showcase__num" aria-hidden="true">{{ card_num }}</span>
+						{%- render 'html-theme-card',
+							type: 'product',
+							product: product,
+							layout: card_layout,
+							image_ratio: section.settings.image_ratio,
+							columns_desktop: c_desktop,
+							columns_tablet: c_tablet,
+							columns_mobile: c_mobile,
+							columns_width: section.settings.width,
+							columns_gap: section.settings.grid_gap,
+							show_price: true,
+							show_stock: true,
+							show_delivery: true,
+							show_rating: section.settings.show_rating,
+							show_badges: section.settings.show_badges,
+							quick_add: section.settings.quick_add,
+							card_sizing: 'smaller'
+						-%}
+					</li>
+				{%- endfor -%}
+			</ul>
+		</div>
+	{%- endcapture -%}
+
+	{%- capture related_html -%}
+		<div class="block-marketing-showcase__related" data-showcase-part="related">
+			{%- if related_list.size > 0 -%}
+				<h3 class="block-marketing-showcase__related-heading">
+					{%- if showcase_line != nil and section.settings.related_heading == blank -%}
+						{{- showcase_line.title.value | escape -}}
+					{%- else -%}
+						{{- related_heading -}}
+					{%- endif -%}
+				</h3>
+				<ul class="block-marketing-showcase__related-grid" role="list">
+					{%- for entry in related_list limit: section.settings.max_related -%}
+						{%- assign entry_html = entry | split: '~~' | last -%}
+						{%- if entry_html != blank -%}
+							<li>{{ entry_html }}</li>
+						{%- endif -%}
+					{%- endfor -%}
+				</ul>
+			{%- endif -%}
+		</div>
+	{%- endcapture -%}
+
+	<div
+		class="block-marketing-showcase__content block-marketing-showcase--{{ display }} {{ root_classes }} {{ section.settings.width }}{% unless is_image_only %} showcase--numbered{% endunless %}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+		{% if section.settings.anchor != blank %}id="{{ section.settings.anchor }}"{% endif %}
+		data-showcase-root
+	>
+		{{ backbar }}
+
+		{%- if section.settings.show_heading -%}
+			<header class="block-marketing-showcase__header" data-showcase-part="header">{{ header_inner }}</header>
+		{%- endif -%}
+
+		{%- if is_image_only -%}
+			<figure class="block-marketing-showcase__figure">
+				<div class="block-marketing-showcase__image" data-showcase-part="image">
+					{%- render 'html-marketing-showcase', showcase: showcase, id_prefix: section.id, default_action: section.settings.default_action, image_loading: section.settings.image_loading, sizes: '(min-width: 60em) 60vw, 100vw' -%}
+				</div>
+				{%- if product_count > 0 -%}
+					<figcaption
+						class="block-marketing-showcase__caption"
+						data-showcase-caption
+						data-count-label="{{ count_label | escape }}"
+						data-all-label="{{ show_all_label | escape }}"
+					>
+						<span data-showcase-caption-count>{{ 'marketing.showcase.product_count' | t: count: product_count }}</span>
+						<button type="button" class="block-marketing-showcase__open-all" data-showcase-open-all aria-haspopup="dialog">
+							{{- 'marketing.showcase.show_all' | t: count: product_count -}}
+						</button>
+					</figcaption>
+				{%- endif -%}
+				{%- if section.settings.show_related -%}{{ related_html }}{%- endif -%}
+			</figure>
+
+			<dialog class="showcase-dialog" data-showcase-all data-showcase-loaded="{{ showcase.system.url }}" aria-label="{{ showcase_title | escape }}">
+				<div class="showcase-dialog__bar">
+					<button type="button" class="showcase-dialog__close" data-showcase-dialog-close aria-label="{{ 'marketing.showcase.close' | t }}">
+						{%- render 'html-theme-icons', icon: 'close', size: 20 -%}
+					</button>
+				</div>
+				<div class="showcase-dialog__body" data-showcase-dialog-body>
+					<div class="block-marketing-showcase__content showcase--numbered showcase--related-strip" data-showcase-root>
+						{{ backbar }}
+						<header class="block-marketing-showcase__header" data-showcase-part="header">{{ header_inner }}</header>
+						<div class="block-marketing-showcase__layout block-marketing-showcase__layout--side block-marketing-showcase__layout--image-left">
+							<div class="block-marketing-showcase__media-col">
+								<div class="block-marketing-showcase__image" data-showcase-part="image">
+									{%- assign all_prefix = section.id | append: '-all' -%}
+									{%- render 'html-marketing-showcase', showcase: showcase, id_prefix: all_prefix, default_action: section.settings.default_action, image_loading: 'lazy', sizes: '(min-width: 60em) 60vw, 100vw' -%}
+								</div>
+								{%- if section.settings.show_related -%}{{ related_html }}{%- endif -%}
+							</div>
+							{{ items_html }}
+						</div>
+					</div>
+				</div>
+			</dialog>
+		{%- else -%}
+			<div class="block-marketing-showcase__layout block-marketing-showcase__layout--{{ section.settings.layout }} block-marketing-showcase__layout--image-{{ section.settings.image_position }}">
+				<div class="block-marketing-showcase__media-col">
+					<div class="block-marketing-showcase__image" data-showcase-part="image">
+						{%- render 'html-marketing-showcase', showcase: showcase, id_prefix: section.id, default_action: section.settings.default_action, image_loading: section.settings.image_loading, sizes: img_sizes -%}
+					</div>
+					{%- if section.settings.show_related and is_strip -%}{{ related_html }}{%- endif -%}
+				</div>
+				{%- if product_count > 0 -%}{{ items_html }}{%- endif -%}
+			</div>
+			{%- if section.settings.show_related and is_strip == false -%}{{ related_html }}{%- endif -%}
+		{%- endif -%}
+	</div>
+{%- elsif request.design_mode -%}
+	<div class="block-marketing-showcase__placeholder {{ section.settings.width }}">
+		<p>Select a showcase in the section settings (Content → Metaobjects → Showcase).</p>
+	</div>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Marketing showcase",
+	"tag": "section",
+	"class": "block-marketing-showcase",
+	"disabled_on": {
+		"groups": ["header", "footer"]
+	},
+	"settings": [
+		{
+			"type": "header",
+			"content": "Content"
+		},
+		{
+			"type": "metaobject",
+			"id": "showcase",
+			"label": "Showcase",
+			"metaobject_type": "showcase",
+			"info": "Leave empty on the showcase page template to use the current showcase"
+		},
+		{
+			"type": "select",
+			"id": "display",
+			"label": "Display",
+			"options": [
+				{ "value": "image_products", "label": "Image + products" },
+				{ "value": "image", "label": "Image only" }
+			],
+			"default": "image_products",
+			"info": "Image only: calm, e.g. in blog posts. Dots open a modal; a button shows all products in a page modal. Image + products: numbered dots linked to the product cards."
+		},
+		{
+			"type": "checkbox",
+			"id": "show_heading",
+			"label": "Show heading",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"info": "Leave empty to use the showcase title"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_description",
+			"label": "Show description",
+			"default": true
+		},
+		{
+			"type": "header",
+			"content": "Hotspots"
+		},
+		{
+			"type": "select",
+			"id": "default_action",
+			"label": "Dot action",
+			"options": [
+				{ "value": "both", "label": "View product + add to cart" },
+				{ "value": "product", "label": "View product only" },
+				{ "value": "cart", "label": "Add to cart only" }
+			],
+			"default": "both",
+			"info": "Used when a hotspot has no own action"
+		},
+		{
+			"type": "select",
+			"id": "image_loading",
+			"label": "Image loading",
+			"options": [
+				{ "value": "lazy", "label": "Lazy" },
+				{ "value": "eager", "label": "Eager (above the fold)" }
+			],
+			"default": "lazy"
+		},
+		{
+			"type": "header",
+			"content": "Products"
+		},
+		{
+			"type": "text",
+			"id": "products_heading",
+			"label": "Products heading",
+			"info": "Leave empty to use locale default"
+		},
+		{
+			"type": "select",
+			"id": "layout",
+			"label": "Products position (image + products)",
+			"options": [
+				{ "value": "side", "label": "Beside image" },
+				{ "value": "below", "label": "Below image" }
+			],
+			"default": "side"
+		},
+		{
+			"type": "select",
+			"id": "image_position",
+			"label": "Image position (beside layout)",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "right", "label": "Right" }
+			],
+			"default": "left"
+		},
+		{
+			"type": "select",
+			"id": "card_layout",
+			"label": "Card layout (below layout)",
+			"options": [
+				{ "value": "vertical", "label": "Vertical" },
+				{ "value": "horizontal", "label": "Horizontal" }
+			],
+			"default": "vertical"
+		},
+		{
+			"type": "select",
+			"id": "image_ratio",
+			"label": "Card image ratio",
+			"options": [
+				{ "value": "portrait", "label": "Portrait (2:3)" },
+				{ "value": "square", "label": "Square (1:1)" },
+				{ "value": "landscape", "label": "Landscape (3:2)" },
+				{ "value": "adapt", "label": "Adapt (original)" }
+			],
+			"default": "square"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_badges",
+			"label": "Show badges",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_rating",
+			"label": "Show rating",
+			"default": false
+		},
+		{
+			"type": "checkbox",
+			"id": "quick_add",
+			"label": "Enable quick add on cards",
+			"default": true
+		},
+		{
+			"type": "range",
+			"id": "columns_desktop",
+			"label": "Columns (desktop, below layout)",
+			"min": 2,
+			"max": 6,
+			"step": 1,
+			"default": 4
+		},
+		{
+			"type": "range",
+			"id": "columns_tablet",
+			"label": "Columns (tablet, below layout)",
+			"min": 1,
+			"max": 4,
+			"step": 1,
+			"default": 3
+		},
+		{
+			"type": "range",
+			"id": "columns_mobile",
+			"label": "Columns (mobile)",
+			"min": 1,
+			"max": 3,
+			"step": 1,
+			"default": 2
+		},
+		{
+			"type": "range",
+			"id": "grid_gap",
+			"label": "Grid gap",
+			"min": 0,
+			"max": 2,
+			"step": 0.1,
+			"default": 0.5,
+			"unit": "em"
+		},
+		{
+			"type": "header",
+			"content": "Related showcases"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_related",
+			"label": "Show related showcases",
+			"default": true,
+			"info": "The other showcases in the same line (showcase_line), else showcases sharing products. Per showcase: related_mode auto or off. Clicking one swaps it in place."
+		},
+		{
+			"type": "select",
+			"id": "related_source",
+			"label": "Related source",
+			"options": [
+				{ "value": "line_or_products", "label": "Line, else shared products" },
+				{ "value": "line", "label": "Line only (theme)" },
+				{ "value": "products", "label": "Shared products only" }
+			],
+			"default": "line_or_products",
+			"info": "A line groups showcases by theme, without needing shared products. Shared products finds showcases with the same products."
+		},
+		{
+			"type": "select",
+			"id": "related_style",
+			"label": "Related style",
+			"options": [
+				{ "value": "strip", "label": "Thumbnail strip under the image" },
+				{ "value": "grid", "label": "Cards below the block" }
+			],
+			"default": "strip"
+		},
+		{
+			"type": "text",
+			"id": "related_heading",
+			"label": "Related heading",
+			"info": "Leave empty to use the line title (in a line) or the locale default"
+		},
+		{
+			"type": "range",
+			"id": "max_related",
+			"label": "Maximum related showcases",
+			"min": 2,
+			"max": 8,
+			"step": 1,
+			"default": 4
+		},
+		{
+			"type": "header",
+			"content": "Layout"
+		},
+		{
+			"type": "select",
+			"id": "width",
+			"label": "Width",
+			"options": [
+				{ "value": "is-align-narrow", "label": "Narrow" },
+				{ "value": "is-align-small", "label": "Small" },
+				{ "value": "is-align", "label": "Regular" },
+				{ "value": "is-align-wide", "label": "Wide" },
+				{ "value": "is-align-full", "label": "Full" }
+			],
+			"default": "is-align-wide"
+		},
+		{
+			"type": "range",
+			"id": "padding_block",
+			"label": "Vertical padding",
+			"min": 0,
+			"max": 6,
+			"step": 0.5,
+			"default": 3,
+			"unit": "em"
+		},
+		{
+			"type": "text",
+			"id": "anchor",
+			"label": "Anchor ID",
+			"info": "ID for scroll links (without #)"
+		},
+		{
+			"type": "text",
+			"id": "custom_class",
+			"label": "Custom class"
+		},
+		{
+			"type": "header",
+			"content": "Colors"
+		},
+		{
+			"type": "color",
+			"id": "background_color",
+			"label": "Background"
+		},
+		{
+			"type": "color",
+			"id": "text_color",
+			"label": "Text"
+		},
+		{
+			"type": "header",
+			"content": "Howto"
+		},
+		{
+			"type": "paragraph",
+			"content": "Showcases are managed under Content → Metaobjects → Showcase. Each hotspot has a variant (or a product), x/y position in % of the image and an optional action. See docs/showcase.md."
+		}
+	],
+	"presets": [
+		{
+			"name": "Showcase",
+			"category": "Marketing"
+		}
+	]
+}
+{% endschema %}

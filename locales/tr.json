@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Sepete eklendi"
+    },
+    "showcase": {
+      "view_product": "Ürünü görüntüle",
+      "close": "Kapat",
+      "related_heading": "İlgili kombinler",
+      "product_count": {
+        "one": "{{ count }} ürün",
+        "other": "{{ count }} ürün"
+      },
+      "product_showcases_heading": "Bu kombinlerde",
+      "position": "{{ current }} / {{ total }}",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "variant_label": "Seçenek",
+      "show_all": "Tüm ürünleri gör ({{ count }})",
+      "back_to": "{{ title }} sayfasına dön",
+      "items_heading": "Bu kombinde"
     }
   },
   "newsletter": {

@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Lisätty ostoskoriin"
+    },
+    "showcase": {
+      "view_product": "Näytä tuote",
+      "close": "Sulje",
+      "related_heading": "Samankaltaiset lookit",
+      "product_count": {
+        "one": "{{ count }} tuote",
+        "other": "{{ count }} tuotetta"
+      },
+      "product_showcases_heading": "Näissä lookeissa",
+      "position": "{{ current }}/{{ total }}",
+      "previous": "Edellinen",
+      "next": "Seuraava",
+      "variant_label": "Vaihtoehto",
+      "show_all": "Näytä kaikki tuotteet ({{ count }})",
+      "back_to": "Takaisin: {{ title }}",
+      "items_heading": "Tässä lookissa"
     }
   },
   "newsletter": {

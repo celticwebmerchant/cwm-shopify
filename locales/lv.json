@@ -24,6 +24,23 @@
   "marketing": {
     "cart_confirm": {
       "heading": "Pievienots grozam"
+    },
+    "showcase": {
+      "view_product": "Skatīt produktu",
+      "close": "Aizvērt",
+      "related_heading": "Saistītie tēli",
+      "product_count": {
+        "one": "{{ count }} produkts",
+        "other": "{{ count }} produkti"
+      },
+      "product_showcases_heading": "Šajos tēlos",
+      "position": "{{ current }} no {{ total }}",
+      "previous": "Iepriekšējais",
+      "next": "Nākamais",
+      "variant_label": "Opcija",
+      "show_all": "Skatīt visus produktus ({{ count }})",
+      "back_to": "Atpakaļ uz {{ title }}",
+      "items_heading": "Šajā tēlā"
     }
   }
 }

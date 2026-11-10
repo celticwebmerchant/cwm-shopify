@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Добавено в количката"
+    },
+    "showcase": {
+      "view_product": "Виж продукта",
+      "close": "Затвори",
+      "related_heading": "Свързани визии",
+      "product_count": {
+        "one": "{{ count }} продукт",
+        "other": "{{ count }} продукта"
+      },
+      "product_showcases_heading": "Във визиите",
+      "position": "{{ current }} от {{ total }}",
+      "previous": "Предишен",
+      "next": "Следващ",
+      "variant_label": "Опция",
+      "show_all": "Виж всички продукти ({{ count }})",
+      "back_to": "Обратно към {{ title }}",
+      "items_heading": "В тази визия"
     }
   },
   "newsletter": {

@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Lagt i handlekurven"
+    },
+    "showcase": {
+      "view_product": "Se produkt",
+      "close": "Lukk",
+      "related_heading": "Relaterte looks",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produkter"
+      },
+      "product_showcases_heading": "Vist i disse looks",
+      "position": "{{ current }} av {{ total }}",
+      "previous": "Forrige",
+      "next": "Neste",
+      "variant_label": "Alternativ",
+      "show_all": "Se alle produkter ({{ count }})",
+      "back_to": "Tilbake til {{ title }}",
+      "items_heading": "I denne looken"
     }
   },
   "newsletter": {

@@ -46,6 +46,10 @@
       <meta name="description" content="{{ meta_description | escape }}">
     {% endif %}
 
+    {%- comment -%} Showcase pages are render sources for in-place swapping, not landing pages {%- endcomment -%}
+    {%- if request.page_type == 'metaobject' and metaobject.system.type == 'showcase' -%}
+      <meta name="robots" content="noindex, nofollow">
+    {%- endif -%}
     {% render 'html-theme-meta', title: meta_title, description: meta_description %}
     {% render 'html-theme-schema' %}
 

@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "已加入購物車"
+    },
+    "showcase": {
+      "view_product": "查看商品",
+      "close": "關閉",
+      "related_heading": "相關搭配",
+      "product_count": {
+        "one": "{{ count }} 件商品",
+        "other": "{{ count }} 件商品"
+      },
+      "product_showcases_heading": "出現在這些搭配中",
+      "position": "{{ current }} / {{ total }}",
+      "previous": "上一個",
+      "next": "下一個",
+      "variant_label": "選項",
+      "show_all": "查看全部商品（{{ count }}）",
+      "back_to": "返回 {{ title }}",
+      "items_heading": "本搭配中的商品"
     }
   },
   "newsletter": {

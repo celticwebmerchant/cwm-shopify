@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Pridané do košíka"
+    },
+    "showcase": {
+      "view_product": "Zobraziť produkt",
+      "close": "Zavrieť",
+      "related_heading": "Súvisiace looky",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produktov"
+      },
+      "product_showcases_heading": "V týchto lookoch",
+      "position": "{{ current }} z {{ total }}",
+      "previous": "Predchádzajúci",
+      "next": "Ďalší",
+      "variant_label": "Možnosť",
+      "show_all": "Zobraziť všetky produkty ({{ count }})",
+      "back_to": "Späť na {{ title }}",
+      "items_heading": "V tomto looku"
     }
   },
   "newsletter": {

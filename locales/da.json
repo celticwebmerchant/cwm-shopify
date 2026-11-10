@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Tilføjet til kurven"
+    },
+    "showcase": {
+      "view_product": "Se produkt",
+      "close": "Luk",
+      "related_heading": "Relaterede looks",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produkter"
+      },
+      "product_showcases_heading": "Set i disse looks",
+      "position": "{{ current }} af {{ total }}",
+      "previous": "Forrige",
+      "next": "Næste",
+      "variant_label": "Valgmulighed",
+      "show_all": "Se alle produkter ({{ count }})",
+      "back_to": "Tilbage til {{ title }}",
+      "items_heading": "I dette look"
     }
   },
   "newsletter": {

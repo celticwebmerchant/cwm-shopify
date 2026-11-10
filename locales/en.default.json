@@ -246,6 +246,23 @@
     },
     "cart_confirm": {
       "heading": "Added to cart"
+    },
+    "showcase": {
+      "view_product": "View product",
+      "close": "Close",
+      "related_heading": "Related looks",
+      "product_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "product_showcases_heading": "Seen in these looks",
+      "position": "{{ current }} of {{ total }}",
+      "previous": "Previous",
+      "next": "Next",
+      "variant_label": "Option",
+      "show_all": "Show all products ({{ count }})",
+      "back_to": "Back to {{ title }}",
+      "items_heading": "In this showcase"
     }
   },
   "newsletter": {

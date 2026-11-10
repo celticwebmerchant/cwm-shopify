@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Đã thêm vào giỏ hàng"
+    },
+    "showcase": {
+      "view_product": "Xem sản phẩm",
+      "close": "Đóng",
+      "related_heading": "Phong cách liên quan",
+      "product_count": {
+        "one": "{{ count }} sản phẩm",
+        "other": "{{ count }} sản phẩm"
+      },
+      "product_showcases_heading": "Xuất hiện trong các phong cách này",
+      "position": "{{ current }} / {{ total }}",
+      "previous": "Trước",
+      "next": "Tiếp",
+      "variant_label": "Tùy chọn",
+      "show_all": "Xem tất cả sản phẩm ({{ count }})",
+      "back_to": "Quay lại {{ title }}",
+      "items_heading": "Trong phong cách này"
     }
   },
   "newsletter": {

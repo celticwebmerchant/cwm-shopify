@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Dodano v košarico"
+    },
+    "showcase": {
+      "view_product": "Ogled izdelka",
+      "close": "Zapri",
+      "related_heading": "Sorodni videzi",
+      "product_count": {
+        "one": "{{ count }} izdelek",
+        "other": "{{ count }} izdelkov"
+      },
+      "product_showcases_heading": "V teh videzih",
+      "position": "{{ current }} od {{ total }}",
+      "previous": "Prejšnji",
+      "next": "Naslednji",
+      "variant_label": "Možnost",
+      "show_all": "Prikaži vse izdelke ({{ count }})",
+      "back_to": "Nazaj na {{ title }}",
+      "items_heading": "V tem videzu"
     }
   },
   "newsletter": {

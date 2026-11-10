@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Adăugat în coș"
+    },
+    "showcase": {
+      "view_product": "Vezi produsul",
+      "close": "Închide",
+      "related_heading": "Look-uri similare",
+      "product_count": {
+        "one": "{{ count }} produs",
+        "other": "{{ count }} produse"
+      },
+      "product_showcases_heading": "Apare în aceste look-uri",
+      "position": "{{ current }} din {{ total }}",
+      "previous": "Anterior",
+      "next": "Următor",
+      "variant_label": "Opțiune",
+      "show_all": "Vezi toate produsele ({{ count }})",
+      "back_to": "Înapoi la {{ title }}",
+      "items_heading": "În acest look"
     }
   },
   "newsletter": {

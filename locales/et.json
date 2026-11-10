@@ -16,6 +16,23 @@
   "marketing": {
     "cart_confirm": {
       "heading": "Lisatud ostukorvi"
+    },
+    "showcase": {
+      "view_product": "Vaata toodet",
+      "close": "Sulge",
+      "related_heading": "Seotud stiilid",
+      "product_count": {
+        "one": "{{ count }} toode",
+        "other": "{{ count }} toodet"
+      },
+      "product_showcases_heading": "Nendes stiilides",
+      "position": "{{ current }}/{{ total }}",
+      "previous": "Eelmine",
+      "next": "Järgmine",
+      "variant_label": "Valik",
+      "show_all": "Näita kõiki tooteid ({{ count }})",
+      "back_to": "Tagasi: {{ title }}",
+      "items_heading": "Selles stiilis"
     }
   }
 }

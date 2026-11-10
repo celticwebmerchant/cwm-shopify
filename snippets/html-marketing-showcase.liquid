@@ -1,0 +1,269 @@
+{%- comment -%}
+============================================================================
+HTML-MARKETING-SHOWCASE
+============================================================================
+Showcase image with hotspot dots; every dot has its own modal (popover on
+desktop, bottom sheet on mobile) with price, variant choice, add to cart /
+view product and previous/next through the showcase.
+Contract: docs/showcase.md
+
+PARAMS:
+- showcase        : showcase metaobject (required)
+- id_prefix       : Unique prefix for popover IDs (required)
+- default_action  : 'product' | 'cart' | 'both' (default 'both') — used when
+                    a hotspot has no own action
+- image_loading   : 'lazy' | 'eager' (default 'lazy')
+- sizes           : sizes attribute for the image (default '100vw')
+- crop_ratio      : Optional frame ratio (e.g. 1 or 0.8). Empty = the image's
+                    natural ratio. With a ratio the frame crops like 'cover'.
+
+FRAME + STAGE:
+- The frame adapts to its context (natural ratio, or crop_ratio as 'cover')
+  and clips. The stage inside always has the image's natural ratio and
+  carries the dots, so posx/posy always refer to the whole photo. Dots that
+  fall outside a crop are clipped — image choice is the editor's job.
+
+NUMBERING:
+- Each unique product gets a number (dot order). The number is always in the
+  markup; CSS shows it only inside .showcase--numbered (image + products).
+
+OUTPUT HOOKS (block-marketing-showcase.js, all delegated):
+- [data-showcase-hotspot="<product id>"] dot ↔ [data-showcase-card] sync
+- [data-showcase-popover] modal, [data-showcase-step] prev/next
+- [data-showcase-variants] / [data-showcase-variant] variant choice → the
+  html-button-order form's hidden id input
+
+DEPENDENCIES:
+- html-product-price, html-button-order, html-theme-icons snippets
+============================================================================
+{%- endcomment -%}
+
+{%- liquid
+	assign showcase_image = showcase.image.value
+	assign hotspots = showcase.hotspots.value
+	assign default_action = default_action | default: 'both'
+	assign image_loading = image_loading | default: 'lazy'
+	assign sizes = sizes | default: '100vw'
+	assign showcase_title = showcase.title.value | default: showcase.system.handle
+
+	comment
+		Count valid hotspots (for "x of y") — variant wins over product.
+	endcomment
+	assign total = 0
+	for hotspot in hotspots
+		assign cp = hotspot.variant.value.product | default: hotspot.product.value
+		if cp != blank
+			assign total = total | plus: 1
+		endif
+	endfor
+-%}
+
+{%- if showcase_image != blank -%}
+	<div class="showcase" data-showcase data-showcase-url="{{ showcase.system.url }}" data-showcase-count="{{ total }}">
+		<div
+			class="showcase__frame"
+			style="--showcase-ratio: {{ showcase_image.aspect_ratio }};{% if crop_ratio != blank %} --showcase-crop: {{ crop_ratio }};{% endif %}"
+		>
+		<div class="showcase__stage">
+			{{- showcase_image
+				| image_url: width: 2000
+				| image_tag:
+					class: 'showcase__image',
+					loading: image_loading,
+					widths: '600,900,1200,1600,2000',
+					sizes: sizes,
+					alt: showcase_title
+			-}}
+
+			{%- liquid
+				assign pos = 0
+				assign num_map = ','
+				assign num_count = 0
+			-%}
+			{%- for hotspot in hotspots -%}
+				{%- liquid
+					comment
+						Variant wins: product comes from the variant when set,
+						so product/variant can never mismatch.
+					endcomment
+					assign hv = hotspot.variant.value
+					assign hp = hotspot.product.value
+					if hv != blank and hv.product != blank
+						assign hp = hv.product
+					endif
+					if hp == blank
+						continue
+					endif
+					assign pos = pos | plus: 1
+
+					comment
+						Number per unique product (same product twice = same number)
+					endcomment
+					assign key = ',' | append: hp.id | append: ':'
+					if num_map contains key
+						assign num = num_map | split: key | last | split: ',' | first
+					else
+						assign num_count = num_count | plus: 1
+						assign num = num_count
+						assign num_map = num_map | append: hp.id | append: ':' | append: num_count | append: ','
+					endif
+
+					assign hx = hotspot.posx.value | default: 50 | at_least: 0 | at_most: 100
+					assign hy = hotspot.posy.value | default: 50 | at_least: 0 | at_most: 100
+					assign action = hotspot.action.value | default: default_action
+					assign popover_id = 'showcase-' | append: id_prefix | append: '-' | append: pos
+
+					assign link_url = hp.url
+					if hv != blank
+						assign link_url = hv.url
+					endif
+
+					assign show_link = true
+					assign show_cart = true
+					if action == 'product'
+						assign show_cart = false
+					elsif action == 'cart'
+						assign show_link = false
+					endif
+
+					comment
+						Variant choice in the modal: only when the customer must
+						choose (no variant set, product has real variants) and
+						the dot may add to cart.
+					endcomment
+					assign show_picker = false
+					if show_cart and hv == blank and hp.has_only_default_variant == false
+						assign show_picker = true
+					endif
+
+					assign media = hv.featured_media | default: hp.featured_media
+				-%}
+
+				<button
+					type="button"
+					class="showcase__dot"
+					style="--showcase-x: {{ hx }}%; --showcase-y: {{ hy }}%;"
+					popovertarget="{{ popover_id }}"
+					data-showcase-hotspot="{{ hp.id }}"
+					aria-label="{{ num }}. {{ hp.title | escape }}"
+				>
+					<span class="showcase__dot-inner" aria-hidden="true">
+						<span class="showcase__dot-num">{{ num }}</span>
+					</span>
+				</button>
+
+				<div
+					id="{{ popover_id }}"
+					class="showcase__popover"
+					popover
+					role="dialog"
+					data-showcase-popover
+					data-showcase-x="{{ hx }}"
+					aria-label="{{ hp.title | escape }}"
+				>
+					<div class="showcase__popover-inner">
+						<div class="showcase__popover-head">
+							<span class="showcase__popover-pos">{{ 'marketing.showcase.position' | t: current: pos, total: total }}</span>
+							<button
+								type="button"
+								class="showcase__popover-close"
+								popovertarget="{{ popover_id }}"
+								popovertargetaction="hide"
+								aria-label="{{ 'marketing.showcase.close' | t }}"
+							>
+								{%- render 'html-theme-icons', icon: 'close', size: 16 -%}
+							</button>
+						</div>
+
+						<div class="showcase__popover-main">
+							{%- if media != blank -%}
+								<a href="{{ link_url }}" class="showcase__popover-media" tabindex="-1">
+									{{- media | image_url: width: 240 | image_tag: loading: 'lazy', alt: hp.title, class: 'showcase__popover-image' -}}
+								</a>
+							{%- endif -%}
+
+							<div class="showcase__popover-body">
+								<p class="showcase__popover-title">
+									<a href="{{ link_url }}" data-showcase-link>{{ hp.title | escape }}</a>
+								</p>
+								{%- if hv != blank and hp.has_only_default_variant == false -%}
+									<p class="showcase__popover-variant">
+										{%- for option in hp.options -%}
+											{{ option }}: {{ hv.options[forloop.index0] }}{% unless forloop.last %} · {% endunless %}
+										{%- endfor -%}
+									</p>
+								{%- endif -%}
+
+								<div class="showcase__popover-price">
+									{%- render 'html-product-price', product: hp, variant: hv -%}
+								</div>
+							</div>
+						</div>
+
+						{%- if show_picker -%}
+							{%- liquid
+								if hp.options.size == 1
+									assign picker_label = hp.options.first
+								else
+									assign picker_label = 'marketing.showcase.variant_label' | t
+								endif
+							-%}
+							<div class="showcase__variants" data-showcase-variants role="group" aria-label="{{ picker_label | escape }}">
+								<span class="showcase__variants-label">{{ picker_label | escape }}</span>
+								<div class="showcase__variants-list">
+									{%- for v in hp.variants -%}
+										<button
+											type="button"
+											class="showcase__variant"
+											data-showcase-variant="{{ v.id }}"
+											data-url="{{ v.url }}"
+											aria-pressed="false"
+											{% unless v.available %}disabled{% endunless %}
+										>{{ v.title | escape }}</button>
+									{%- endfor -%}
+								</div>
+							</div>
+						{%- endif -%}
+
+						<div class="showcase__popover-actions">
+							{%- if show_cart -%}
+								{%- liquid
+									assign order_behavior = 'link'
+									if hv != blank or hp.has_only_default_variant or show_picker
+										assign order_behavior = 'add'
+									endif
+								-%}
+								{%- render 'html-button-order',
+									product: hp,
+									variant: hv,
+									variant_behavior: order_behavior,
+									show_icon: true,
+									button_style: 'primary'
+								-%}
+							{%- endif -%}
+							{%- if show_link -%}
+								<a href="{{ link_url }}" class="showcase__popover-link" data-showcase-link>
+									{{- 'marketing.showcase.view_product' | t -}}
+								</a>
+							{%- endif -%}
+						</div>
+
+						{%- if total > 1 -%}
+							<div class="showcase__popover-nav">
+								<button type="button" class="showcase__popover-step" data-showcase-step="-1">
+									{%- render 'html-theme-icons', icon: 'chevron-left', size: 16 -%}
+									<span>{{ 'marketing.showcase.previous' | t }}</span>
+								</button>
+								<button type="button" class="showcase__popover-step" data-showcase-step="1">
+									<span>{{ 'marketing.showcase.next' | t }}</span>
+									{%- render 'html-theme-icons', icon: 'chevron-right', size: 16 -%}
+								</button>
+							</div>
+						{%- endif -%}
+					</div>
+				</div>
+			{%- endfor -%}
+		</div>
+		</div>
+	</div>
+{%- endif -%}

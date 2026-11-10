@@ -235,6 +235,23 @@
     "products_heading": "Nasze najnowsze produkty",
     "cart_confirm": {
       "heading": "Dodano do koszyka"
+    },
+    "showcase": {
+      "view_product": "Zobacz produkt",
+      "close": "Zamknij",
+      "related_heading": "Podobne stylizacje",
+      "product_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produktów"
+      },
+      "product_showcases_heading": "W tych stylizacjach",
+      "position": "{{ current }} z {{ total }}",
+      "previous": "Poprzedni",
+      "next": "Następny",
+      "variant_label": "Opcja",
+      "show_all": "Zobacz wszystkie produkty ({{ count }})",
+      "back_to": "Wróć do {{ title }}",
+      "items_heading": "W tej stylizacji"
     }
   },
   "newsletter": {

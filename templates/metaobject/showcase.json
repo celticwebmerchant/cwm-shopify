@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "showcase": {
+      "type": "block-marketing-showcase",
+      "settings": {
+        "display": "image_products",
+        "show_heading": true,
+        "show_description": true,
+        "default_action": "both",
+        "image_loading": "eager",
+        "show_products": true,
+        "layout": "side",
+        "image_position": "left",
+        "card_layout": "vertical",
+        "image_ratio": "square",
+        "show_badges": true,
+        "show_rating": false,
+        "quick_add": true,
+        "columns_desktop": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "grid_gap": 0.5,
+        "show_related": true,
+        "max_related": 4,
+        "width": "is-align-wide",
+        "padding_block": 3
+      }
+    }
+  },
+  "order": ["showcase"]
+}

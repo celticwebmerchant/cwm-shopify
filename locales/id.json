@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Ditambahkan ke keranjang"
+    },
+    "showcase": {
+      "view_product": "Lihat produk",
+      "close": "Tutup",
+      "related_heading": "Tampilan terkait",
+      "product_count": {
+        "one": "{{ count }} produk",
+        "other": "{{ count }} produk"
+      },
+      "product_showcases_heading": "Ada di tampilan ini",
+      "position": "{{ current }} dari {{ total }}",
+      "previous": "Sebelumnya",
+      "next": "Berikutnya",
+      "variant_label": "Opsi",
+      "show_all": "Lihat semua produk ({{ count }})",
+      "back_to": "Kembali ke {{ title }}",
+      "items_heading": "Dalam tampilan ini"
     }
   },
   "newsletter": {

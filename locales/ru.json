@@ -240,6 +240,23 @@
     },
     "cart_confirm": {
       "heading": "Добавлено в корзину"
+    },
+    "showcase": {
+      "view_product": "Посмотреть товар",
+      "close": "Закрыть",
+      "related_heading": "Похожие образы",
+      "product_count": {
+        "one": "{{ count }} товар",
+        "other": "{{ count }} товаров"
+      },
+      "product_showcases_heading": "В этих образах",
+      "position": "{{ current }} из {{ total }}",
+      "previous": "Назад",
+      "next": "Далее",
+      "variant_label": "Вариант",
+      "show_all": "Показать все товары ({{ count }})",
+      "back_to": "Назад к {{ title }}",
+      "items_heading": "В этом образе"
     }
   },
   "newsletter": {

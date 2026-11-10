@@ -235,6 +235,23 @@
     "products_heading": "Unsere neuesten Produkte",
     "cart_confirm": {
       "heading": "Zum Warenkorb hinzugefügt"
+    },
+    "showcase": {
+      "view_product": "Produkt ansehen",
+      "close": "Schließen",
+      "related_heading": "Ähnliche Looks",
+      "product_count": {
+        "one": "{{ count }} Produkt",
+        "other": "{{ count }} Produkte"
+      },
+      "product_showcases_heading": "In diesen Looks zu sehen",
+      "position": "{{ current }} von {{ total }}",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "variant_label": "Option",
+      "show_all": "Alle Produkte ansehen ({{ count }})",
+      "back_to": "Zurück zu {{ title }}",
+      "items_heading": "In diesem Look"
     }
   },
   "newsletter": {

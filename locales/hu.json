@@ -245,6 +245,23 @@
     },
     "cart_confirm": {
       "heading": "Kosárba helyezve"
+    },
+    "showcase": {
+      "view_product": "Termék megtekintése",
+      "close": "Bezárás",
+      "related_heading": "Kapcsolódó szettek",
+      "product_count": {
+        "one": "{{ count }} termék",
+        "other": "{{ count }} termék"
+      },
+      "product_showcases_heading": "Ezekben a szettekben",
+      "position": "{{ current }} / {{ total }}",
+      "previous": "Előző",
+      "next": "Következő",
+      "variant_label": "Opció",
+      "show_all": "Összes termék megtekintése ({{ count }})",
+      "back_to": "Vissza ide: {{ title }}",
+      "items_heading": "Ebben a szettben"
     }
   },
   "newsletter": {

@@ -1,0 +1,41 @@
+{%- comment -%}
+============================================================================
+HTML-MARKETING-SHOWCASE-CARD
+============================================================================
+Compact card for a showcase. The link points to the showcase's own page
+(noindex, nofollow), but block-marketing-showcase.js intercepts it: inside a
+showcase block it swaps the showcase in place, elsewhere it opens it in a modal.
+Contract: docs/showcase.md
+
+PARAMS:
+- showcase        : showcase metaobject (required)
+- sizes       : sizes attribute (default '(min-width: 60em) 25vw, 50vw')
+============================================================================
+{%- endcomment -%}
+
+{%- liquid
+	assign showcase_image = showcase.image.value
+	assign showcase_title = showcase.title.value | default: showcase.system.handle
+	assign showcase_url = showcase.system.url
+	assign sizes = sizes | default: '(min-width: 60em) 25vw, 50vw'
+	assign product_count = 0
+	for h in showcase.hotspots.value
+		if h.variant.value != blank or h.product.value != blank
+			assign product_count = product_count | plus: 1
+		endif
+	endfor
+-%}
+
+<article class="showcase-card">
+	<a href="{{ showcase_url | default: '#' }}" class="showcase-card__link" data-showcase-swap rel="nofollow">
+		{%- if showcase_image != blank -%}
+			<div class="showcase-card__media">
+				{{- showcase_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '300,450,600,900', sizes: sizes, alt: showcase_title, class: 'showcase-card__image' -}}
+			</div>
+		{%- endif -%}
+		<div class="showcase-card__body">
+			<h3 class="showcase-card__title">{{ showcase_title | escape }}</h3>
+			<p class="showcase-card__count">{{ 'marketing.showcase.product_count' | t: count: product_count }}</p>
+		</div>
+	</a>
+</article>
